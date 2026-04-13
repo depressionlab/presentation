@@ -12,63 +12,76 @@
         window.__unocss = {
             theme: {
                 colors: {
-                    bg: '#0a0a0a',
-                    bg2: '#111111',
-                    bg3: '#1a1a1a',
-                    surface: '#1e1e1e',
-                    brder: '#2a2a2a',
-                    txt: '#e8e4dc',
-                    muted: '#888',
-                    accent: '#d4451a',
-                    accent2: '#e8a030',
-                    accent3: '#4a9eff',
-                    green: '#3dba6a',
-                    red: '#e05252',
-                    white: '#f5f1eb'
+                    bg: '#fdfaf5',       // Warm, soft cream background
+                    bg2: '#f4efe6',      // Slightly darker cream for contrast
+                    card: '#ffffff',     // Pure white for cards
+                    border: '#e8e2d5',   // Soft, warm border color
+                    text: '#5a5461',     // Soft, readable purplish-grey body text
+                    heading: '#352e3b',  // Darker tone for headings
+                    muted: '#9e97a3',    // Soft grey for muted text
+                    accent: '#ff8fab',   // Cute pink/rose primary accent
+                    accent2: '#fca75a',  // Friendly peach/orange secondary
+                    accent3: '#73b2ef',  // Soft sky blue
+                    green: '#74c496',    // Soft mint green
+                    red: '#fa7a7a'       // Soft coral red
                 }
             },
             shortcuts: {
-                'slide': 'absolute inset-0 hidden px-[40px] py-[50px] md:px-[72px] md:py-[64px] flex-col justify-center bg-bg overflow-hidden',
-                'slide-active': '!flex animate-[slideIn_0.3s_ease]',
-                'section-label': 'font-mono text-[11px] tracking-[0.15em] uppercase text-accent mb-5',
-                'heading-1': 'font-serif text-[clamp(2.8rem,5vw,5.5rem)] leading-[1.05] text-white mb-6',
-                'heading-2': 'font-serif text-[clamp(2rem,3.5vw,3.6rem)] leading-[1.1] text-white mb-5',
-                'heading-3': 'font-sans text-[1.1rem] font-bold tracking-[0.04em] text-accent2 mb-2.5 uppercase',
-                'text-p': 'text-[1.05rem] leading-[1.75] text-[#bbb] max-w-[800px] mb-[14px] [&>strong]:text-white [&>strong]:font-medium [&>em]:text-accent2 [&>em]:not-italic',
-                'callout': 'border-l-3 p-[18px_24px] my-5 max-w-[860px] text-txt',
-                'callout-red': 'border-accent bg-accent/10 callout',
-                'callout-green': 'border-green bg-green/10 callout',
-                'callout-yellow': 'border-accent2 bg-accent2/10 callout',
-                'callout-blue': 'border-accent3 bg-accent3/10 callout',
+                'slide': 'absolute inset-0 hidden px-[30px] py-[40px] md:px-[80px] md:py-[64px] flex-col justify-center bg-bg overflow-hidden text-text',
+                'slide-active': '!flex animate-[slideIn_0.4s_cubic-bezier(0.16,1,0.3,1)]',
+                
+                // Typography
+                'section-label': 'inline-block font-mono text-[11px] tracking-[0.2em] uppercase text-accent font-bold bg-accent/10 px-3.5 py-1.5 rounded-full mb-6',
+                'heading-1': 'font-serif text-[clamp(2.8rem,5vw,5.5rem)] leading-[1.05] text-heading font-bold mb-6 tracking-tight',
+                'heading-2': 'font-serif text-[clamp(2rem,3.5vw,3.6rem)] leading-[1.1] text-heading font-bold mb-5 tracking-tight',
+                'heading-3': 'font-sans text-[1.2rem] font-bold tracking-[0.02em] text-heading mb-2',
+                'text-p': 'text-[1.1rem] leading-[1.8] max-w-[800px] mb-[18px] [&>strong]:text-heading [&>strong]:font-bold [&>em]:text-accent [&>em]:not-italic [&>em]:font-bold',
+                
+                // Callouts & Cards
+                'callout': 'border-2 rounded-2xl p-[24px_28px] my-6 max-w-[860px] text-text shadow-sm',
+                'callout-red': 'border-red/30 bg-red/5 callout',
+                'callout-green': 'border-green/30 bg-green/5 callout',
+                'callout-yellow': 'border-accent2/30 bg-accent2/5 callout',
+                'callout-blue': 'border-accent3/30 bg-accent3/5 callout',
+                'card': 'bg-card border-2 border-border rounded-2xl p-[24px_28px] shadow-sm hover:shadow-md transition-shadow duration-300',
+                
+                // Lists & Grids
                 'clean-list': 'list-none my-4 max-w-[860px]',
-                'clean-list-item': 'py-2.5 pl-[22px] border-b border-brder text-[1rem] text-[#ccc] leading-[1.6] relative before:content-["—"] before:absolute before:left-0 before:text-accent before:font-mono [&>strong]:text-white',
-                'two-col': 'grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[1100px] mt-4',
-                'two-col-wide': 'grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-10 max-w-[1100px] mt-4',
-                'three-col': 'grid grid-cols-1 md:grid-cols-3 gap-5 max-w-[1100px] mt-5',
-                'col-block': 'bg-bg3 border border-brder p-[24px_28px]',
-                'action-grid': 'grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[1000px] mt-5',
-                'action-item': 'bg-bg3 border border-brder p-[20px_22px] flex gap-[14px] items-start',
-                'chip': 'inline-block bg-surface border border-brder font-mono text-[11px] py-1 px-[10px] text-muted m-[3px_4px_3px_0]',
-                'chip-ok': 'border-green text-green chip',
-                'chip-warn': 'border-accent2 text-accent2 chip',
-                'chip-danger': 'border-accent text-accent chip',
-                'tool-card': 'bg-bg3 border border-brder border-t-2 border-t-green p-[20px_22px]',
-                'tl-item': 'flex gap-5 py-4 border-b border-brder items-start',
-                'tl-year': 'font-mono text-[12px] text-accent min-w-[50px] pt-1',
-                'tl-content': 'flex-1[&>strong]:block [&>strong]:text-white [&>strong]:text-[0.95rem][&>strong]:mb-1 [&>p]:text-[0.87rem] [&>p]:text-[#999] [&>p]:m-0 [&>p]:leading-[1.5]',
-                'tracker-table': 'w-full max-w-[860px] border-collapse mt-5',
-                'tracker-th': 'font-mono text-[10px] uppercase tracking-[0.12em] text-muted text-left py-2 px-3.5 border-b border-brder hover:bg-bg3 transition',
-                'tracker-td': 'py-3 px-3.5 border-b border-brder text-[0.95rem] text-[#ccc]',
-                'big-bg-text': 'absolute font-serif text-white/5 leading-none pointer-events-none select-none'
+                'clean-list-item': 'py-3 pl-[24px] border-b border-border text-[1.05rem] text-text leading-[1.6] relative before:content-[""] before:absolute before:left-0 before:top-[20px] before:w-[8px] before:h-[8px] before:bg-accent2 before:rounded-full [&>strong]:text-heading [&>strong]:font-bold last:border-0',
+                'two-col': 'grid grid-cols-1 md:grid-cols-2 gap-10 max-w-[1100px] mt-6',
+                'two-col-wide': 'grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-12 max-w-[1100px] mt-6',
+                'three-col': 'grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1100px] mt-6',
+                
+                // Interactive Elements
+                'action-grid': 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-[1100px] mt-6',
+                'action-item': 'card flex gap-[16px] items-start hover:-translate-y-1 transition-transform',
+                'chip': 'inline-block bg-bg2 border-2 border-border font-sans font-bold text-[11px] py-1 px-3 rounded-full text-muted m-[4px_4px_4px_0] uppercase tracking-wide',
+                'chip-ok': 'border-green/40 bg-green/10 text-green chip',
+                'chip-warn': 'border-accent2/40 bg-accent2/10 text-accent2 chip',
+                'chip-danger': 'border-red/40 bg-red/10 text-red chip',
+                
+                // Timeline
+                'tl-item': 'flex gap-6 py-5 border-b border-border items-start last:border-0',
+                'tl-year': 'font-mono text-[13px] font-bold text-accent3 min-w-[50px] pt-1 bg-accent3/10 px-2 py-1 rounded-md text-center',
+                'tl-content': 'flex-1 [&>strong]:block [&>strong]:text-heading [&>strong]:text-[1.05rem] [&>strong]:mb-1.5 [&>p]:text-[0.95rem] [&>p]:text-text [&>p]:m-0 [&>p]:leading-[1.6]',
+                
+                // Tables
+                'tracker-table': 'w-full max-w-[860px] border-collapse mt-6 bg-card rounded-2xl overflow-hidden shadow-sm border-2 border-border',
+                'tracker-th': 'font-sans font-bold text-[11px] uppercase tracking-[0.15em] text-muted text-left py-4 px-5 border-b-2 border-border bg-bg2/50',
+                'tracker-td': 'py-4 px-5 border-b border-border text-[1rem] text-text last:border-0',
+                
+                // Buttons & Links
+                'btn-primary': 'inline-block bg-accent hover:bg-accent/90 text-white font-bold py-3 px-6 rounded-xl text-[0.95rem] transition-colors border-none cursor-pointer text-center',
+                'link-fancy': 'text-accent3 font-bold no-underline decoration-accent3/30 decoration-2 underline-offset-4 hover:underline transition-all'
             },
             presets: [
                 () => window.__unocss_runtime.presets.presetWind3(),
                 () => window.__unocss_runtime.presets.presetWebFonts({
                     provider: 'google',
                     fonts: {
-                        sans: "DM Sans",
-                        serif: "DM Serif Display",
-                        mono: "IBM Plex Mono"
+                        sans: "Nunito:400,600,700,800",
+                        serif: "Fraunces:400,600,700",
+                        mono: "JetBrains Mono:400,700"
                     }
                 }),
             ],
@@ -83,131 +96,153 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
-            background: #0a0a0a;
-            color: #e8e4dc;
-            font-family: "DM Sans", sans-serif;
+            background: #fdfaf5;
+            color: #5a5461;
+            font-family: "Nunito", sans-serif;
+            -webkit-font-smoothing: antialiased;
         }
 
         @keyframes slideIn {
             from {
                 opacity: 0;
-                transform: translateY(12px);
+                transform: scale(0.98) translateY(10px);
             } to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: scale(1) translateY(0);
             }
         }
 
         .scroll-content::-webkit-scrollbar {
-            width: 4px;
+            width: 8px;
         }
         .scroll-content::-webkit-scrollbar-track {
             background: transparent;
         }
         .scroll-content::-webkit-scrollbar-thumb {
-            background: #2a2a2a;
+            background: #e8e2d5;
+            border-radius: 10px;
         }
-        .iframe-container iframe {
-            width: 100%;
-            border: none;
-            height: calc(100% - 28px);
-            margin-top: 28px;
+        .scroll-content::-webkit-scrollbar-thumb:hover {
+            background: #d1c8b4;
         }
+        
         tr:hover td {
-            background: var(--un-colors-bg3);
+            background: var(--un-colors-bg2);
         }
 
         [un-cloak] {
             display: none;
         }
+
+        ::selection {
+            background: var(--un-colors-accent);
+            color: white;
+        }
     </style>
 </head>
 
 <body class="un-cloak">
-    <div id="progress" class="fixed bottom-0 left-0 h-[3px] bg-accent z-50 transition-all duration-300 w-0"></div>
-    <div class="fixed bottom-4 right-6 font-mono text-[11px] text-muted z-50"><span id="slide-num">1</span> / <span id="slide-total">21</span></div>
+    <!-- Progress Bar -->
+    <div id="progress" class="fixed top-0 left-0 h-[6px] bg-accent z-50 transition-all duration-500 ease-out w-0 rounded-r-full shadow-[0_0_10px_rgba(255,143,171,0.5)]"></div>
+    <div class="fixed bottom-6 right-8 font-mono font-bold text-[13px] text-muted z-50 bg-card px-4 py-2 rounded-full border-2 border-border shadow-sm">
+        <span id="slide-num" class="text-heading">1</span> / <span id="slide-total">21</span>
+    </div>
 
     <div class="relative w-full h-full deck">
+        
+        <!-- Slide 0: Title -->
         <div class="slide slide-active" id="s0">
-            <div class="big-bg-text text-[22rem] -right-5 -bottom-10">?</div>
-            <div class="font-mono text-[11px] text-muted tracking-[0.12em] uppercase mb-8 flex items-center gap-3 before:content-[''] before:inline-block before:w-[36px] before:h-[1px] before:bg-muted">Book Day 2025 · Data Privacy</div>
-            <div class="w-[60px] h-[3px] bg-accent mb-7"></div>
+            <div class="font-mono text-[12px] text-muted tracking-[0.2em] uppercase mb-8 flex items-center gap-4 before:content-[''] before:inline-block before:w-[40px] before:h-[2px] before:bg-accent2 before:rounded-full">
+                Book Day 2025 · Data Privacy
+            </div>
             <h1 class="heading-1">How NOT to<br><em class="italic text-accent">Dox</em> Yourself</h1>
-            <p class="text-[1.1rem] text-muted max-w-[540px] leading-[1.65] font-light">How surveillance capitalism turned your daily life into a data stream and what you can do about it.</p>
+            <p class="text-[1.2rem] text-text max-w-[600px] leading-[1.7] font-semibold mt-2">
+                How surveillance capitalism turned your daily life into a data stream, and what you can do about it.
+            </p>
         </div>
 
+        <!-- Slide 1: Phishing Demo -->
         <div class="slide" id="s1">
             <div class="section-label">Section 00: Not a Hook, a Spear</div>
             <h2 class="heading-2">A highly targeted attack.</h2>
-            <p class="text-p">When your data is public, this is what a scammer can do. <strong>Click the link below.</strong></p>
+            <p class="text-p">When your personal data is public, this is what a scammer can do. <strong>Read the email, then click the link.</strong></p>
             
-            <div class="mt-6 bg-white text-black rounded-md shadow-2xl max-w-[800px] overflow-hidden border border-[#d1d5db] font-sans relative">
-                <div id="phishing-overlay" class="absolute inset-0 bg-[#f3f4f6]/95 backdrop-blur-sm z-10 hidden flex-col items-center justify-center p-8">
-                    <div id="phishing-step-1" class="w-full max-w-[340px] bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-                        <div class="font-bold text-xl mb-1 text-center text-gray-800">Legal Document Portal</div>
-                        <p class="text-sm text-gray-600 mb-6 text-center">Sign in to securely view your summons</p>
-                        <input type="text" placeholder="Email" class="w-full border border-gray-300 rounded px-3 py-2.5 mb-3 text-sm focus:outline-blue-500" value="jane.doe@gmail.com" readonly>
-                        <input type="password" id="phishing-pwd" placeholder="Enter your password" class="w-full border border-gray-300 rounded px-3 py-2.5 mb-5 text-sm focus:outline-blue-500">
-                        <button onclick="submitPhishing()" class="w-full bg-blue-600 hover:bg-blue-700 transition text-white font-bold py-2.5 rounded text-sm">Sign In</button>
+            <div class="mt-6 bg-card text-[#333] rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] max-w-[800px] overflow-hidden border-2 border-border font-sans relative">
+                
+                <!-- Phishing Overlay -->
+                <div id="phishing-overlay" class="absolute inset-0 bg-[#fdfaf5]/80 backdrop-blur-md z-10 hidden flex-col items-center justify-center p-8">
+                    
+                    <!-- Fake Login -->
+                    <div id="phishing-step-1" class="w-full max-w-[360px] bg-white p-8 rounded-2xl shadow-xl border border-[#e5e7eb]">
+                        <div class="font-bold text-2xl mb-2 text-center text-gray-800">Legal Portal</div>
+                        <p class="text-sm text-gray-500 mb-6 text-center">Sign in to securely view your summons</p>
+                        <input type="text" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 mb-4 text-[0.95rem] bg-gray-50 text-gray-500 font-medium" value="jane.doe@gmail.com" readonly>
+                        <input type="password" id="phishing-pwd" placeholder="Enter your password" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 mb-6 text-[0.95rem] focus:border-blue-400 focus:outline-none transition">
+                        <button onclick="submitPhishing()" class="w-full bg-blue-500 hover:bg-blue-600 transition text-white font-bold py-3 rounded-xl text-[0.95rem]">Sign In</button>
                     </div>
                     
-                    <div id="phishing-step-2" class="w-full h-full hidden flex-col items-center justify-center text-center p-6">
-                        <div class="text-red-600 text-6xl mb-4">⚠️</div>
-                        <h3 class="text-3xl font-bold text-red-600 mb-3 tracking-tight">Credentials Stolen!</h3>
-                        <p class="text-gray-800 text-lg font-medium max-w-[400px]">The attacker just captured your email and your actual password.</p>
-                        <p class="text-[0.95rem] text-gray-600 mt-4 max-w-[500px]">You thought you were logging into a secure portal to view a court document, but this was a fake overlay built right into the email client.</p>
-                        <button onclick="resetPhishing()" class="mt-8 text-sm text-blue-600 font-bold uppercase tracking-widest hover:underline">Reset Demo</button>
+                    <!-- The "Gotcha" Screen -->
+                    <div id="phishing-step-2" class="w-full h-full hidden flex-col items-center justify-center text-center p-8">
+                        <div class="text-[0.9rem] font-bold tracking-widest text-red uppercase mb-3 bg-red/10 px-4 py-1.5 rounded-full inline-block">Demo Alert</div>
+                        <h3 class="text-3xl font-bold text-heading mb-4 tracking-tight">Credentials Stolen!</h3>
+                        <p class="text-text text-[1.1rem] font-bold max-w-[450px]">The attacker just captured your email and your actual password.</p>
+                        <p class="text-[1rem] text-muted mt-4 max-w-[550px] leading-relaxed">
+                            You thought you were logging into a secure portal, but this was a <strong>fake overlay</strong> built right into the email. By knowing your exact address and family members, the attacker created a scenario urgent enough to make you bypass your critical thinking.
+                        </p>
+                        <button onclick="resetPhishing()" class="mt-8 text-[0.9rem] text-accent font-bold uppercase tracking-widest hover:bg-accent/10 px-6 py-2 rounded-full transition">Reset Demo</button>
                     </div>
                 </div>
 
-                <div class="bg-[#f3f4f6] border-b border-[#d1d5db] px-6 py-4">
-                    <div class="flex justify-between items-center mb-1">
-                        <span class="font-bold text-lg text-black">URGENT: Attempted Delivery of Legal Notice</span>
-                        <span class="text-xs text-[#6b7280]">10:42 AM (2 mins ago)</span>
+                <!-- Email Content -->
+                <div class="bg-bg2/50 border-b-2 border-border px-8 py-5">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-[1.1rem] text-heading">URGENT: Attempted Delivery of Legal Notice</span>
+                        <span class="text-[0.85rem] font-bold text-muted">10:42 AM (2 mins ago)</span>
                     </div>
-                    <div class="text-sm">
-                        <span class="text-[#6b7280]">From:</span> <span class="font-medium text-black">Court Summons Dispatch</span> &lt;notices@legal-delivery-sys.com&gt;<br>
-                        <span class="text-[#6b7280]">To:</span> <span class="font-medium text-black">jane.doe@gmail.com</span>
+                    <div class="text-[0.95rem]">
+                        <span class="text-muted font-bold">From:</span> <span class="font-bold text-heading">Court Summons Dispatch</span> &lt;notices@legal-delivery-sys.com&gt;<br>
+                        <span class="text-muted font-bold">To:</span> <span class="font-bold text-heading">jane.doe@gmail.com</span>
                     </div>
                 </div>
-                <div class="p-6 text-[0.95rem] leading-relaxed text-[#374151]">
-                    <p class="mb-4">Dear <strong class="text-black font-semibold">Jane Doe (DOB: 08/23/2010)</strong>,</p>
-                    <p class="mb-4">We have made repeated attempts to deliver a legal notice regarding a civil complaint to your current residence at <strong class="text-black font-semibold text-red-600 bg-red-50 px-1">1428 Elm Street, Apt 4B, Springfield</strong>.</p>
-                    <p class="mb-4">Because we could not reach you at your primary phone <strong class="text-black font-semibold">(646) 555-8372</strong>, and you are no longer listed at your previous address on <strong class="text-black font-semibold">742 Evergreen Terrace</strong>, we are legally required to pursue alternative contact methods.</p>
-                    <p class="mb-4">If you do not respond to this notice within 24 hours, process servers will be dispatched to your employer, <strong class="text-black font-semibold">Initech Corporation</strong>. Alternatively, we will contact your known relatives, including <strong class="text-black font-semibold">John Doe (Father)</strong> and <strong class="text-black font-semibold">Mary Smith (Sister)</strong>, to locate you.</p>
+                <div class="p-8 text-[1rem] leading-[1.7] text-text">
+                    <p class="mb-4">Dear <strong class="text-heading">Jane Doe (DOB: 08/23/2010)</strong>,</p>
+                    <p class="mb-4">We have made repeated attempts to deliver a legal notice regarding a civil complaint to your current residence at <strong class="text-red bg-red/10 px-2 py-0.5 rounded-md">1428 Elm Street, Apt 4B, Springfield</strong>.</p>
+                    <p class="mb-4">Because we could not reach you at your primary phone <strong>(646) 555-8372</strong>, and you are no longer listed at your previous address on <strong>742 Evergreen Terrace</strong>, we are legally required to pursue alternative contact methods.</p>
+                    <p class="mb-4">If you do not respond to this notice within 24 hours, process servers will be dispatched to your employer, <strong>Initech Corporation</strong>. Alternatively, we will contact your known relatives, including <strong>John Doe (Father)</strong> and <strong>Mary Smith (Sister)</strong>, to locate you.</p>
                     <p class="mb-6">To avoid public service of this complaint, click the secure link below to view the digital summons and respond immediately:</p>
-                    <button onclick="showPhishingLogin(event)" class="inline-block bg-blue-600 hover:bg-blue-700 transition text-white font-bold py-2.5 px-5 rounded mb-6 text-sm cursor-pointer border-none">VIEW SECURE COMPLAINT</button>
-                    <p class="text-[0.75rem] text-[#9ca3af] leading-tight">Notice ID: #8492-B. This communication is from a debt collection and legal processing agency. Any information obtained will be used for that purpose.</p>
+                    <button onclick="showPhishingLogin(event)" class="inline-block bg-blue-500 hover:bg-blue-600 transition text-white font-bold py-3 px-6 rounded-xl mb-6 text-[0.95rem] cursor-pointer border-none shadow-sm">VIEW SECURE COMPLAINT</button>
+                    <p class="text-[0.8rem] text-muted leading-tight font-medium">Notice ID: #8492-B. This communication is from a debt collection and legal processing agency. Any information obtained will be used for that purpose.</p>
                 </div>
             </div>
         </div>
 
+        <!-- Slide 2: Book Tie-in -->
         <div class="slide" id="s2">
             <div class="section-label">Obligatory Book Tie-In</div>
             <h2 class="heading-2">Measurement<br>is Power.</h2>
-            <p class="text-p">James Vincent's <strong>Beyond Measure</strong> is about our obsession with quantifying the world. It traces how humans have used measurement to make sense of the world, but warns of the danger of <strong>reducing complex human experiences and natural phenomena into metrics, algorithms, and data points</strong>.</p>
+            <p class="text-p">James Vincent's <strong>Beyond Measure</strong> is about our obsession with quantifying the world. It traces how humans have used measurement to make sense of the universe, but warns of the danger of <strong>reducing complex human experiences into mere data points</strong>.</p>
             <p class="text-p">Measurement is never neutral. Whoever controls what gets measured, and how, holds power over everyone else.</p>
             
             <div class="callout-yellow mt-6">
-                <h3 class="heading-3 text-[0.95rem]">The Ultimate Act of Measurement</h3>
-                <p class="m-0 text-txt text-[0.95rem]">Surveillance is the ultimate act of measurement. It is the process of taking a human being with complexities, flaws, and desires, and <strong>measuring them down to a spreadsheet of clickable behaviors</strong> to be sold to the highest bidder.</p>
+                <h3 class="heading-3">The Ultimate Act of Measurement</h3>
+                <p class="m-0 text-text">Surveillance is the modern ultimate act of measurement. It is the process of taking a human being with complexities, flaws, and desires, and <strong>measuring them down to a spreadsheet of clickable behaviors</strong> to be categorized and sold to the highest bidder.</p>
             </div>
-            <div class="big-bg-text text-[18rem] -bottom-15 -right-10 opacity-10">∞</div>
         </div>
 
+        <!-- Slide 3: The Philosophy -->
         <div class="slide" id="s3">
             <div class="section-label">Section 01: The Philosophy</div>
             <h2 class="heading-2">The "Free"<br>Web.</h2>
             <p class="text-p">Privacy isn't just about what we post willingly, but <strong>what is taken from us</strong> silently.</p>
-            <p class="text-p">Data privacy is not about hiding secrets. Data privacy is about <strong>resisting the capitalist commodification of our human experiences</strong>.</p>
+            <p class="text-p">Data privacy is not about hiding dirty secrets. Data privacy is about <strong>resisting the capitalist commodification of our human experiences</strong>.</p>
             
-            <div class="col-block border-t-2 border-accent mt-6 max-w-[860px]">
-                <p class="text-p mb-0">When we are tracked, measured, and categorized, we are stripped of our autonomy and turned into products.</p>
+            <div class="card border-t-4 border-t-accent mt-6 max-w-[860px]">
+                <h3 class="heading-3 mb-2">Data Minimization</h3>
+                <p class="text-text mb-0 leading-[1.6]">The concept that a company should only collect the absolute minimum amount of data required to provide a service. If a flashlight app needs your GPS location, it is not a flashlight app; it is a data broker disguised as a utility.</p>
             </div>
-            
-            <p class="text-p mt-6">Every time we talk about a tracker or a data broker, we should frame it as <em>an act of measurement imposed on humans for someone else’s profit</em>.</p>
         </div>
 
+        <!-- Slide 4: The Myth -->
         <div class="slide" id="s4">
             <div class="section-label">Section 02: The Myth</div>
             <h2 class="heading-2">"I have nothing<br>to hide."</h2>
@@ -215,516 +250,572 @@
             <p class="text-p">It's a comforting thought. It makes us feel safe. But what does it actually mean?</p>
             
             <div class="callout-blue">
-                <p class="m-0 text-[1.05rem]">We all know what happens in bathrooms. It's not a secret. There are no classified documents protecting toilets and sinks. <strong>But you still close the door.</strong></p>
-                <p class="mt-3 mb-0 text-[1.05rem]">You don't close the door because you're doing something wrong; you close the door because existing in a space in which you’re constantly observed <strong>strips you of your humanity</strong>.</p>
+                <p class="m-0 text-[1.1rem] leading-[1.7]">We all know what happens in bathrooms. It's not a secret. There are no classified documents protecting toilets and sinks. <strong>But you still close the door.</strong></p>
+                <p class="mt-4 mb-0 text-[1.1rem] leading-[1.7]">You don't close the door because you're doing something wrong; you close the door because existing in a space in which you’re constantly observed <strong>strips you of your dignity and humanity</strong>.</p>
             </div>
 
-            <p class="text-p">This is because you want privacy, not secrecy. <strong>Privacy is the boundary between being a human and being a specimen.</strong></p>
-            <p class="text-p">There are always certain facts about us (personal health information, sexual behavior) that we wouldn’t want the whole world to know. The need for privacy is legitimate. Privacy is about empowering your rights over your own information.</p>
+            <p class="text-p mt-6">This is because you want privacy, not secrecy. <strong>Privacy is the boundary between being a human and being a specimen.</strong></p>
         </div>
 
+        <!-- Slide 5: Defining terms -->
         <div class="slide" id="s5">
             <div class="section-label">Section 03: Defining terms</div>
             <h2 class="heading-2">Privacy is<br>about power.</h2>
-            <p class="text-p">You don’t need to be a hacker in a dimly-lit room on the Dark Web to care about privacy. People often confuse three distinct concepts:</p>
+            <p class="text-p">You don’t need to be a hacker in a dimly-lit room to care about privacy. Let's clarify some distinct concepts:</p>
 
-            <div class="three-col mt-6">
-                <div class="col-block border-t border-t-[2px] border-t-accent3">
+            <div class="three-col mt-8">
+                <div class="card border-t-4 border-t-accent3">
                     <h3 class="heading-3">Privacy</h3>
-                    <p class="text-[0.95rem] text-[#bbb] m-0">Data is only seen by who you intend to see it. It is about consent and control.</p>
+                    <p class="text-[1rem] text-text m-0 leading-[1.6]">Data is only seen by who you intend to see it. It is entirely about <strong>consent and control</strong>.</p>
                 </div>
-                <div class="col-block border-t border-t-[2px] border-t-green">
+                <div class="card border-t-4 border-t-green">
                     <h3 class="heading-3 text-green">Security</h3>
-                    <p class="text-[0.95rem] text-[#bbb] m-0">You can trust the tools you’re using, in the same way you trust your front door and keys to keep you safe.</p>
+                    <p class="text-[1rem] text-text m-0 leading-[1.6]">You can trust the tools you’re using. Your data is protected against unauthorized access or breaches.</p>
                 </div>
-                <div class="col-block border-t border-t-[2px] border-t-accent2">
+                <div class="card border-t-4 border-t-accent2">
                     <h3 class="heading-3">Anonymity</h3>
-                    <p class="text-[0.95rem] text-[#bbb] m-0">Acting without being identified. Disconnecting your actions from your real-world identity.</p>
+                    <p class="text-[1rem] text-text m-0 leading-[1.6]">Acting without being identified. Completely disconnecting your digital actions from your real-world identity.</p>
                 </div>
             </div>
 
-            <div class="callout-red max-w-[1100px] mt-6 text-center">
-                <p class="m-0 font-medium">You don’t need all three all the time. Right now, on the modern web, you barely have one.</p>
+            <div class="callout-red max-w-[1100px] mt-8 text-center">
+                <p class="m-0 text-[1.1rem] font-bold text-heading">You don’t need all three all the time. Right now, on the modern web, you barely have one.</p>
             </div>
         </div>
 
+        <!-- Slide 6: I know where you live -->
         <div class="slide" id="s6">
-            <div class="section-label">Section 04: I know where you live</div>
+            <div class="section-label">Section 04: Public Records</div>
             <h2 class="heading-2">What do we<br>already know about you?</h2>
-            <p class="text-p">Before we get into complicated trackers, there is a category of data openly available to anyone with a browser and thirty seconds of free time—the exact data used in the phishing email we just saw.</p>
-            <div class="two-col">
-                <div>
-                    <h3 class="heading-3">What's available</h3>
+            <p class="text-p">Before we get into complicated browser trackers, there is a category of data openly available to anyone with a browser and thirty seconds of free time—the exact data used in the phishing email we just saw.</p>
+            
+            <div class="two-col mt-8">
+                <div class="card">
+                    <h3 class="heading-3">What's available for free</h3>
                     <ul class="clean-list">
-                        <li class="clean-list-item"><strong>Full name + age</strong></li>
+                        <li class="clean-list-item"><strong>Full name + exact age</strong></li>
                         <li class="clean-list-item"><strong>Current & past home addresses</strong></li>
-                        <li class="clean-list-item"><strong>Phone numbers</strong></li>
-                        <li class="clean-list-item"><strong>Email addresses</strong></li>
+                        <li class="clean-list-item"><strong>Phone numbers & emails</strong></li>
                         <li class="clean-list-item"><strong>Family members' names</strong> (parents, siblings)</li>
-                        <li class="clean-list-item"><strong>Employment history</strong></li>
                         <li class="clean-list-item"><strong>Marriage & divorce records</strong></li>
                     </ul>
                 </div>
-                <div>
+                <div class="card bg-bg2/30 border-dashed">
                     <h3 class="heading-3">Where does it come from?</h3>
                     <ul class="clean-list">
                         <li class="clean-list-item"><strong>Voter registration records</strong> (public in most states)</li>
                         <li class="clean-list-item"><strong>Property/housing records</strong> (publicly accessible)</li>
-                        <li class="clean-list-item"><strong>Court records</strong> civil, criminal, probate</li>
-                        <li class="clean-list-item"><strong>Old data breaches</strong> scraped, compiled, resold</li>
+                        <li class="clean-list-item"><strong>Court & DMV records</strong></li>
+                        <li class="clean-list-item"><strong>Old data breaches</strong> scraped and compiled</li>
                     </ul>
-                    <div class="callout-red mt-4">
-                        <p class="m-0"><strong>Note:</strong> Tax records are <em>not</em> public (though even that norm has been tested recently)</p>
-                    </div>
                 </div>
             </div>
         </div>
 
+        <!-- Slide 7: Live Demo / Lookups -->
         <div class="slide" id="s7">
-            <div class="section-label">Section 05: Live Demo</div>
-            <h2 class="heading-2">Let's look<br>someone up.</h2>
-            <p class="text-p">People search sites aggregate public record data into a single profile. They require no login. They're designed for the average consumer, but they are weaponized by stalkers, scammers, and abusers.</p>
-            <p class="text-p">We tried it on two Ms. Feng and Mr. Bauld. Here's what came back:</p>
-            <ul class="clean-list max-w-[720px]">
-                <li class="clean-list-item">Full address history going back years: <strong>every place they'd ever lived, including their childhood homes</strong></li>
-                <li class="clean-list-item">Names of close relatives: parents, siblings, adult children</li>
-                <li class="clean-list-item">Associated phone numbers and email addresses</li>
-                <li class="clean-list-item">Their employment history and current employer</li>
-                <li class="clean-list-item">Enough detail to craft a <strong>convincing, personalized attack</strong></li>
-            </ul>
+            <div class="section-label">Section 05: Data Brokers</div>
+            <h2 class="heading-2">The People-Search<br>Industry.</h2>
+            <p class="text-p">People-search sites aggregate public record data into a single, highly readable profile. They require no login. They're designed for the average consumer, but they are routinely weaponized by stalkers, scammers, and abusers.</p>
+            
+            <div class="card mt-6 max-w-[800px]">
+                <p class="font-bold text-heading text-[1.1rem] mb-4">When we looked up a random adult, here is what came back instantly:</p>
+                <ul class="clean-list">
+                    <li class="clean-list-item">Full address history going back 15 years, including <strong>childhood homes</strong>.</li>
+                    <li class="clean-list-item">Names of close relatives: parents, siblings, and adult children.</li>
+                    <li class="clean-list-item">Associated phone numbers and email addresses.</li>
+                    <li class="clean-list-item">Their employment history and current employer.</li>
+                </ul>
+                <div class="bg-accent2/10 text-heading p-4 mt-4 rounded-xl font-bold text-[0.95rem]">
+                    This provides enough detail to craft a convincing, highly personalized attack on anyone.
+                </div>
+            </div>
         </div>
 
+        <!-- Slide 8: Why it exists (US vs EU) -->
         <div class="slide" id="s8">
-            <div class="section-label">Section 06: Why it exists</div>
-            <h2 class="heading-2">Why can anyone<br>access this?</h2>
+            <div class="section-label">Section 06: Why is this legal?</div>
+            <h2 class="heading-2">A failure of<br>legislation.</h2>
             <div class="two-col-wide">
                 <div>
                     <p class="text-p">
-                        Because in the US, <strong>there is no comprehensive federal data privacy law</strong>.
-                        Aggregating and reselling public records is entirely legal.
-                        The companies doing this have spent heavily to keep it that way.
+                        In the US, <strong>there is no comprehensive federal data privacy law</strong>.
+                        Aggregating and reselling public records is entirely legal. The companies doing this have spent heavily to keep it that way.
                     </p>
-                    <p class="text-p">In the EU, the <strong>General Data Protection Regulation (GDPR)</strong> (2018) fundamentally changed this:</p>
+                    <p class="text-p">In the EU, the <strong>General Data Protection Regulation (GDPR)</strong> fundamentally changed this:</p>
                     <ul class="clean-list">
-                        <li class="clean-list-item">Companies must have a <strong>legal basis</strong> to collect data</li>
-                        <li class="clean-list-item">You have the <strong>right to be forgotten</strong></li>
-                        <li class="clean-list-item">People search sites of this type <strong>cannot legally operate</strong> for EU residents</li>
+                        <li class="clean-list-item">Companies must have a <strong>legal basis</strong> to collect your data.</li>
+                        <li class="clean-list-item">You have the <strong>right to be forgotten</strong>.</li>
+                        <li class="clean-list-item">People-search sites of this type <strong>cannot legally operate</strong> for EU residents.</li>
                     </ul>
-                    <p class="text-p">
-                        The only reason you can download your Instagram, TikTok, or Google data today is because of
-                        GDPR pressure. Without it, we would have essentially no visibility into what these companies
-                        collect on us.
+                    <p class="text-[0.95rem] text-muted font-bold mt-6 leading-relaxed">
+                        The only reason you can download your Instagram, TikTok, or Google data today is because of global GDPR pressure.
                     </p>
                 </div>
                 <div>
-                    <h3 class="heading-3">US vs. EU</h3>
+                    <h3 class="heading-3 mb-4">Regulatory Landscape</h3>
                     <div class="tl-item">
-                        <div class="tl-year text-accent3">EU</div>
+                        <div class="tl-year text-accent3 bg-accent3/10">EU</div>
                         <div class="tl-content">
-                            <strong>GDPR</strong>
-                            <p>Comprehensive federal-level data protection. Data minimization, purpose limitation, right
-                                to erasure, mandatory breach notification within 72 hours.</p>
+                            <strong>GDPR (2018)</strong>
+                            <p>Comprehensive federal-level data protection. Mandates data minimization, purpose limitation, right to erasure, and breach notification within 72 hours.</p>
                         </div>
                     </div>
-                    <div class="tl-item">
-                        <div class="tl-year text-red">US</div>
+                    <div class="tl-item border-none">
+                        <div class="tl-year text-red bg-red/10">US</div>
                         <div class="tl-content">
-                            <strong>No equivalent federal law</strong>
-                            <p>Patchwork of sector-specific laws (HIPAA for health, FERPA for education). No general
-                                right to erasure. No data minimization requirements. People search sites: legal.</p>
+                            <strong>No Federal Equivalent</strong>
+                            <p>A patchwork of sector-specific laws (HIPAA for health, FERPA for education). No general right to erasure. People search sites are fully legal.</p>
                         </div>
                     </div>
-                    <div class="callout-red mt-4 px-4 py-3">
-                        <p class="m-0 text-[0.95rem]">Lobbyists spent <strong>hundreds of millions</strong> to prevent a US GDPR equivalent.</p>
+                    <div class="callout-red mt-4 px-5 py-4">
+                        <p class="m-0 text-[0.95rem] font-bold text-heading">Tech lobbyists spent hundreds of millions to prevent a US equivalent to the GDPR.</p>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Slide 9: Real Consequences -->
         <div class="slide" id="s9">
             <div class="section-label">Section 07: Real Consequences</div>
             <h2 class="heading-2">This is <em>not</em><br>an abstract problem.</h2>
-            <div class="scroll-content overflow-y-auto max-h-[calc(100vh-160px)] pr-3">
+            
+            <div class="scroll-content overflow-y-auto max-h-[calc(100vh-220px)] pr-4 pb-4">
                 <div class="three-col">
-                    <div class="col-block border-t border-t-[2px] border-t-accent">
+                    <div class="card border-t-4 border-t-red">
                         <h3 class="heading-3">Domestic Violence</h3>
-                        <p class="text-[0.95rem] text-[#bbb] m-0">Survivors attempting to rebuild their lives are findable in seconds by abusers using free people-search tools. Shelter locations can be compromised through family member lookups.</p>
+                        <p class="text-[1rem] text-text m-0 leading-[1.6]">Survivors attempting to rebuild their lives are findable in seconds by abusers using free tools. Confidential shelter locations are often compromised through family member lookups.</p>
                     </div>
-                    <div class="col-block border-t border-t-[2px] border-t-accent">
+                    <div class="card border-t-4 border-t-red">
                         <h3 class="heading-3">Stalking</h3>
-                        <p class="text-[0.95rem] text-[#bbb] m-0">Journalists, activists, and public figures can be physically located. <strong>From TikTokers to teachers</strong>, no one is exempt.</p>
+                        <p class="text-[1rem] text-text m-0 leading-[1.6]">Journalists, activists, and public figures can be physically located instantly. <strong>From popular creators to school teachers</strong>, no one is exempt from being mapped.</p>
                     </div>
-                    <div class="col-block border-t border-t-[2px] border-t-accent">
+                    <div class="card border-t-4 border-t-red">
                         <h3 class="heading-3">Targeted Scams</h3>
-                        <p class="text-[0.95rem] text-[#bbb] m-0">Armed with your address history, relatives' names, and employer, scammers craft impersonations, like the email we saw at the start, pretending to be a family member in trouble, a bank, or law enforcement.</p>
+                        <p class="text-[1rem] text-text m-0 leading-[1.6]">Armed with address history, relatives' names, and employers, scammers craft impersonations pretending to be a family member in trouble, a bank, or law enforcement.</p>
                     </div>
                 </div>
+                
                 <div class="callout-yellow max-w-full mt-6">
-                    <p class="m-0"><strong>ICE and Project 2025:</strong> Policy proposals explicitly discuss expanding access to commercial data broker databases to assist with immigration enforcement.</p>
+                    <p class="m-0 text-[1.05rem] leading-[1.6]"><strong>Law Enforcement Bypass:</strong> Government agencies are explicitly purchasing data broker databases to bypass the need for warrants. If they can buy your location data from an app developer, they don't need a judge's permission.</p>
                 </div>
             </div>
         </div>
 
+        <!-- Slide 10: Browser Tracking -->
         <div class="slide" id="s10">
             <div class="section-label">Section 08: Browser Tracking</div>
             <h2 class="heading-2">The invisible<br>follow.</h2>
-            <p class="text-p">People search is layer one. Layer two is the browser. Your activity across the entire web is tracked — not just on sites you use, but sites you've never heard of.</p>
+            <p class="text-p">People search is layer one. Layer two is the browser. Your activity across the entire web is tracked — not just on sites you use, but on sites you've never heard of.</p>
+            
             <div class="two-col">
-                <div>
-                    <h3 class="heading-3">How tracking works</h3>
+                <div class="card">
+                    <h3 class="heading-3 mb-4">How tracking works</h3>
                     <ul class="clean-list">
-                        <li class="clean-list-item"><strong>Third-party cookies:</strong> Small files that follow you from site to site</li>
-                        <li class="clean-list-item"><strong>Tracking pixels:</strong> Invisible images embedded in pages and emails that phone home when loaded</li>
-                        <li class="clean-list-item"><strong>Browser fingerprinting:</strong> Your screen size, fonts, and config form a unique identifier</li>
-                        <li class="clean-list-item"><strong>Link decorators:</strong> The <code class="text-accent3 text-[0.85rem]">?utm_source=</code> strings in URLs</li>
+                        <li class="clean-list-item"><strong>Third-party cookies:</strong> Small files that follow you from site to site.</li>
+                        <li class="clean-list-item"><strong>Tracking pixels:</strong> Invisible 1x1 images embedded in pages and emails that log when you open them.</li>
+                        <li class="clean-list-item"><strong>Browser fingerprinting:</strong> Your screen size, installed fonts, and hardware config form a unique identifier.</li>
+                        <li class="clean-list-item"><strong>Link decorators:</strong> The cluttered <code class="text-accent bg-accent/10 px-1 rounded text-[0.85rem]">?utm_source=</code> strings at the end of URLs.</li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="heading-3">Who is doing it</h3>
-                    <div class="callout-blue">
-                        <p class="m-0">You are not just tracked on Google and Facebook. Their tracking scripts are embedded across news sites, health sites, and children's content.</p>
+                    <h3 class="heading-3 mb-4">Who is doing it?</h3>
+                    <div class="callout-blue mt-0">
+                        <p class="m-0 text-[1.05rem] leading-[1.6]">You are not just tracked while on Google or Meta. Their tracking scripts are invisibly embedded across news sites, health forums, and children's content.</p>
                     </div>
-                    <p>
-                        When you read an article about a medical condition, search for a lawyer, or lookup information
-                        about a protest, that information is logged and permanently added to your profile.
+                    <p class="text-p mt-6 text-[1.05rem]">
+                        When you read an article about a medical condition, search for a bankruptcy lawyer, or look up information about a protest, that information is logged and permanently added to your shadow profile.
                     </p>
                 </div>
             </div>
         </div>
 
+        <!-- Slide 11: Scale of Tracking -->
         <div class="slide" id="s11">
-            <div class="section-label">Section 09: Scale of Tracking</div>
-            <h2 class="heading-2">How far do<br>their trackers reach?</h2>
-            <p class="text-p">Share of the world's top websites where each company's tracking scripts are present (DuckDuckGo Tracker Radar).</p>
+            <div class="section-label">Section 09: The Scale</div>
+            <h2 class="heading-2">How far do<br>trackers reach?</h2>
+            <p class="text-p">This is the share of the world's top websites where each company's invisible tracking scripts are present (Source: DuckDuckGo Tracker Radar).</p>
 
             <table class="tracker-table">
                 <thead>
                     <tr>
                         <th class="tracker-th">Company</th>
-                        <th class="tracker-th">% of Top Websites</th>
+                        <th class="tracker-th w-[30%]">Presence on Web</th>
                         <th class="tracker-th">Context</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="tracker-td"><strong class="text-accent3 font-bold">Google / Alphabet</strong></td>
+                        <td class="tracker-td"><strong class="text-accent3 font-bold text-[1.1rem]">Google / Alphabet</strong></td>
                         <td class="tracker-td">
-                            <div class="flex items-center gap-2.5">
-                                <div class="h-2 rounded-sm bg-accent3" style="width: 72%;"></div>
-                                <span class="font-mono text-xs text-muted">~72%</span>
+                            <div class="flex items-center gap-3">
+                                <div class="h-3 rounded-full bg-accent3 shadow-sm" style="width: 72%;"></div>
+                                <span class="font-bold text-[0.9rem] text-heading">~72%</span>
                             </div>
                         </td>
-                        <td class="tracker-td text-[0.83rem] text-[#888]">Analytics, Ad Manager, Fonts, reCAPTCHA — all phone home</td>
+                        <td class="tracker-td text-[0.95rem] text-text">Analytics, Fonts, and reCAPTCHA log your visits back to base.</td>
                     </tr>
                     <tr>
-                        <td class="tracker-td"><strong class="text-[#6366f1] font-bold">Meta / Facebook</strong></td>
+                        <td class="tracker-td"><strong class="text-accent font-bold text-[1.1rem]">Meta / Facebook</strong></td>
                         <td class="tracker-td">
-                            <div class="flex items-center gap-2.5">
-                                <div class="h-2 rounded-sm bg-[#6366f1]" style="width: 21%;"></div>
-                                <span class="font-mono text-xs text-muted">~21%</span>
+                            <div class="flex items-center gap-3">
+                                <div class="h-3 rounded-full bg-accent shadow-sm" style="width: 21%;"></div>
+                                <span class="font-bold text-[0.9rem] text-heading">~21%</span>
                             </div>
                         </td>
-                        <td class="tracker-td text-[0.83rem] text-[#888]">Tracks purchases, form submissions — even without an account</td>
+                        <td class="tracker-td text-[0.95rem] text-text">Tracks purchases and form submissions — even without an account.</td>
                     </tr>
                     <tr>
-                        <td class="tracker-td"><strong class="text-red font-bold">TikTok / ByteDance</strong></td>
+                        <td class="tracker-td"><strong class="text-heading font-bold text-[1.1rem]">TikTok / ByteDance</strong></td>
                         <td class="tracker-td">
-                            <div class="flex items-center gap-2.5">
-                                <div class="h-2 rounded-sm bg-red" style="width: 5%;"></div>
-                                <span class="font-mono text-xs text-muted">~5%</span>
+                            <div class="flex items-center gap-3">
+                                <div class="h-3 rounded-full bg-heading shadow-sm" style="width: 5%;"></div>
+                                <span class="font-bold text-[0.9rem] text-heading">~5%</span>
                             </div>
                         </td>
-                        <td class="tracker-td text-[0.83rem] text-[#888]">Growing steadily. Tracks across websites regardless of app.</td>
+                        <td class="tracker-td text-[0.95rem] text-text">Growing steadily. Tracks across websites regardless of having the app.</td>
                     </tr>
                 </tbody>
             </table>
 
-            <div class="callout-red mt-7">
-                <p class="m-0">Google has trackers on roughly <strong>7 in 10 websites</strong> you visit. They build a profile on you even if you never use Google services directly.</p>
+            <div class="callout-red mt-6">
+                <p class="m-0 text-[1.05rem] font-bold text-heading">Google has trackers on roughly 7 in 10 websites you visit. They build a profile on you even if you never use Google services directly.</p>
             </div>
         </div>
 
+        <!-- Slide 12: The Data Economy -->
         <div class="slide" id="s12">
             <div class="section-label">Section 10: The Data Economy</div>
             <h2 class="heading-2">Your data gets<br><em class="italic text-accent">sold.</em></h2>
-            <div class="two-col">
-                <div>
-                    <h3 class="heading-3">What data brokers sell</h3>
-                    <ul class="clean-list">
-                        <li class="clean-list-item">Browsing history and search queries</li>
-                        <li class="clean-list-item">Purchase history and financials</li>
-                        <li class="clean-list-item">Location history (precise GPS pings)</li>
-                        <li class="clean-list-item">Health and medical interests</li>
-                    </ul>
-                    <div class="callout-red mt-4">
-                        <p class="m-0">The data broker industry is worth <strong>over $300 billion</strong> annually. You are the product. You are not paid.</p>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="heading-3">"But I like personalized ads!"</h3>
-                    <p class="text-p">Advertisers <strong>do not have your interests in mind</strong>, they have conversion rates in mind. They fuel:</p>
-                    <ul class="clean-list">
-                        <li>Planned obsolescence: products designed to break so you buy again</li>
-                        <li>Fast fashion and cheaply made goods — fueled by behavioral data about impulse buying</li>
-                        <li>Environmental and labor cost of that production chain — paid by workers and ecosystems, not
-                            the advertiser</li>
-                    </ul>
-                    <p class="text-[0.9rem] text-[#bbb] mt-3">The "personalized ads" framing is designed to make surveillance feel like a service. It isn't. It's an invasion of your privacy.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide" id="s13">
-            <div class="section-label">Section 11: Breaches</div>
-            <h2 class="heading-2">And then<br>it gets stolen.</h2>
-            <p class="text-p">Even if you trusted every company handling your data — and you shouldn't — the data they collect is an
-                attractive target. Large-scale breaches are a <strong>constant, ongoing
-                    feature</strong> of the current system.</p>
-            <div class="scroll-content overflow-y-auto max-h-[calc(100vh-160px)] pr-3">
-                <div class="max-w-[860px] mt-4">
-                    <div class="tl-item">
-                        <div class="tl-year">2026</div>
-                        <div class="tl-content">
-                            <strong>European Commission — 340 GB stolen</strong>
-                            <p>Personal data of 29+ EU entities via a supply chain attack.</p>
-                        </div>
-                    </div>
-                    <div class="tl-item">
-                        <div class="tl-year">2025</div>
-                        <div class="tl-content">
-                            <strong>Hims & Hers — customer support hacked</strong>
-                            <p>Telehealth company. Names and contact info exposed via social engineering.</p>
-                        </div>
-                    </div>
-                    <div class="tl-item">
-                        <div class="tl-year">2023</div>
-                        <div class="tl-content">
-                            <strong>Experian, credit data of millions exposed</strong>
-                            <p>The company that holds your credit score, breached again.</p>
-                        </div>
-                    </div>
-                    <div class="tl-item">
-                        <div class="tl-year">2018</div>
-                        <div class="tl-content">
-                            <strong>Cambridge Analytica / Facebook</strong>
-                            <p>87 million users' data harvested without consent and used for political targeting. This
-                                event is what prompted serious discussion of GDPR enforcement.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="callout-red mt-5">
-                    <p class="m-0">Every company that collects more data than it needs creates a larger target. The solution is collecting less data in the first place.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide" id="s14">
-            <div class="section-label">Section 12: The Structural Problem</div>
-            <h2 class="heading-2">This is<br><em class="italic text-accent">by design.</em></h2>
+            
             <div class="two-col-wide">
                 <div>
-                    <p class="text-p">The surveillance infrastructure was built to <strong>extract profit from human attention and behavior</strong>. Surveillance capitalism refines your behavioral data into predictive products.</p>
-                    <p class="text-p">Tech companies have lobbied aggressively against privacy legislation in the US. They frame data collection as "improving your experience" and write 10,000-word privacy policies specifically because no one reads them.</p>
-                    <div class="callout-red mt-5">
-                        <p class="m-0">The lack of US privacy law is the <strong>intentional outcome of an industry that spent enormous sums to prevent regulation</strong>.</p>
+                    <h3 class="heading-3 mb-4">What data brokers package</h3>
+                    <ul class="clean-list">
+                        <li class="clean-list-item">Browsing history and search queries.</li>
+                        <li class="clean-list-item">Purchase history and estimated financial status.</li>
+                        <li class="clean-list-item">Precise GPS location history (where you sleep, work, and visit).</li>
+                        <li class="clean-list-item">Inferred health conditions and medical interests.</li>
+                    </ul>
+                    <div class="callout-red mt-6">
+                        <p class="m-0 font-bold text-heading text-[1.05rem]">The data broker industry is worth over $300 billion annually. You are the product. You are not paid.</p>
                     </div>
                 </div>
-                <div>
-                    <div class="col-block border-t border-t-[2px] border-t-accent mb-4">
-                        <h3 class="heading-3">Who lobbied against GDPR?</h3>
-                        <p class="text-[0.95rem] text-[#bbb] m-0">Google, Meta, Amazon, and the US Chamber of Commerce lobbied hard against any US equivalent.</p>
+                <div class="card bg-accent2/5 border-accent2/30">
+                    <h3 class="heading-3 mb-4">"But I like personalized ads!"</h3>
+                    <p class="text-[1.05rem] leading-[1.6] mb-4">Advertisers <strong>do not have your interests in mind</strong>, they have conversion rates in mind. They use your behavioral profiles to fuel:</p>
+                    <ul class="clean-list">
+                        <li class="clean-list-item text-[0.95rem]">Planned obsolescence: selling products designed to break.</li>
+                        <li class="clean-list-item text-[0.95rem]">Impulse buying: triggered by emotional state profiling.</li>
+                    </ul>
+                    <p class="text-[0.95rem] text-muted font-bold mt-6">The "personalized ads" framing is a marketing spin designed to make surveillance feel like a helpful service. It is an invasion of privacy.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 13: Breaches -->
+        <div class="slide" id="s13">
+            <div class="section-label">Section 11: Security Failures</div>
+            <h2 class="heading-2">And then<br>it gets stolen.</h2>
+            <p class="text-p">Even if you trusted every company handling your data — and you shouldn't — the massive hoards of data they collect are incredibly attractive targets. Breaches are a <strong>constant, ongoing feature</strong> of the system.</p>
+            
+            <div class="scroll-content overflow-y-auto max-h-[calc(100vh-250px)] pr-4">
+                <div class="card mt-4 p-0 overflow-hidden">
+                    <div class="tl-item px-8">
+                        <div class="tl-year text-red bg-red/10">2024</div>
+                        <div class="tl-content">
+                            <strong>National Public Data Breach</strong>
+                            <p>Nearly 3 billion records containing Social Security Numbers, addresses, and phone numbers were leaked. A stark reminder that data brokers fail to secure the data they scrape.</p>
+                        </div>
                     </div>
-                    <div class="col-block border-t border-t-[2px] border-t-accent2">
-                        <h3 class="heading-3">Who gets hurt most?</h3>
-                        <p class="text-[0.95rem] text-[#bbb] m-0">People fleeing domestic abuse. Undocumented immigrants. Journalists. Minors. The people with the least power to push back are the most exposed.</p>
+                    <div class="tl-item px-8">
+                        <div class="tl-year text-accent2 bg-accent2/10">2023</div>
+                        <div class="tl-content">
+                            <strong>Experian / 23andMe</strong>
+                            <p>Massive exposures of credit histories and highly sensitive genetic information due to credential stuffing and systemic failures.</p>
+                        </div>
+                    </div>
+                    <div class="tl-item px-8 border-none pb-6">
+                        <div class="tl-year text-accent3 bg-accent3/10">2018</div>
+                        <div class="tl-content">
+                            <strong>Cambridge Analytica / Facebook</strong>
+                            <p>87 million users' psychological data harvested without consent and utilized for highly targeted political manipulation.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="callout-red mt-6">
+                    <p class="m-0 text-[1.1rem] font-bold text-heading text-center">Every company that collects more data than it needs creates a larger target. The only real solution is collecting less data in the first place.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 14: The Structural Problem -->
+        <div class="slide" id="s14">
+            <div class="section-label">Section 12: The Architecture</div>
+            <h2 class="heading-2">This is happening<br><em class="italic text-accent">by design.</em></h2>
+            
+            <div class="two-col-wide">
+                <div>
+                    <p class="text-p">The surveillance infrastructure was built intentionally to <strong>extract maximum profit from human attention and behavior</strong>. Surveillance capitalism refines your digital footprints into predictive products to sell.</p>
+                    <p class="text-p">Tech monopolies frame data collection as "improving your experience" while burying the truth in 10,000-word privacy policies designed specifically to be unreadable.</p>
+                    <div class="callout-red mt-6">
+                        <p class="m-0 text-[1.05rem] font-bold text-heading">The lack of a US privacy law is the intentional outcome of an industry protecting its business model.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <div class="card border-l-4 border-l-accent3 border-t-2 border-r-2 border-b-2">
+                        <h3 class="heading-3 mb-2">Who blocked privacy laws?</h3>
+                        <p class="text-[1rem] text-text m-0">Google, Meta, Amazon, and massive advertising coalitions lobbied tirelessly against giving US citizens basic data rights.</p>
+                    </div>
+                    <div class="card border-l-4 border-l-accent2 border-t-2 border-r-2 border-b-2">
+                        <h3 class="heading-3 mb-2">Who gets hurt most?</h3>
+                        <p class="text-[1rem] text-text m-0">People fleeing domestic abuse, undocumented immigrants, activists, and minors. Those with the least power to push back are the most exposed.</p>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Slide 15: Your Data -->
         <div class="slide" id="s15">
-            <div class="section-label">Section 13: Your Data</div>
+            <div class="section-label">Section 13: Look For Yourself</div>
             <h2 class="heading-2">What do they<br>actually have on you?</h2>
-            <p class="text-p">Because of GDPR, platforms are required to allow users to download their data. This is eye-opening.</p>
-            <div class="two-col">
-                <div>
-                    <h3 class="heading-3">How to request your data</h3>
+            <p class="text-p">Because of the GDPR, major platforms are now legally required to allow users to download their personal data archives. Doing this is eye-opening.</p>
+            
+            <div class="two-col mt-8">
+                <div class="card">
+                    <h3 class="heading-3 mb-4">How to request your data</h3>
                     <ul class="clean-list">
                         <li class="clean-list-item"><strong>Instagram:</strong> Settings → Your Activity → Download Your Information</li>
                         <li class="clean-list-item"><strong>Google:</strong> takeout.google.com</li>
+                        <li class="clean-list-item"><strong>Apple:</strong> privacy.apple.com</li>
                         <li class="clean-list-item"><strong>TikTok:</strong> Settings → Privacy → Download Your Data</li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="heading-3">What you'll typically find</h3>
+                <div class="card bg-accent2/5 border-accent2/30">
+                    <h3 class="heading-3 mb-4">What you'll typically find</h3>
                     <ul class="clean-list">
-                        <li class="clean-list-item">Every search query, ever</li>
-                        <li class="clean-list-item">Precise GPS location history going back years</li>
-                        <li class="clean-list-item">Inferred interests and political leanings</li>
+                        <li class="clean-list-item">Every search query you've ever typed.</li>
+                        <li class="clean-list-item">Precise GPS location history going back years.</li>
+                        <li class="clean-list-item">A list of highly specific inferred interests, political leanings, and estimated income.</li>
                     </ul>
-                    <div class="callout-yellow mt-4">
-                        <p class="m-0">If you can download it — imagine what they're <em>not</em> showing you.</p>
+                    <div class="bg-card mt-6 p-4 rounded-xl border border-border font-bold text-heading text-[0.95rem] text-center shadow-sm">
+                        If this is what they let you download — imagine the profiles they aren't showing you.
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Slide 16: What To Do (Actions) -->
         <div class="slide" id="s16">
-            <div class="section-label">Section 14: What To Do</div>
+            <div class="section-label">Section 14: Practical Steps</div>
             <h2 class="heading-2">Things that<br>actually help.</h2>
-            <p class="text-p">Privacy exists on a spectrum. Here's what's worth doing first.</p>
+            <p class="text-p mb-6">Privacy exists on a spectrum. Don't let perfection be the enemy of progress. Start here:</p>
+            
             <div class="action-grid">
                 <div class="action-item">
-                    <div class="text-[1.5rem] mt-0.5 shrink-0">🔒</div>
+                    <div class="text-[1.8rem] font-serif font-bold text-accent mt-1 shrink-0 leading-none">01</div>
                     <div>
-                        <h4 class="font-sans text-[0.9rem] font-bold text-white uppercase tracking-wide mb-1">Use an adblocker</h4>
-                        <p class="text-[0.88rem] leading-[1.55] m-0 text-[#bbb]"><strong>uBlock Origin</strong> blocks third-party trackers across the web. The highest-impact action you can take.</p>
-                        <div class="mt-2"><span class="chip-ok">uBlock Origin</span></div>
+                        <h4 class="font-sans text-[1.1rem] font-bold text-heading mb-1">Use an Adblocker</h4>
+                        <p class="text-[0.95rem] leading-[1.5] m-0 text-text"><strong>uBlock Origin</strong> blocks third-party trackers web-wide. The highest-impact action you can take.</p>
+                        <div class="mt-3"><span class="chip-ok">uBlock Origin</span></div>
                     </div>
                 </div>
                 <div class="action-item">
-                    <div class="text-[1.5rem] mt-0.5 shrink-0">🦊</div>
+                    <div class="text-[1.8rem] font-serif font-bold text-accent mt-1 shrink-0 leading-none">02</div>
                     <div>
-                        <h4 class="font-sans text-[0.9rem] font-bold text-white uppercase tracking-wide mb-1">Switch to Firefox</h4>
-                        <p class="text-[0.88rem] leading-[1.55] m-0 text-[#bbb]">The only major browser not built by an ad company. Chrome exists to feed Google's ad platform.</p>
-                        <div class="mt-2"><span class="chip-ok">Firefox</span></div>
+                        <h4 class="font-sans text-[1.1rem] font-bold text-heading mb-1">Switch to Firefox</h4>
+                        <p class="text-[0.95rem] leading-[1.5] m-0 text-text">The only major browser not built by an ad company. Chrome literally exists to feed Google's ad platform.</p>
+                        <div class="mt-3"><span class="chip-ok">Firefox / Brave</span></div>
                     </div>
                 </div>
                 <div class="action-item">
-                    <div class="text-[1.5rem] mt-0.5 shrink-0">🔍</div>
+                    <div class="text-[1.8rem] font-serif font-bold text-accent mt-1 shrink-0 leading-none">03</div>
                     <div>
-                        <h4 class="font-sans text-[0.9rem] font-bold text-white uppercase tracking-wide mb-1">Change default search</h4>
-                        <p class="text-[0.88rem] leading-[1.55] m-0 text-[#bbb]"><strong>DuckDuckGo</strong> or <strong>Brave Search</strong> do not build a profile on you. Google Search logs every query.</p>
+                        <h4 class="font-sans text-[1.1rem] font-bold text-heading mb-1">Change Default Search</h4>
+                        <p class="text-[0.95rem] leading-[1.5] m-0 text-text"><strong>DuckDuckGo</strong> or <strong>Brave Search</strong> do not build a profile on you. Google Search logs every query permanently.</p>
                     </div>
                 </div>
                 <div class="action-item">
-                    <div class="text-[1.5rem] mt-0.5 shrink-0">📧</div>
+                    <div class="text-[1.8rem] font-serif font-bold text-accent mt-1 shrink-0 leading-none">04</div>
                     <div>
-                        <h4 class="font-sans text-[0.9rem] font-bold text-white uppercase tracking-wide mb-1">Move away from Gmail</h4>
-                        <p class="text-[0.88rem] leading-[1.55] m-0 text-[#bbb]"><strong>Proton Mail</strong> is end-to-end encrypted. Google scans your email to build your ad profile.</p>
-                        <div class="mt-2"><span class="chip-ok">Proton Mail</span> <span class="chip-warn">Takes ~1hr</span></div>
+                        <h4 class="font-sans text-[1.1rem] font-bold text-heading mb-1">Move from Gmail</h4>
+                        <p class="text-[0.95rem] leading-[1.5] m-0 text-text"><strong>Proton Mail</strong> is end-to-end encrypted. Google actively scans your purchases and habits from your inbox.</p>
+                        <div class="mt-3"><span class="chip-ok">Proton Mail</span></div>
+                    </div>
+                </div>
+                <div class="action-item">
+                    <div class="text-[1.8rem] font-serif font-bold text-accent mt-1 shrink-0 leading-none">05</div>
+                    <div>
+                        <h4 class="font-sans text-[1.1rem] font-bold text-heading mb-1">Use Email Aliases</h4>
+                        <p class="text-[0.95rem] leading-[1.5] m-0 text-text">Stop giving out your real email. Use forwarding services to prevent cross-site tracking.</p>
+                        <div class="mt-3"><span class="chip-warn">SimpleLogin</span> <span class="chip-warn">Apple Hide My Email</span></div>
+                    </div>
+                </div>
+                <div class="action-item">
+                    <div class="text-[1.8rem] font-serif font-bold text-accent mt-1 shrink-0 leading-none">06</div>
+                    <div>
+                        <h4 class="font-sans text-[1.1rem] font-bold text-heading mb-1">Enable 2FA (MFA)</h4>
+                        <p class="text-[0.95rem] leading-[1.5] m-0 text-text">SMS texts can be intercepted. Use an Authenticator app to severely limit the damage of password breaches.</p>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Slide 17: More Tools -->
         <div class="slide" id="s17">
-            <div class="section-label">Section 15: Tools</div>
+            <div class="section-label">Section 15: The Tool Belt</div>
             <h2 class="heading-2">More tools<br>worth knowing.</h2>
-            <div class="three-col">
-                <div class="tool-card">
-                    <span class="font-mono text-[0.8rem] text-green block mb-1.5">Password Manager</span>
-                    <h4 class="font-sans text-[0.95rem] font-bold text-white mb-2">Bitwarden</h4>
-                    <p class="text-[0.85rem] text-[#bbb] leading-[1.55] m-0">Free, open source. Generates and stores strong unique passwords to prevent credential stuffing after breaches.</p>
+            
+            <div class="three-col mt-8">
+                <div class="card border-t-4 border-t-green">
+                    <span class="font-mono text-[0.85rem] font-bold text-green uppercase tracking-wider block mb-2">Password Manager</span>
+                    <h4 class="font-sans text-[1.15rem] font-bold text-heading mb-2">Bitwarden</h4>
+                    <p class="text-[0.95rem] text-text leading-[1.6] m-0">Free and open source. Generates and stores strong unique passwords to completely prevent credential stuffing after inevitable corporate breaches.</p>
                 </div>
-                <div class="tool-card">
-                    <span class="font-mono text-[0.8rem] text-green block mb-1.5">VPN</span>
-                    <h4 class="font-sans text-[0.95rem] font-bold text-white mb-2">Mullvad / Proton VPN</h4>
-                    <p class="text-[0.85rem] text-[#bbb] leading-[1.55] m-0">Encrypts your internet traffic from your ISP. Mullvad accepts cash and keeps no logs.</p>
+                <div class="card border-t-4 border-t-green">
+                    <span class="font-mono text-[0.85rem] font-bold text-green uppercase tracking-wider block mb-2">VPN</span>
+                    <h4 class="font-sans text-[1.15rem] font-bold text-heading mb-2">Mullvad / Proton VPN</h4>
+                    <p class="text-[0.95rem] text-text leading-[1.6] m-0">Encrypts your internet traffic to hide it from your Internet Service Provider. Mullvad famously keeps zero logs and accepts anonymous cash payments.</p>
                 </div>
-                <div class="tool-card">
-                    <span class="font-mono text-[0.8rem] text-green block mb-1.5">Encrypted Messaging</span>
-                    <h4 class="font-sans text-[0.95rem] font-bold text-white mb-2">Signal</h4>
-                    <p class="text-[0.85rem] text-[#bbb] leading-[1.55] m-0">E2E encrypted by default. Open source. WhatsApp shares metadata. iMessage is Apple-only.</p>
+                <div class="card border-t-4 border-t-green">
+                    <span class="font-mono text-[0.85rem] font-bold text-green uppercase tracking-wider block mb-2">Encrypted Messaging</span>
+                    <h4 class="font-sans text-[1.15rem] font-bold text-heading mb-2">Signal</h4>
+                    <p class="text-[0.95rem] text-text leading-[1.6] m-0">End-to-End encrypted by default. Non-profit and open source. WhatsApp shares vast metadata with Meta. iMessage locks you into Apple's ecosystem.</p>
                 </div>
-                <div class="tool-card border-t-accent2">
-                    <span class="font-mono text-[0.8rem] text-accent2 block mb-1.5">Opt-out</span>
-                    <h4 class="font-sans text-[0.95rem] font-bold text-white mb-2">Remove yourself</h4>
-                    <p class="text-[0.85rem] text-[#bbb] leading-[1.55] m-0">Services like <strong>DeleteMe</strong> automate removal from hundreds of data brokers for a fee.</p>
+                <div class="card border-t-4 border-t-accent2">
+                    <span class="font-mono text-[0.85rem] font-bold text-accent2 uppercase tracking-wider block mb-2">Data Broker Opt-out</span>
+                    <h4 class="font-sans text-[1.15rem] font-bold text-heading mb-2">Remove Yourself</h4>
+                    <p class="text-[0.95rem] text-text leading-[1.6] m-0">Services like <strong>DeleteMe</strong> or <strong>Kanary</strong> automate the grueling process of removing your profile from hundreds of data brokers for a fee.</p>
                 </div>
-                <div class="tool-card border-t-accent2">
-                    <span class="font-mono text-[0.8rem] text-accent2 block mb-1.5">Cookie Management</span>
-                    <h4 class="font-sans text-[0.95rem] font-bold text-white mb-2">Reject non-essential</h4>
-                    <p class="text-[0.85rem] text-[#bbb] leading-[1.55] m-0">Find the "manage preferences" option and disable analytics and advertising cookies.</p>
+                <div class="card border-t-4 border-t-accent2">
+                    <span class="font-mono text-[0.85rem] font-bold text-accent2 uppercase tracking-wider block mb-2">Cookie Management</span>
+                    <h4 class="font-sans text-[1.15rem] font-bold text-heading mb-2">Reject Non-Essential</h4>
+                    <p class="text-[0.95rem] text-text leading-[1.6] m-0">Always find the "manage preferences" option and disable analytics and advertising cookies. Never just click "Accept All" to clear the popup.</p>
                 </div>
-                <div class="tool-card border-t-accent2">
-                    <span class="font-mono text-[0.8rem] text-accent2 block mb-1.5">DNS</span>
-                    <h4 class="font-sans text-[0.95rem] font-bold text-white mb-2">Encrypted DNS</h4>
-                    <p class="text-[0.85rem] text-[#bbb] leading-[1.55] m-0">Setting DNS to <strong>Quad9</strong> or <strong>1.1.1.1</strong> encrypts domain lookups from your ISP.</p>
+                <div class="card border-t-4 border-t-accent2">
+                    <span class="font-mono text-[0.85rem] font-bold text-accent2 uppercase tracking-wider block mb-2">Secure DNS</span>
+                    <h4 class="font-sans text-[1.15rem] font-bold text-heading mb-2">Encrypted Lookups</h4>
+                    <p class="text-[0.95rem] text-text leading-[1.6] m-0">Setting your device DNS to <strong>Quad9</strong> or <strong>1.1.1.1</strong> encrypts your domain lookups, stopping your ISP from selling your browsing history.</p>
                 </div>
             </div>
         </div>
 
+        <!-- Slide 18: Collective Action -->
         <div class="slide" id="s18">
-            <div class="section-label">Section 16: Collective Action</div>
+            <div class="section-label">Section 16: The Bigger Picture</div>
             <h2 class="heading-2">Individual changes<br>are not enough.</h2>
-            <p class="text-p"><strong>Individual solutions to structural problems are inherently limited</strong>. Not everyone has the resources to navigate this. The people who can't remain exposed.</p>
-            <div class="callout-red max-w-full">
-                <p class="m-0">The goal should be that <strong>surveillance capitalism is constrained by law</strong>, the way other forms of exploitation are constrained by law.</p>
+            <p class="text-p"><strong>Individual solutions to structural problems are inherently limited</strong>. Not everyone has the time, technical literacy, or resources to navigate this ecosystem. The people who can't remain hopelessly exposed.</p>
+            
+            <div class="callout-red max-w-[900px]">
+                <p class="m-0 text-[1.1rem] font-bold text-heading text-center">The goal must be that surveillance capitalism is constrained by law, the exact same way other forms of human exploitation are constrained by law.</p>
             </div>
-            <div class="two-col mt-5">
-                <div>
-                    <h3 class="heading-3">What political action looks like</h3>
+            
+            <div class="two-col mt-8">
+                <div class="card">
+                    <h3 class="heading-3 mb-4">What political action looks like</h3>
                     <ul class="clean-list">
-                        <li class="clean-list-item">Support <strong>federal privacy legislation</strong></li>
-                        <li class="clean-list-item">Oppose legislation weakening encryption</li>
-                        <li class="clean-list-item">Push back on ICE data broker access</li>
+                        <li class="clean-list-item">Demand comprehensive <strong>federal privacy legislation</strong> (a US GDPR).</li>
+                        <li class="clean-list-item">Oppose all legislation attempting to weaken End-to-End Encryption.</li>
+                        <li class="clean-list-item">Push back on government agencies buying data broker access.</li>
                     </ul>
                 </div>
                 <div>
-                    <div class="col-block border-t border-t-[2px] border-t-accent3">
-                        <h3 class="heading-3">5calls.org</h3>
-                        <p class="text-[0.95rem] text-[#bbb] mb-3">Connects you with elected representatives with scripts for current issues including privacy.</p>
-                        <span class="font-mono text-[1.1rem] text-accent3 block mt-2">5calls.org</span>
+                    <div class="card bg-accent3/10 border-accent3/30 h-full flex flex-col justify-center text-center">
+                        <h3 class="heading-3 mb-3">5calls.org</h3>
+                        <p class="text-[1.05rem] text-text mb-6">A service that instantly connects you with your elected representatives and provides clear scripts for current issues, including digital privacy rights.</p>
+                        <a href="https://5calls.org/" target="_blank" class="inline-block bg-accent3 hover:bg-accent3/90 text-white font-bold py-3 px-8 rounded-full transition shadow-sm mx-auto">Visit 5calls.org</a>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Slide 19: Closing -->
         <div class="slide" id="s19">
-            <div class="section-label">Closing: The Bigger Picture</div>
-            <div class="big-bg-text text-[20rem] -right-15 opacity-15">∑</div>
+            <div class="section-label">Closing</div>
             <h2 class="heading-2">Measurement<br>as <em class="italic text-accent">control.</em></h2>
-            <p class="text-p">Vincent's point about measurement applies with to the data economy. You are being measured constantly. Because the US has no meaningful privacy law, you have almost no right to stop it.</p>
-            <div class="callout-red mt-5 max-w-[860px]">
-                <p class="m-0"><strong>Who should be in control of this measurement?</strong> The companies extracting profit from it? Or the people whose lives are being quantified?</p>
+            <p class="text-p">Vincent's point in <em>Beyond Measure</em> applies perfectly to the modern data economy. You are being measured constantly, quantified flawlessly, and sold endlessly. Because the US has no meaningful privacy laws, you have almost no right to stop it.</p>
+            
+            <div class="callout-yellow mt-8 max-w-[860px] p-[32px]">
+                <p class="m-0 text-[1.2rem] leading-[1.6] text-center"><strong>Who should be in control of this measurement?</strong><br><br>The massive corporations extracting infinite profit from it?<br>Or the human beings whose lives are being quantified?</p>
             </div>
-            <p class="text-[1.05rem] text-[#bbb] mt-5">Privacy isn't about having something to hide. It's about who gets to hold the measuring stick.</p>
+            
+            <p class="text-[1.2rem] text-heading font-bold mt-8 text-center max-w-[860px]">
+                Privacy isn't about having something to hide.<br>It's about who gets to hold the measuring stick.
+            </p>
         </div>
 
+        <!-- Slide 20: Resources -->
         <div class="slide" id="s20">
-            <div class="section-label">Q&A + Resources</div>
-            <h2 class="heading-2">Questions?</h2>
-            <p class="text-p">Resources mentioned:</p>
-            <div class="flex flex-col gap-2.5 max-w-[600px] mt-7">
-                <a href="https://duckduckgo.github.io/tracker-radar-wiki/" target="_blank" class="font-mono text-[0.85rem] text-accent3 no-underline py-2.5 border-b border-brder flex justify-between items-center after:content-['↗'] after:text-muted">DuckDuckGo Tracker Radar</a>
-                <a href="https://5calls.org/" target="_blank" class="font-mono text-[0.85rem] text-accent3 no-underline py-2.5 border-b border-brder flex justify-between items-center after:content-['↗'] after:text-muted">5calls.org — contact representatives</a>
-                <a href="https://proton.me/" target="_blank" class="font-mono text-[0.85rem] text-accent3 no-underline py-2.5 border-b border-brder flex justify-between items-center after:content-['↗'] after:text-muted">Proton — email & VPN</a>
-                <a href="https://ublockorigin.com/" target="_blank" class="font-mono text-[0.85rem] text-accent3 no-underline py-2.5 border-b border-brder flex justify-between items-center after:content-['↗'] after:text-muted">uBlock Origin — adblocker</a>
+            <div class="section-label">Appendix</div>
+            <h2 class="heading-2">Q&A + Resources</h2>
+            <p class="text-p">Links to tools and concepts mentioned in this presentation:</p>
+            
+            <div class="flex flex-col gap-4 max-w-[700px] mt-8">
+                <a href="https://duckduckgo.github.io/tracker-radar-wiki/" target="_blank" class="card flex justify-between items-center py-4 px-6 text-heading font-bold text-[1.05rem] hover:bg-accent3/5 hover:border-accent3/40 transition-colors no-underline">
+                    <span>DuckDuckGo Tracker Radar</span>
+                    <span class="text-[0.85rem] bg-bg2 px-3 py-1 rounded-full text-muted font-sans font-bold uppercase tracking-wider">Research</span>
+                </a>
+                
+                <a href="https://5calls.org/" target="_blank" class="card flex justify-between items-center py-4 px-6 text-heading font-bold text-[1.05rem] hover:bg-accent3/5 hover:border-accent3/40 transition-colors no-underline">
+                    <span>5calls.org — Contact Representatives</span>
+                    <span class="text-[0.85rem] bg-bg2 px-3 py-1 rounded-full text-muted font-sans font-bold uppercase tracking-wider">Activism</span>
+                </a>
+                
+                <a href="https://proton.me/" target="_blank" class="card flex justify-between items-center py-4 px-6 text-heading font-bold text-[1.05rem] hover:bg-accent3/5 hover:border-accent3/40 transition-colors no-underline">
+                    <span>Proton — Encrypted Email & VPN</span>
+                    <span class="text-[0.85rem] bg-bg2 px-3 py-1 rounded-full text-muted font-sans font-bold uppercase tracking-wider">Tool</span>
+                </a>
+                
+                <a href="https://ublockorigin.com/" target="_blank" class="card flex justify-between items-center py-4 px-6 text-heading font-bold text-[1.05rem] hover:bg-accent3/5 hover:border-accent3/40 transition-colors no-underline">
+                    <span>uBlock Origin — Browser Adblocker</span>
+                    <span class="text-[0.85rem] bg-bg2 px-3 py-1 rounded-full text-muted font-sans font-bold uppercase tracking-wider">Tool</span>
+                </a>
             </div>
         </div>
 
     </div>
 
     <script>
-        // coding excellence
+        // Phishing Demo Logic
         const showPhishingLogin = (e) => {
             if(e) e.preventDefault();
-            document.getElementById('phishing-overlay').classList.remove('hidden');
-            document.getElementById('phishing-overlay').classList.add('flex');
+            const overlay = document.getElementById('phishing-overlay');
+            const pwdInput = document.getElementById('phishing-pwd');
+            
+            overlay.classList.remove('hidden');
+            overlay.classList.add('flex');
+            
             setTimeout(() => {
-                document.getElementById('phishing-pwd').focus();
+                pwdInput.focus();
             }, 100);
         }
 
         const submitPhishing = () => {
             document.getElementById('phishing-step-1').classList.add('hidden');
-            document.getElementById('phishing-step-2').classList.remove('hidden');
-            document.getElementById('phishing-step-2').classList.add('flex');
+            const step2 = document.getElementById('phishing-step-2');
+            step2.classList.remove('hidden');
+            step2.classList.add('flex');
         }
 
         const resetPhishing = () => {
-            document.getElementById('phishing-overlay').classList.add('hidden');
-            document.getElementById('phishing-overlay').classList.remove('flex');
+            const overlay = document.getElementById('phishing-overlay');
+            const step1 = document.getElementById('phishing-step-1');
+            const step2 = document.getElementById('phishing-step-2');
+            const pwdInput = document.getElementById('phishing-pwd');
             
-            document.getElementById('phishing-step-1').classList.remove('hidden');
+            overlay.classList.add('hidden');
+            overlay.classList.remove('flex');
             
-            document.getElementById('phishing-step-2').classList.add('hidden');
-            document.getElementById('phishing-step-2').classList.remove('flex');
+            step1.classList.remove('hidden');
             
-            document.getElementById('phishing-pwd').value = '';
+            step2.classList.add('hidden');
+            step2.classList.remove('flex');
+            
+            pwdInput.value = '';
         }
 
+        // Slide Navigation Logic
         const setupSlides = () => {
             const slides = document.querySelectorAll(".slide");
             const total = slides.length;
@@ -736,20 +827,30 @@
             slideTotal.innerText = total;
 
             function update() {
-                slides.forEach((s, i) =>
-                    s.classList.toggle("slide-active", i === current)
-                );
+                slides.forEach((s, i) => {
+                    if (i === current) {
+                        s.classList.add("slide-active");
+                    } else {
+                        s.classList.remove("slide-active");
+                    }
+                });
                 progress.style.width = `${((current + 1) / total) * 100}%`;
                 slideNum.innerText = current + 1;
             }
 
             document.addEventListener("keydown", (e) => {
-                if (e.target.tagName.toLowerCase() === 'input') return;
+                // Prevent sliding when typing in the phishing input
+                if (e.target.tagName.toLowerCase() === 'input') {
+                    if (e.key === "Enter") submitPhishing();
+                    return;
+                }
 
                 if (e.key === "ArrowRight" || e.key === " ") {
+                    e.preventDefault();
                     current = Math.min(current + 1, total - 1);
                     update();
                 } else if (e.key === "ArrowLeft") {
+                    e.preventDefault();
                     current = Math.max(current - 1, 0);
                     update();
                 }
