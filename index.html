@@ -125,7 +125,7 @@
 
 <body class="un-cloak">
     <div id="progress" class="fixed bottom-0 left-0 h-[3px] bg-accent z-50 transition-all duration-300 w-0"></div>
-    <div class="fixed bottom-4 right-6 font-mono text-[11px] text-muted z-50"><span id="slide-num">1</span> / <span id="slide-total">18</span></div>
+    <div class="fixed bottom-4 right-6 font-mono text-[11px] text-muted z-50"><span id="slide-num">1</span> / <span id="slide-total">21</span></div>
 
     <div class="relative w-full h-full deck">
         <div class="slide slide-active" id="s0">
@@ -139,9 +139,27 @@
         <div class="slide" id="s1">
             <div class="section-label">Section 00: Not a Hook, a Spear</div>
             <h2 class="heading-2">A highly targeted attack.</h2>
-            <p class="text-p">When your data is public, this is what a scammer can do.</p>
+            <p class="text-p">When your data is public, this is what a scammer can do. <strong>Click the link below.</strong></p>
             
-            <div class="mt-6 bg-white text-black rounded-md shadow-2xl max-w-[800px] overflow-hidden border border-[#d1d5db] font-sans">
+            <div class="mt-6 bg-white text-black rounded-md shadow-2xl max-w-[800px] overflow-hidden border border-[#d1d5db] font-sans relative">
+                <div id="phishing-overlay" class="absolute inset-0 bg-[#f3f4f6]/95 backdrop-blur-sm z-10 hidden flex-col items-center justify-center p-8">
+                    <div id="phishing-step-1" class="w-full max-w-[340px] bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+                        <div class="font-bold text-xl mb-1 text-center text-gray-800">Legal Document Portal</div>
+                        <p class="text-sm text-gray-600 mb-6 text-center">Sign in to securely view your summons</p>
+                        <input type="text" placeholder="Email" class="w-full border border-gray-300 rounded px-3 py-2.5 mb-3 text-sm focus:outline-blue-500" value="jane.doe@gmail.com" readonly>
+                        <input type="password" id="phishing-pwd" placeholder="Enter your password" class="w-full border border-gray-300 rounded px-3 py-2.5 mb-5 text-sm focus:outline-blue-500">
+                        <button onclick="submitPhishing()" class="w-full bg-blue-600 hover:bg-blue-700 transition text-white font-bold py-2.5 rounded text-sm">Sign In</button>
+                    </div>
+                    
+                    <div id="phishing-step-2" class="w-full h-full hidden flex-col items-center justify-center text-center p-6">
+                        <div class="text-red-600 text-6xl mb-4">⚠️</div>
+                        <h3 class="text-3xl font-bold text-red-600 mb-3 tracking-tight">Credentials Stolen!</h3>
+                        <p class="text-gray-800 text-lg font-medium max-w-[400px]">The attacker just captured your email and your actual password.</p>
+                        <p class="text-[0.95rem] text-gray-600 mt-4 max-w-[500px]">You thought you were logging into a secure portal to view a court document, but this was a fake overlay built right into the email client.</p>
+                        <button onclick="resetPhishing()" class="mt-8 text-sm text-blue-600 font-bold uppercase tracking-widest hover:underline">Reset Demo</button>
+                    </div>
+                </div>
+
                 <div class="bg-[#f3f4f6] border-b border-[#d1d5db] px-6 py-4">
                     <div class="flex justify-between items-center mb-1">
                         <span class="font-bold text-lg text-black">URGENT: Attempted Delivery of Legal Notice</span>
@@ -158,7 +176,7 @@
                     <p class="mb-4">Because we could not reach you at your primary phone <strong class="text-black font-semibold">(646) 555-8372</strong>, and you are no longer listed at your previous address on <strong class="text-black font-semibold">742 Evergreen Terrace</strong>, we are legally required to pursue alternative contact methods.</p>
                     <p class="mb-4">If you do not respond to this notice within 24 hours, process servers will be dispatched to your employer, <strong class="text-black font-semibold">Initech Corporation</strong>. Alternatively, we will contact your known relatives, including <strong class="text-black font-semibold">John Doe (Father)</strong> and <strong class="text-black font-semibold">Mary Smith (Sister)</strong>, to locate you.</p>
                     <p class="mb-6">To avoid public service of this complaint, click the secure link below to view the digital summons and respond immediately:</p>
-                    <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 transition text-white font-bold py-2.5 px-5 rounded no-underline mb-6 text-sm">VIEW SECURE COMPLAINT</a>
+                    <button onclick="showPhishingLogin(event)" class="inline-block bg-blue-600 hover:bg-blue-700 transition text-white font-bold py-2.5 px-5 rounded mb-6 text-sm cursor-pointer border-none">VIEW SECURE COMPLAINT</button>
                     <p class="text-[0.75rem] text-[#9ca3af] leading-tight">Notice ID: #8492-B. This communication is from a debt collection and legal processing agency. Any information obtained will be used for that purpose.</p>
                 </div>
             </div>
@@ -167,16 +185,71 @@
         <div class="slide" id="s2">
             <div class="section-label">Obligatory Book Tie-In</div>
             <h2 class="heading-2">Measurement<br>is Power.</h2>
-            <p class="text-p">James Vincent's <strong>Beyond Measure</strong> traces how humans have used measurement to make sense of the world — from counting the depth of the Nile to defining the kilogram. But measurement is never neutral. Whoever controls what gets measured, and how, holds power over everyone else.</p>
-            <div class="callout-yellow">
-                <p class="m-0 text-txt">"At every turn, Vincent is keenly attuned to the <strong>political consequences of measurement</strong>, exploring how it has been used as a tool for oppression and control."</p>
+            <p class="text-p">James Vincent's <strong>Beyond Measure</strong> is about our obsession with quantifying the world. It traces how humans have used measurement to make sense of the world, but warns of the danger of <strong>reducing complex human experiences and natural phenomena into metrics, algorithms, and data points</strong>.</p>
+            <p class="text-p">Measurement is never neutral. Whoever controls what gets measured, and how, holds power over everyone else.</p>
+            
+            <div class="callout-yellow mt-6">
+                <h3 class="heading-3 text-[0.95rem]">The Ultimate Act of Measurement</h3>
+                <p class="m-0 text-txt text-[0.95rem]">Surveillance is the ultimate act of measurement. It is the process of taking a human being with complexities, flaws, and desires, and <strong>measuring them down to a spreadsheet of clickable behaviors</strong> to be sold to the highest bidder.</p>
             </div>
-            <p class="text-p">Today, the thing being measured is <strong>you</strong>. Every click, search, purchase, location ping, and social post is a data point. That data is being collected at a scale that would have been inconceivable even twenty years ago.</p>
             <div class="big-bg-text text-[18rem] -bottom-15 -right-10 opacity-10">∞</div>
         </div>
 
         <div class="slide" id="s3">
-            <div class="section-label">Section 02: I know where you live</div>
+            <div class="section-label">Section 01: The Philosophy</div>
+            <h2 class="heading-2">The "Free"<br>Web.</h2>
+            <p class="text-p">Privacy isn't just about what we post willingly, but <strong>what is taken from us</strong> silently.</p>
+            <p class="text-p">Data privacy is not about hiding secrets. Data privacy is about <strong>resisting the capitalist commodification of our human experiences</strong>.</p>
+            
+            <div class="col-block border-t-2 border-accent mt-6 max-w-[860px]">
+                <p class="text-p mb-0">When we are tracked, measured, and categorized, we are stripped of our autonomy and turned into products.</p>
+            </div>
+            
+            <p class="text-p mt-6">Every time we talk about a tracker or a data broker, we should frame it as <em>an act of measurement imposed on humans for someone else’s profit</em>.</p>
+        </div>
+
+        <div class="slide" id="s4">
+            <div class="section-label">Section 02: The Myth</div>
+            <h2 class="heading-2">"I have nothing<br>to hide."</h2>
+            <p class="text-p">There is a phrase that kills more privacy legislation than even the biggest tech lobby could dream of: <strong>“I have nothing to hide.”</strong></p>
+            <p class="text-p">It's a comforting thought. It makes us feel safe. But what does it actually mean?</p>
+            
+            <div class="callout-blue">
+                <p class="m-0 text-[1.05rem]">We all know what happens in bathrooms. It's not a secret. There are no classified documents protecting toilets and sinks. <strong>But you still close the door.</strong></p>
+                <p class="mt-3 mb-0 text-[1.05rem]">You don't close the door because you're doing something wrong; you close the door because existing in a space in which you’re constantly observed <strong>strips you of your humanity</strong>.</p>
+            </div>
+
+            <p class="text-p">This is because you want privacy, not secrecy. <strong>Privacy is the boundary between being a human and being a specimen.</strong></p>
+            <p class="text-p">There are always certain facts about us (personal health information, sexual behavior) that we wouldn’t want the whole world to know. The need for privacy is legitimate. Privacy is about empowering your rights over your own information.</p>
+        </div>
+
+        <div class="slide" id="s5">
+            <div class="section-label">Section 03: Defining terms</div>
+            <h2 class="heading-2">Privacy is<br>about power.</h2>
+            <p class="text-p">You don’t need to be a hacker in a dimly-lit room on the Dark Web to care about privacy. People often confuse three distinct concepts:</p>
+
+            <div class="three-col mt-6">
+                <div class="col-block border-t border-t-[2px] border-t-accent3">
+                    <h3 class="heading-3">Privacy</h3>
+                    <p class="text-[0.95rem] text-[#bbb] m-0">Data is only seen by who you intend to see it. It is about consent and control.</p>
+                </div>
+                <div class="col-block border-t border-t-[2px] border-t-green">
+                    <h3 class="heading-3 text-green">Security</h3>
+                    <p class="text-[0.95rem] text-[#bbb] m-0">You can trust the tools you’re using, in the same way you trust your front door and keys to keep you safe.</p>
+                </div>
+                <div class="col-block border-t border-t-[2px] border-t-accent2">
+                    <h3 class="heading-3">Anonymity</h3>
+                    <p class="text-[0.95rem] text-[#bbb] m-0">Acting without being identified. Disconnecting your actions from your real-world identity.</p>
+                </div>
+            </div>
+
+            <div class="callout-red max-w-[1100px] mt-6 text-center">
+                <p class="m-0 font-medium">You don’t need all three all the time. Right now, on the modern web, you barely have one.</p>
+            </div>
+        </div>
+
+        <div class="slide" id="s6">
+            <div class="section-label">Section 04: I know where you live</div>
             <h2 class="heading-2">What do we<br>already know about you?</h2>
             <p class="text-p">Before we get into complicated trackers, there is a category of data openly available to anyone with a browser and thirty seconds of free time—the exact data used in the phishing email we just saw.</p>
             <div class="two-col">
@@ -207,8 +280,8 @@
             </div>
         </div>
 
-        <div class="slide" id="s4">
-            <div class="section-label">Section 03: Live Demo</div>
+        <div class="slide" id="s7">
+            <div class="section-label">Section 05: Live Demo</div>
             <h2 class="heading-2">Let's look<br>someone up.</h2>
             <p class="text-p">People search sites aggregate public record data into a single profile. They require no login. They're designed for the average consumer, but they are weaponized by stalkers, scammers, and abusers.</p>
             <p class="text-p">We tried it on two Ms. Feng and Mr. Bauld. Here's what came back:</p>
@@ -221,8 +294,8 @@
             </ul>
         </div>
 
-        <div class="slide" id="s5">
-            <div class="section-label">Section 04: Why it exists</div>
+        <div class="slide" id="s8">
+            <div class="section-label">Section 06: Why it exists</div>
             <h2 class="heading-2">Why can anyone<br>access this?</h2>
             <div class="two-col-wide">
                 <div>
@@ -268,8 +341,8 @@
             </div>
         </div>
 
-        <div class="slide" id="s6">
-            <div class="section-label">Section 05: Real Consequences</div>
+        <div class="slide" id="s9">
+            <div class="section-label">Section 07: Real Consequences</div>
             <h2 class="heading-2">This is <em>not</em><br>an abstract problem.</h2>
             <div class="scroll-content overflow-y-auto max-h-[calc(100vh-160px)] pr-3">
                 <div class="three-col">
@@ -292,8 +365,8 @@
             </div>
         </div>
 
-        <div class="slide" id="s7">
-            <div class="section-label">Section 06: Browser Tracking</div>
+        <div class="slide" id="s10">
+            <div class="section-label">Section 08: Browser Tracking</div>
             <h2 class="heading-2">The invisible<br>follow.</h2>
             <p class="text-p">People search is layer one. Layer two is the browser. Your activity across the entire web is tracked — not just on sites you use, but sites you've never heard of.</p>
             <div class="two-col">
@@ -319,8 +392,8 @@
             </div>
         </div>
 
-        <div class="slide" id="s8">
-            <div class="section-label">Section 07: Scale of Tracking</div>
+        <div class="slide" id="s11">
+            <div class="section-label">Section 09: Scale of Tracking</div>
             <h2 class="heading-2">How far do<br>their trackers reach?</h2>
             <p class="text-p">Share of the world's top websites where each company's tracking scripts are present (DuckDuckGo Tracker Radar).</p>
 
@@ -371,8 +444,8 @@
             </div>
         </div>
 
-        <div class="slide" id="s9">
-            <div class="section-label">Section 08: The Data Economy</div>
+        <div class="slide" id="s12">
+            <div class="section-label">Section 10: The Data Economy</div>
             <h2 class="heading-2">Your data gets<br><em class="italic text-accent">sold.</em></h2>
             <div class="two-col">
                 <div>
@@ -401,8 +474,8 @@
             </div>
         </div>
 
-        <div class="slide" id="s10">
-            <div class="section-label">Section 09: Breaches</div>
+        <div class="slide" id="s13">
+            <div class="section-label">Section 11: Breaches</div>
             <h2 class="heading-2">And then<br>it gets stolen.</h2>
             <p class="text-p">Even if you trusted every company handling your data — and you shouldn't — the data they collect is an
                 attractive target. Large-scale breaches are a <strong>constant, ongoing
@@ -445,8 +518,8 @@
             </div>
         </div>
 
-        <div class="slide" id="s11">
-            <div class="section-label">Section 10: The Structural Problem</div>
+        <div class="slide" id="s14">
+            <div class="section-label">Section 12: The Structural Problem</div>
             <h2 class="heading-2">This is<br><em class="italic text-accent">by design.</em></h2>
             <div class="two-col-wide">
                 <div>
@@ -469,8 +542,8 @@
             </div>
         </div>
 
-        <div class="slide" id="s12">
-            <div class="section-label">Section 11: Your Data</div>
+        <div class="slide" id="s15">
+            <div class="section-label">Section 13: Your Data</div>
             <h2 class="heading-2">What do they<br>actually have on you?</h2>
             <p class="text-p">Because of GDPR, platforms are required to allow users to download their data. This is eye-opening.</p>
             <div class="two-col">
@@ -496,8 +569,8 @@
             </div>
         </div>
 
-        <div class="slide" id="s13">
-            <div class="section-label">Section 12: What To Do</div>
+        <div class="slide" id="s16">
+            <div class="section-label">Section 14: What To Do</div>
             <h2 class="heading-2">Things that<br>actually help.</h2>
             <p class="text-p">Privacy exists on a spectrum. Here's what's worth doing first.</p>
             <div class="action-grid">
@@ -535,8 +608,8 @@
             </div>
         </div>
 
-        <div class="slide" id="s14">
-            <div class="section-label">Section 13: Tools</div>
+        <div class="slide" id="s17">
+            <div class="section-label">Section 15: Tools</div>
             <h2 class="heading-2">More tools<br>worth knowing.</h2>
             <div class="three-col">
                 <div class="tool-card">
@@ -572,8 +645,8 @@
             </div>
         </div>
 
-        <div class="slide" id="s15">
-            <div class="section-label">Section 14: Collective Action</div>
+        <div class="slide" id="s18">
+            <div class="section-label">Section 16: Collective Action</div>
             <h2 class="heading-2">Individual changes<br>are not enough.</h2>
             <p class="text-p"><strong>Individual solutions to structural problems are inherently limited</strong>. Not everyone has the resources to navigate this. The people who can't remain exposed.</p>
             <div class="callout-red max-w-full">
@@ -598,23 +671,22 @@
             </div>
         </div>
 
-        <div class="slide" id="s16">
+        <div class="slide" id="s19">
             <div class="section-label">Closing: The Bigger Picture</div>
             <div class="big-bg-text text-[20rem] -right-15 opacity-15">∑</div>
             <h2 class="heading-2">Measurement<br>as <em class="italic text-accent">control.</em></h2>
-            <p class="text-p">Vincent's point about measurement applies with full force to the data economy. You are being measured constantly. Because the US has no meaningful privacy law, you have almost no right to stop it.</p>
+            <p class="text-p">Vincent's point about measurement applies with to the data economy. You are being measured constantly. Because the US has no meaningful privacy law, you have almost no right to stop it.</p>
             <div class="callout-red mt-5 max-w-[860px]">
                 <p class="m-0"><strong>Who should be in control of this measurement?</strong> The companies extracting profit from it? Or the people whose lives are being quantified?</p>
             </div>
             <p class="text-[1.05rem] text-[#bbb] mt-5">Privacy isn't about having something to hide. It's about who gets to hold the measuring stick.</p>
         </div>
 
-        <div class="slide" id="s17">
+        <div class="slide" id="s20">
             <div class="section-label">Q&A + Resources</div>
             <h2 class="heading-2">Questions?</h2>
             <p class="text-p">Resources mentioned:</p>
             <div class="flex flex-col gap-2.5 max-w-[600px] mt-7">
-                <a href="https://www.familytreenow.com/" target="_blank" class="font-mono text-[0.85rem] text-accent3 no-underline py-2.5 border-b border-brder flex justify-between items-center after:content-['↗'] after:text-muted">FamilyTreeNow.com — people search demo</a>
                 <a href="https://duckduckgo.github.io/tracker-radar-wiki/" target="_blank" class="font-mono text-[0.85rem] text-accent3 no-underline py-2.5 border-b border-brder flex justify-between items-center after:content-['↗'] after:text-muted">DuckDuckGo Tracker Radar</a>
                 <a href="https://5calls.org/" target="_blank" class="font-mono text-[0.85rem] text-accent3 no-underline py-2.5 border-b border-brder flex justify-between items-center after:content-['↗'] after:text-muted">5calls.org — contact representatives</a>
                 <a href="https://proton.me/" target="_blank" class="font-mono text-[0.85rem] text-accent3 no-underline py-2.5 border-b border-brder flex justify-between items-center after:content-['↗'] after:text-muted">Proton — email & VPN</a>
@@ -625,35 +697,68 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-        const slides = document.querySelectorAll(".slide");
-        const total = slides.length;
-        const progress = document.getElementById("progress");
-        const slideNum = document.getElementById("slide-num");
-        const slideTotal = document.getElementById("slide-total");
-        let current = 0;
-
-        slideTotal.innerText = total;
-
-        function update() {
-            slides.forEach((slide, index) =>
-                slide.classList.toggle("slide-active", index === current)
-            );
-            progress.style.width = `${((current + 1) / total) * 100}%`;
-            slideNum.innerText = current + 1;
+        // coding excellence
+        const showPhishingLogin = (e) => {
+            if(e) e.preventDefault();
+            document.getElementById('phishing-overlay').classList.remove('hidden');
+            document.getElementById('phishing-overlay').classList.add('flex');
+            setTimeout(() => {
+                document.getElementById('phishing-pwd').focus();
+            }, 100);
         }
 
-        document.addEventListener("keydown", (e) => {
-            if (e.key === "ArrowRight" || e.key === " ") {
-                current = Math.min(current + 1, total - 1);
-                update();
-            } else if (e.key === "ArrowLeft") {
-                current = Math.max(current - 1, 0);
-                update();
+        const submitPhishing = () => {
+            document.getElementById('phishing-step-1').classList.add('hidden');
+            document.getElementById('phishing-step-2').classList.remove('hidden');
+            document.getElementById('phishing-step-2').classList.add('flex');
+        }
+
+        const resetPhishing = () => {
+            document.getElementById('phishing-overlay').classList.add('hidden');
+            document.getElementById('phishing-overlay').classList.remove('flex');
+            
+            document.getElementById('phishing-step-1').classList.remove('hidden');
+            
+            document.getElementById('phishing-step-2').classList.add('hidden');
+            document.getElementById('phishing-step-2').classList.remove('flex');
+            
+            document.getElementById('phishing-pwd').value = '';
+        }
+
+        const setupSlides = () => {
+            const slides = document.querySelectorAll(".slide");
+            const total = slides.length;
+            const progress = document.getElementById("progress");
+            const slideNum = document.getElementById("slide-num");
+            const slideTotal = document.getElementById("slide-total");
+            let current = 0;
+
+            slideTotal.innerText = total;
+
+            function update() {
+                slides.forEach((s, i) =>
+                    s.classList.toggle("slide-active", i === current)
+                );
+                progress.style.width = `${((current + 1) / total) * 100}%`;
+                slideNum.innerText = current + 1;
             }
-        });
-        update();
-    });
+
+            document.addEventListener("keydown", (e) => {
+                if (e.target.tagName.toLowerCase() === 'input') return;
+
+                if (e.key === "ArrowRight" || e.key === " ") {
+                    current = Math.min(current + 1, total - 1);
+                    update();
+                } else if (e.key === "ArrowLeft") {
+                    current = Math.max(current - 1, 0);
+                    update();
+                }
+            });
+            
+            update();
+        }
+
+        document.addEventListener("DOMContentLoaded", setupSlides);
     </script>
 </body>
 
