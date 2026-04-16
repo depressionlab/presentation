@@ -11,69 +11,63 @@
             window.__unocss = {
                 theme: {
                     colors: {
-                        bg: '#fdfaf5',
-                        bg2: '#f4efe6',
-                        card: '#ffffff',
-                        border: '#e8e2d5',
-                        text: '#5a5461',
-                        heading: '#352e3b',
-                        muted: '#9e97a3',
-                        accent: '#ff8fab',
-                        accent2: '#fca75a',
-                        accent3: '#73b2ef',
-                        green: '#74c496',
-                        red: '#fa7a7a'
+                        bg: '#05070A',
+                        bg2: '#0D1117',
+                        card: '#11161D',
+                        border: '#1F2937',
+                        text: '#94A3B8',
+                        heading: '#F8FAFC',
+                        muted: '#475569',
+                        accent: '#0EA5E9',
+                        accent2: '#D946EF',
+                        accent3: '#10B981',
+                        green: '#10B981',
+                        red: '#F43F5E'
                     }
                 },
                 shortcuts: {
-                    'slide': 'absolute inset-0 hidden px-[30px] py-[40px] md:px-[80px] md:py-[64px] flex-col justify-center bg-bg overflow-hidden text-text',
-                    'slide-active': '!flex animate-[slideIn_0.4s_cubic-bezier(0.16,1,0.3,1)]',
+                    'slide': 'absolute inset-0 hidden px-[6vw] py-[6vh] pb-[15vh] flex-col justify-start md:justify-center overflow-y-auto overflow-x-hidden text-text',
+                    'slide-active': '!flex animate-[slideIn_0.6s_cubic-bezier(0.16,1,0.3,1)]',
 
-                    'section-label': 'inline-block font-mono text-[11px] tracking-[0.2em] uppercase text-accent font-bold bg-accent/10 px-3.5 py-1.5 rounded-full mb-6',
-                    'heading-1': 'font-serif text-[clamp(2.8rem,5vw,5.5rem)] leading-[1.05] text-heading font-bold mb-6 tracking-tight',
-                    'heading-2': 'font-serif text-[clamp(2rem,3.5vw,3.6rem)] leading-[1.1] text-heading font-bold mb-5 tracking-tight',
-                    'heading-3': 'font-sans text-[1.2rem] font-bold tracking-[0.02em] text-heading mb-2',
-                    'text-p': 'text-[1.1rem] leading-[1.8] max-w-[800px] mb-[18px] [&>strong]:text-heading [&>strong]:font-bold [&>em]:text-accent [&>em]:not-italic [&>em]:font-bold',
+                    'section-label': 'inline-block font-mono text-[clamp(0.8rem,1vw,1rem)] tracking-[0.25em] uppercase text-accent font-bold bg-accent/10 px-5 py-2 rounded-full mb-6 border border-accent/30 shadow-[0_0_15px_rgba(14,165,233,0.2)] animate-[pulse_3s_ease-in-out_infinite]',
+                    'heading-1': 'font-sans text-[clamp(3rem,6vw,6.5rem)] leading-[1.05] text-heading font-extrabold mb-6 tracking-tight drop-shadow-lg mt-auto md:mt-0',
+                    'heading-2': 'font-sans text-[clamp(2.2rem,4vw,4.5rem)] leading-[1.1] text-heading font-bold mb-6 tracking-tight drop-shadow-md',
+                    'heading-3': 'font-sans text-[clamp(1.3rem,2vw,1.8rem)] font-bold tracking-[0.02em] text-heading mb-3',
+                    'text-p': 'text-[clamp(1.1rem,1.6vw,1.4rem)] leading-[1.8] max-w-[1000px] mb-[24px] text-slate-300 [&>strong]:text-heading [&>strong]:font-bold [&>em]:text-accent [&>em]:not-italic [&>em]:font-bold',
 
-                    'callout': 'border-2 rounded-2xl p-[24px_28px] my-6 max-w-[860px] text-text shadow-sm',
-                    'callout-red': 'border-red/30 bg-red/5 callout',
-                    'callout-green': 'border-green/30 bg-green/5 callout',
-                    'callout-yellow': 'border-accent2/30 bg-accent2/5 callout',
-                    'callout-blue': 'border-accent3/30 bg-accent3/5 callout',
-                    'card': 'bg-card border-2 border-border rounded-2xl p-[24px_28px] shadow-sm hover:shadow-md transition-shadow duration-300',
+                    'callout': 'border border-l-[6px] rounded-2xl p-[32px] my-8 max-w-[1000px] text-slate-300 shadow-2xl backdrop-blur-md bg-opacity-40 transition-transform duration-300 hover:-translate-y-1',
+                    'callout-red': 'border-red/40 border-l-red bg-red/10 callout',
+                    'callout-green': 'border-green/40 border-l-green bg-green/10 callout',
+                    'callout-yellow': 'border-accent2/40 border-l-accent2 bg-accent2/10 callout',
+                    'callout-blue': 'border-accent/40 border-l-accent bg-accent/10 callout',
+                    
+                    'card': 'bg-card border border-border rounded-2xl p-[32px] shadow-xl hover:border-accent/50 hover:shadow-[0_8px_30px_rgba(14,165,233,0.15)] transition-all duration-300 relative overflow-hidden group',
 
-                    'clean-list': 'list-none my-4 max-w-[860px]',
-                    'clean-list-item': 'py-3 pl-[24px] border-b border-border text-[1.05rem] text-text leading-[1.6] relative before:content-[""] before:absolute before:left-0 before:top-[20px] before:w-[8px] before:h-[8px] before:bg-accent2 before:rounded-full [&>strong]:text-heading [&>strong]:font-bold last:border-0',
-                    'two-col': 'grid grid-cols-1 md:grid-cols-2 gap-10 max-w-[1100px] mt-6',
-                    'two-col-wide': 'grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-12 max-w-[1100px] mt-6',
-                    'three-col': 'grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1100px] mt-6',
+                    'clean-list': 'list-none my-6 max-w-[1000px]',
+                    'clean-list-item': 'py-4 pl-[32px] border-b border-border/60 text-[clamp(1.05rem,1.4vw,1.35rem)] text-slate-300 leading-[1.6] relative before:content-[""] before:absolute before:left-0 before:top-[28px] before:w-[8px] before:h-[8px] before:bg-accent2 before:shadow-[0_0_12px_rgba(217,70,239,0.9)] before:rounded-full [&>strong]:text-heading [&>strong]:font-bold last:border-0 opacity-0 animate-[fadeInRight_0.5s_ease-out_forwards]',
+                    
+                    'two-col': 'grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-[1400px] mt-8',
+                    'two-col-wide': 'grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-16 max-w-[1400px] mt-8',
+                    'three-col': 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1400px] mt-8',
 
-                    'action-grid': 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-[1100px] mt-6',
-                    'action-item': 'card flex gap-[16px] items-start hover:-translate-y-1 transition-transform',
-                    'chip': 'inline-block bg-bg2 border-2 border-border font-sans font-bold text-[11px] py-1 px-3 rounded-full text-muted m-[4px_4px_4px_0] uppercase tracking-wide',
-                    'chip-ok': 'border-green/40 bg-green/10 text-green chip',
-                    'chip-warn': 'border-accent2/40 bg-accent2/10 text-accent2 chip',
-                    'chip-danger': 'border-red/40 bg-red/10 text-red chip',
+                    'action-grid': 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-[1400px] mt-8',
+                    'action-item': 'card flex flex-col sm:flex-row gap-[20px] items-start hover:-translate-y-2 transition-transform duration-300',
+                    'chip': 'inline-block bg-bg2 border border-border font-mono font-bold text-[12px] py-1.5 px-3 rounded m-[4px_4px_4px_0] uppercase tracking-wider',
+                    'chip-ok': 'border-green/50 bg-green/10 text-green shadow-[0_0_10px_rgba(16,185,129,0.2)] chip',
+                    'chip-warn': 'border-accent2/50 bg-accent2/10 text-accent2 shadow-[0_0_10px_rgba(217,70,239,0.2)] chip',
+                    'chip-danger': 'border-red/50 bg-red/10 text-red shadow-[0_0_10px_rgba(244,63,94,0.2)] chip',
 
-                    'tl-item': 'flex gap-6 py-5 border-b border-border items-start last:border-0',
-                    'tl-year': 'font-mono text-[13px] font-bold text-accent3 min-w-[50px] pt-1 bg-accent3/10 px-2 py-1 rounded-md text-center',
-                    'tl-content': 'flex-1 [&>strong]:block [&>strong]:text-heading [&>strong]:text-[1.05rem] [&>strong]:mb-1.5 [&>p]:text-[0.95rem] [&>p]:text-text [&>p]:m-0 [&>p]:leading-[1.6]',
-
-                    'tracker-table': 'w-full max-w-[860px] border-collapse mt-6 bg-card rounded-2xl overflow-hidden shadow-sm border-2 border-border',
-                    'tracker-th': 'font-sans font-bold text-[11px] uppercase tracking-[0.15em] text-muted text-left py-4 px-5 border-b-2 border-border bg-bg2/50',
-                    'tracker-td': 'py-4 px-5 border-b border-border text-[1rem] text-text last:border-0',
-
-                    'btn-primary': 'inline-block bg-accent hover:bg-accent/90 text-white font-bold py-3 px-6 rounded-xl text-[0.95rem] transition-colors border-none cursor-pointer text-center',
-                    'link-fancy': 'text-accent3 font-bold no-underline decoration-accent3/30 decoration-2 underline-offset-4 hover:underline transition-all'
+                    'tl-item': 'flex gap-6 py-6 border-b border-border/60 items-start last:border-0 relative',
+                    'tl-year': 'font-mono text-[16px] font-bold text-accent min-w-[70px] pt-1.5 bg-accent/10 px-3 py-1.5 rounded border border-accent/30 text-center shadow-[0_0_15px_rgba(14,165,233,0.2)]',
+                    'tl-content': 'flex-1 [&>strong]:block [&>strong]:text-heading [&>strong]:text-[1.25rem] [&>strong]:mb-2 [&>p]:text-[1.05rem] [&>p]:text-slate-300 [&>p]:m-0 [&>p]:leading-[1.6]'
                 },
                 presets: [
                     () => window.__unocss_runtime.presets.presetWind3(),
                     () => window.__unocss_runtime.presets.presetWebFonts({
                         provider: 'google',
                         fonts: {
-                            sans: "Nunito:400,600,700,800",
-                            serif: "Fraunces:400,600,700",
-                            mono: "JetBrains Mono:400,700"
+                            sans: "Outfit:400,500,600,700,800",
+                            mono: "Fira Code:400,600,700"
                         }
                     }),
                 ],
@@ -83,936 +77,947 @@
 
         <style>
             body, html {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-                background: #fdfaf5;
-                color: #5a5461;
-                font-family: "Nunito", sans-serif;
+                margin: 0; padding: 0; width: 100%; height: 100%;
+                overflow: hidden; background-color: #05070A;
+                color: #94A3B8; font-family: "Outfit", sans-serif;
                 -webkit-font-smoothing: antialiased;
             }
 
-            @keyframes slideIn {
-                from { opacity: 0; transform: scale(0.98) translateY(10px); }
-                to   { opacity: 1; transform: scale(1) translateY(0); }
+            /* Dynamic Background */
+            .grid-bg {
+                position: absolute; inset: -50%; z-index: -2;
+                background-image: 
+                    linear-gradient(rgba(14, 165, 233, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(14, 165, 233, 0.03) 1px, transparent 1px);
+                background-size: 60px 60px;
+                animation: panGrid 40s linear infinite; pointer-events: none;
+                transform: perspective(500px) rotateX(20deg);
             }
 
-            .scroll-content::-webkit-scrollbar { width: 8px; }
-            .scroll-content::-webkit-scrollbar-track { background: transparent; }
-            .scroll-content::-webkit-scrollbar-thumb { background: #e8e2d5; border-radius: 10px; }
-            .scroll-content::-webkit-scrollbar-thumb:hover { background: #d1c8b4; }
+            .glow-bg {
+                position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+                width: 80vw; height: 80vh;
+                background: radial-gradient(circle, rgba(14,165,233,0.07) 0%, rgba(217,70,239,0.03) 40%, transparent 70%);
+                z-index: -1; pointer-events: none;
+            }
 
-            tr:hover td { background: var(--un-colors-bg2); }
+            @keyframes panGrid {
+                0% { transform: perspective(500px) rotateX(20deg) translateY(0); }
+                100% { transform: perspective(500px) rotateX(20deg) translateY(60px); }
+            }
+
+            @keyframes slideIn {
+                from { opacity: 0; transform: scale(0.98) translateY(15px); filter: blur(5px); }
+                to   { opacity: 1; transform: scale(1) translateY(0); filter: blur(0); }
+            }
+
+            @keyframes fadeInRight {
+                from { opacity: 0; transform: translateX(-15px); }
+                to   { opacity: 1; transform: translateX(0); }
+            }
+
+            @keyframes pulseHint {
+                0%, 100% { box-shadow: 0 0 0 0 rgba(244,63,94, 0.4); }
+                50% { box-shadow: 0 0 0 6px rgba(244,63,94, 0); }
+            }
+
+            .slide-active .clean-list-item:nth-child(1) { animation-delay: 0.1s; }
+            .slide-active .clean-list-item:nth-child(2) { animation-delay: 0.2s; }
+            .slide-active .clean-list-item:nth-child(3) { animation-delay: 0.3s; }
+            .slide-active .clean-list-item:nth-child(4) { animation-delay: 0.4s; }
+            .slide-active .clean-list-item:nth-child(5) { animation-delay: 0.5s; }
+
+            /* Modern Scrollbar */
+            ::-webkit-scrollbar { width: 6px; height: 6px; }
+            ::-webkit-scrollbar-track { background: transparent; }
+            ::-webkit-scrollbar-thumb { background: #1F2937; border-radius: 10px; }
+            ::-webkit-scrollbar-thumb:hover { background: #0EA5E9; }
 
             [un-cloak] { display: none; }
+            ::selection { background: rgba(14,165,233,0.3); color: #FFF; }
 
-            ::selection { background: var(--un-colors-accent); color: white; }
+            /* Navigation Controls */
+            .nav-controls {
+                position: fixed; bottom: 2rem; right: 2rem; display: flex; align-items: center; gap: 12px;
+                z-index: 100; background: rgba(17, 22, 29, 0.8); backdrop-filter: blur(12px);
+                padding: 8px; border-radius: 16px; border: 1px solid #1F2937; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            }
+            .nav-btn {
+                background: #1F2937; color: #F8FAFC; border: none; width: 40px; height: 40px;
+                border-radius: 10px; font-size: 1.2rem; cursor: pointer; transition: all 0.2s;
+                display: flex; align-items: center; justify-content: center;
+            }
+            .nav-btn:hover { background: #0EA5E9; box-shadow: 0 0 15px rgba(14,165,233,0.5); transform: translateY(-2px); }
+            .nav-btn:active { transform: translateY(0); }
+            .slide-counter { font-family: "Fira Code", monospace; font-weight: 700; color: #94A3B8; padding: 0 12px; }
+            .slide-counter span { color: #F8FAFC; }
 
             /* ── Demo Tab System ── */
-            .demo-tabs {
-                display: flex; gap: 6px; margin-bottom: 16px; flex-wrap: wrap;
-            }
+            .demo-tabs { display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
             .demo-tab {
-                font-family: "JetBrains Mono", monospace;
-                font-size: 11px; font-weight: 700;
-                letter-spacing: 0.12em; text-transform: uppercase;
-                padding: 7px 16px; border-radius: 100px;
-                border: 2px solid #e8e2d5; background: #fdfaf5;
-                color: #9e97a3; cursor: pointer;
-                transition: all 0.2s; white-space: nowrap;
+                font-family: "Fira Code", monospace; font-size: clamp(0.75rem, 1vw, 0.95rem); font-weight: 700;
+                letter-spacing: 0.1em; text-transform: uppercase;
+                padding: 12px 20px; border-radius: 8px;
+                border: 1px solid #1F2937; background: #11161D; color: #64748B;
+                cursor: pointer; transition: all 0.3s; white-space: nowrap; flex-grow: 1; text-align: center;
             }
-            .demo-tab:hover { border-color: #ff8fab; color: #ff8fab; background: rgba(255,143,171,0.07); }
+            @media(min-width: 768px) { .demo-tab { flex-grow: 0; } }
+            .demo-tab:hover { border-color: #0EA5E9; color: #0EA5E9; background: rgba(14,165,233,0.08); }
             .demo-tab.active {
-                background: rgba(255,143,171,0.12);
-                border-color: rgba(255,143,171,0.5);
-                color: #ff8fab;
+                background: rgba(14,165,233,0.15); border-color: #0EA5E9; color: #0EA5E9;
+                box-shadow: 0 0 20px rgba(14,165,233,0.3); transform: translateY(-2px);
             }
             .demo-panel { display: none; }
-            .demo-panel.active { display: block; animation: slideIn 0.3s cubic-bezier(0.16,1,0.3,1); }
+            .demo-panel.active { display: block; animation: slideIn 0.5s cubic-bezier(0.16,1,0.3,1); }
 
             /* ── Phishing email shell ── */
             .email-shell {
-                background: #ffffff; color: #333;
-                border-radius: 18px;
-                box-shadow: 0 8px 30px rgba(0,0,0,0.06);
-                max-width: 800px; overflow: hidden;
-                border: 2px solid #e8e2d5; font-family: sans-serif; position: relative;
+                background: #ffffff; color: #1e293b; border-radius: 12px;
+                box-shadow: 0 20px 50px rgba(0,0,0,0.5); max-width: 900px;
+                overflow: hidden; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; position: relative;
             }
-            .email-header-bar {
-                background: #f4efe6; border-bottom: 2px solid #e8e2d5;
-                padding: 18px 28px;
-            }
-
-            /* ── Phishing overlay ── */
+            .email-header-bar { background: #f8fafc; border-bottom: 1px solid #e2e8f0; padding: 16px 24px; }
             .phishing-overlay {
-                position: absolute; inset: 0;
-                background: rgba(253,250,245,0.82);
-                backdrop-filter: blur(12px);
-                z-index: 10; display: none;
-                align-items: center; justify-content: center;
-                flex-direction: column; padding: 24px;
+                position: absolute; inset: 0; background: rgba(5, 7, 10, 0.95); backdrop-filter: blur(8px);
+                z-index: 10; display: none; align-items: center; justify-content: center;
+                flex-direction: column; padding: 20px;
             }
-            .phishing-overlay.show { display: flex; }
-
+            .phishing-overlay.show { display: flex; animation: fadeInRight 0.3s ease-out; }
             .phish-login-box {
-                width: 100%; max-width: 360px;
-                background: white; padding: 32px;
-                border-radius: 20px;
-                box-shadow: 0 20px 60px rgba(0,0,0,0.14);
-                border: 1px solid #e5e7eb;
+                width: 100%; max-width: 400px; background: #11161D; padding: 32px;
+                border-radius: 16px; border: 1px solid #1F2937; box-shadow: 0 25px 80px rgba(0,0,0,0.9);
             }
             .phish-gotcha {
-                display: none; flex-direction: column;
-                align-items: center; text-align: center; width: 100%; max-width: 480px;
+                display: none; flex-direction: column; align-items: center; text-align: center; width: 100%; max-width: 600px;
             }
-            .phish-gotcha.show { display: flex; }
+            .phish-gotcha.show { display: flex; animation: slideIn 0.5s ease-out; }
 
-            .profile-builder {
-                display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 860px;
-            }
-            @media (max-width: 700px) { .profile-builder { grid-template-columns: 1fr; } }
-
-            .profile-col { background: white; border: 2px solid #e8e2d5; border-radius: 18px; padding: 20px 22px; }
+            /* ── Browse & Ads Demo ── */
+            .profile-builder { display: grid; grid-template-columns: 1fr; gap: 24px; max-width: 1000px; }
+            @media(min-width: 1024px) { .profile-builder { grid-template-columns: 1fr 1fr; } }
+            .profile-col { background: #11161D; border: 1px solid #1F2937; border-radius: 12px; padding: 20px; }
             .profile-col h4 {
-                font-size: 11px; font-weight: 700; letter-spacing: 0.18em;
-                text-transform: uppercase; color: #9e97a3;
-                margin: 0 0 14px; font-family: "JetBrains Mono", monospace;
+                font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
+                color: #64748B; margin: 0 0 16px; font-family: "Fira Code", monospace;
+                display: flex; justify-content: space-between; align-items: center;
             }
-
             .browse-item {
-                display: flex; align-items: center; gap: 10px;
-                padding: 8px 10px; border-radius: 10px;
-                cursor: pointer; transition: background 0.15s; user-select: none;
-                margin-bottom: 4px;
+                display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 8px;
+                cursor: pointer; transition: all 0.2s; user-select: none; margin-bottom: 8px; border: 1px solid transparent;
             }
-            .browse-item:hover { background: #f4efe6; }
-            .browse-item.checked { background: rgba(255,143,171,0.09); }
+            .browse-item:hover { background: #1A222D; transform: translateX(4px); }
+            .browse-item.checked { background: rgba(14,165,233,0.1); border-color: rgba(14,165,233,0.4); }
             .browse-item .site-icon {
-                width: 28px; height: 28px; border-radius: 6px;
-                display: flex; align-items: center; justify-content: center;
-                font-size: 14px; flex-shrink: 0; background: #f0ece3;
+                width: 32px; height: 32px; border-radius: 6px; display: flex; align-items: center;
+                justify-content: center; font-size: 16px; background: #1F2937;
             }
-            .browse-item .site-name { font-size: 0.88rem; font-weight: 600; color: #352e3b; flex: 1; }
-            .browse-item .site-tag  { font-size: 10px; color: #9e97a3; font-family: "JetBrains Mono", monospace; }
+            .browse-item .site-name { font-size: 1rem; font-weight: 600; color: #F8FAFC; flex: 1; }
             .browse-item .cb {
-                width: 18px; height: 18px; border-radius: 5px;
-                border: 2px solid #e8e2d5; flex-shrink: 0;
-                display: flex; align-items: center; justify-content: center;
-                transition: all 0.15s; font-size: 11px; color: white;
+                width: 20px; height: 20px; border-radius: 4px; border: 2px solid #475569;
+                display: flex; align-items: center; justify-content: center; transition: all 0.2s; font-size: 12px; color: transparent;
             }
-            .browse-item.checked .cb { background: #ff8fab; border-color: #ff8fab; }
-            .browse-item.checked .cb::after { content: '✓'; }
+            .browse-item.checked .cb { background: #0EA5E9; border-color: #0EA5E9; color: #05070A; box-shadow: 0 0 12px rgba(14,165,233,0.6); }
+            .browse-item.checked .cb::after { content: '✓'; font-weight: bold; }
 
             .ad-card {
-                border: 2px solid #e8e2d5; border-radius: 14px; padding: 14px 16px;
-                margin-bottom: 8px; background: white; transition: all 0.3s; opacity: 0.3;
-                display: flex; gap: 12px; align-items: center;
+                border: 1px solid #1F2937; border-radius: 8px; padding: 12px; margin-bottom: 10px;
+                background: #1A222D; transition: all 0.4s cubic-bezier(0.16,1,0.3,1); opacity: 0.4; display: flex; gap: 12px; align-items: center; filter: grayscale(100%);
             }
-            .ad-card.lit { opacity: 1; border-color: rgba(255,143,171,0.4); background: rgba(255,143,171,0.04); }
-            .ad-icon { width: 40px; height: 40px; border-radius: 10px; background: #f4efe6; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+            .ad-card.lit { opacity: 1; filter: grayscale(0%); border-color: #0EA5E9; background: rgba(14,165,233,0.05); box-shadow: 0 5px 20px rgba(14,165,233,0.15); transform: translateX(6px); }
+            .ad-icon { width: 40px; height: 40px; border-radius: 8px; background: #1F2937; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
             .ad-body { flex: 1; }
-            .ad-body .ad-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: #9e97a3; font-family: "JetBrains Mono", monospace; margin-bottom: 2px; }
-            .ad-body .ad-title { font-size: 0.88rem; font-weight: 700; color: #352e3b; margin-bottom: 2px; }
-            .ad-body .ad-why   { font-size: 0.78rem; color: #9e97a3; }
-            .ad-score { font-family: "JetBrains Mono", monospace; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 100px; background: #f4efe6; color: #9e97a3; flex-shrink: 0; transition: all 0.3s; }
-            .ad-card.lit .ad-score { background: rgba(255,143,171,0.15); color: #ff8fab; }
+            .ad-body .ad-title { font-size: 0.95rem; font-weight: 700; color: #F8FAFC; margin-bottom: 2px; }
+            .ad-body .ad-why   { font-size: 0.8rem; color: #94A3B8; }
+            .reset-btn { font-size: 10px; padding: 4px 8px; background: #1F2937; border-radius: 4px; cursor: pointer; color:#94A3B8; transition:0.2s;}
+            .reset-btn:hover { background: #F43F5E; color: #FFF; }
 
             /* ── Fingerprint demo ── */
-            .fp-grid {
-                display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 10px; max-width: 860px;
+            .fp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; max-width: 1000px; }
+            .fp-item { background: #11161D; border: 1px solid #1F2937; border-radius: 8px; padding: 14px 16px; transition: all 0.4s; position: relative; overflow: hidden; }
+            .fp-item::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 3px; background: transparent; transition: background 0.4s; }
+            .fp-item.revealed { border-color: rgba(16,185,129,0.4); background: rgba(16,185,129,0.05); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(16,185,129,0.1); }
+            .fp-item.revealed::before { background: #10B981; box-shadow: 0 0 15px #10B981; }
+            .fp-item .fp-label { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #64748B; font-family: "Fira Code", monospace; margin-bottom: 4px; }
+            .fp-item .fp-val   { font-size: 1rem; font-weight: 700; color: #F8FAFC; font-family: "Fira Code", monospace; word-break: break-all; }
+            .fp-item .fp-val.hidden-val { color: #1F2937; user-select: none; }
+            .fp-hash { margin-top: 20px; padding: 20px; background: #11161D; border: 1px solid #1F2937; border-radius: 8px; max-width: 1000px; font-family: "Fira Code", monospace; font-size: 1rem; color: #64748B; transition: all 0.5s; text-align: center; overflow-wrap: break-word; }
+            .fp-hash.lit { background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.5); color: #F8FAFC; box-shadow: 0 0 30px rgba(16,185,129,0.2); transform: scale(1.01); }
+            
+            /* ── Broker Demo ── */
+            .broker-profile { background: #11161D; border: 1px solid #1F2937; border-radius: 12px; max-width: 900px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.4); }
+            .broker-header { background: #1A222D; border-bottom: 1px solid #1F2937; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;}
+            .broker-logo { font-family: "Fira Code", monospace; font-size: 12px; font-weight: 700; background: #F8FAFC; color: #05070A; padding: 4px 10px; border-radius: 4px; }
+            .broker-url { font-size: 0.95rem; color: #64748B; font-family: "Fira Code", monospace; word-break: break-all; }
+            .broker-body { padding: 24px; }
+            .broker-name { font-size: 2rem; font-weight: 800; color: #F8FAFC; margin-bottom: 4px; }
+            .broker-sub  { font-size: 1rem; color: #94A3B8; margin-bottom: 24px; border-bottom: 1px solid #1F2937; padding-bottom: 16px;}
+            .broker-fields { display: grid; grid-template-columns: 1fr; gap: 12px; }
+            @media(min-width: 640px) { .broker-fields { grid-template-columns: 1fr 1fr; } }
+            .broker-field { background: #1A222D; border: 1px solid #1F2937; border-radius: 8px; padding: 12px 16px; overflow: hidden; }
+            .broker-field .bf-label { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #64748B; font-family: "Fira Code", monospace; margin-bottom: 4px; }
+            .broker-field .bf-val   { font-size: 1.1rem; font-weight: 600; color: #F8FAFC; }
+            
+            /* Interactive Redaction Styling */
+            .broker-redact { 
+                display: inline-block; background: #334155; color: transparent; border-radius: 4px; 
+                cursor: pointer; user-select: none; transition: all 0.2s; padding: 2px 6px; font-family: monospace; 
+                position: relative;
             }
-            .fp-item {
-                background: white; border: 2px solid #e8e2d5; border-radius: 14px;
-                padding: 14px 16px; transition: all 0.4s;
+            .broker-redact:not(.revealed) { animation: pulseHint 2s infinite; }
+            .broker-redact:hover:not(.revealed) { background: #475569; transform: scale(1.02); }
+            .broker-redact.revealed { 
+                background: transparent; color: #F43F5E; padding: 0; text-shadow: 0 0 10px rgba(244,63,94,0.4);
+                animation: flashRedact 0.4s ease-out; cursor: default;
             }
-            .fp-item.revealed { border-color: rgba(115,178,239,0.5); background: rgba(115,178,239,0.05); }
-            .fp-item .fp-label { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #9e97a3; font-family: "JetBrains Mono", monospace; margin-bottom: 4px; }
-            .fp-item .fp-val   { font-size: 0.95rem; font-weight: 700; color: #352e3b; font-family: "JetBrains Mono", monospace; word-break: break-all; }
-            .fp-item .fp-val.hidden-val { color: #e8e2d5; user-select: none; }
-            .fp-hash {
-                margin-top: 14px; padding: 12px 16px;
-                background: #f4efe6; border-radius: 12px; max-width: 860px;
-                font-family: "JetBrains Mono", monospace; font-size: 12px;
-                color: #9e97a3; word-break: break-all; transition: all 0.4s;
+            @keyframes flashRedact {
+                0% { background: #FFF; color: #FFF; text-shadow: 0 0 20px #FFF; transform: scale(1.05); }
+                100% { background: transparent; transform: scale(1); }
             }
-            .fp-hash.lit { background: rgba(115,178,239,0.1); color: #352e3b; }
-            .fp-reveal-btn {
-                display: inline-flex; align-items: center; gap: 8px;
-                background: #73b2ef; color: white; border: none;
-                border-radius: 100px; padding: 9px 22px;
-                font-family: "JetBrains Mono", monospace; font-size: 11px;
-                font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-                cursor: pointer; transition: background 0.2s; margin-bottom: 14px;
-            }
-            .fp-reveal-btn:hover { background: #5a9fe0; }
-            .fp-reveal-btn:disabled { background: #74c496; cursor: default; }
 
-            .broker-profile {
-                background: white; border: 2px solid #e8e2d5; border-radius: 18px;
-                max-width: 740px; overflow: hidden;
-            }
-            .broker-header {
-                background: #f4efe6; border-bottom: 2px solid #e8e2d5;
-                padding: 14px 22px; display: flex; align-items: center; gap: 12px;
-            }
-            .broker-logo {
-                font-family: "JetBrains Mono", monospace; font-size: 11px; font-weight: 700;
-                background: #352e3b; color: white; padding: 5px 10px; border-radius: 7px;
-                letter-spacing: 0.1em;
-            }
-            .broker-url { font-size: 0.82rem; color: #9e97a3; font-family: "JetBrains Mono", monospace; }
-            .broker-body { padding: 20px 22px; }
-            .broker-name { font-size: 1.4rem; font-weight: 800; color: #352e3b; margin-bottom: 4px; }
-            .broker-sub  { font-size: 0.85rem; color: #9e97a3; margin-bottom: 16px; }
-            .broker-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-            @media (max-width: 600px) { .broker-fields { grid-template-columns: 1fr; } }
-            .broker-field { background: #fdfaf5; border: 1px solid #e8e2d5; border-radius: 10px; padding: 10px 13px; }
-            .broker-field .bf-label { font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #9e97a3; font-family: "JetBrains Mono", monospace; margin-bottom: 3px; }
-            .broker-field .bf-val   { font-size: 0.88rem; font-weight: 700; color: #352e3b; }
-            .broker-field.danger    { border-color: rgba(250,122,122,0.4); background: rgba(250,122,122,0.05); }
-            .broker-field.danger .bf-val { color: #fa7a7a; }
-            .broker-redact {
-                display: inline-block; background: #352e3b; color: #352e3b;
-                border-radius: 4px; cursor: pointer; user-select: none;
-                transition: all 0.3s; padding: 1px 4px;
-            }
-            .broker-redact.revealed { background: rgba(250,122,122,0.15); color: #fa7a7a; }
-            .broker-relatives { margin-top: 12px; padding: 12px 14px; background: #fdfaf5; border: 1px solid #e8e2d5; border-radius: 12px; }
-            .broker-relatives .bf-label { font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #9e97a3; font-family: "JetBrains Mono", monospace; margin-bottom: 8px; }
-            .rel-item { display: flex; align-items: center; gap: 8px; padding: 5px 0; font-size: 0.85rem; color: #352e3b; font-weight: 600; border-bottom: 1px solid #e8e2d5; }
-            .rel-item:last-child { border: none; }
-            .rel-type { font-size: 9px; font-family: "JetBrains Mono", monospace; color: #9e97a3; background: #f4efe6; padding: 2px 7px; border-radius: 100px; }
-            .broker-cta {
-                margin-top: 14px; padding: 10px 14px; border-radius: 10px;
-                background: rgba(250,122,122,0.07); border: 1px solid rgba(250,122,122,0.25);
-                font-size: 0.82rem; color: #5a5461; display: flex; align-items: center; gap: 10px;
-            }
-            .broker-cta strong { color: #fa7a7a; }
-
-            .reveal-btn {
-                font-family: "JetBrains Mono", monospace; font-size: 10px; font-weight: 700;
-                letter-spacing: 0.12em; text-transform: uppercase;
-                background: rgba(250,122,122,0.08); border: 1px solid rgba(250,122,122,0.3);
-                color: #fa7a7a; border-radius: 100px; padding: 5px 14px;
-                cursor: pointer; transition: all 0.2s; margin-top: 10px;
-            }
-            .reveal-btn:hover { background: rgba(250,122,122,0.15); }
+            .broker-relatives { margin-top: 20px; padding: 20px; background: #1A222D; border: 1px solid #1F2937; border-radius: 8px; }
+            .rel-item { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 0; font-size: 1.05rem; color: #F8FAFC; border-bottom: 1px solid #1F2937; flex-wrap: wrap; }
+            .rel-item:last-child { border: none; padding-bottom: 0; }
+            .rel-type { font-size: 10px; font-family: "Fira Code", monospace; color: #94A3B8; background: #1F2937; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.1em; }
         </style>
     </head>
 
     <body class="un-cloak">
-        <!-- Progress Bar -->
-        <div id="progress" class="fixed top-0 left-0 h-[6px] bg-accent z-50 transition-all duration-500 ease-out w-0 rounded-r-full shadow-[0_0_10px_rgba(255,143,171,0.5)]"></div>
-        <div class="fixed bottom-6 right-8 font-mono font-bold text-[13px] text-muted z-50 bg-card px-4 py-2 rounded-full border-2 border-border shadow-sm">
-            <span id="slide-num" class="text-heading">1</span> / <span id="slide-total">21</span>
+        <div class="grid-bg"></div>
+        <div class="glow-bg"></div>
+
+        <!-- Progress Bar (Neon) -->
+        <div id="progress" class="fixed top-0 left-0 h-[4px] bg-accent z-50 transition-all duration-[600ms] ease-out w-0 rounded-r-full shadow-[0_0_20px_rgba(14,165,233,0.9)]"></div>
+        
+        <!-- On-Screen Navigation -->
+        <div class="nav-controls">
+            <button class="nav-btn" onclick="prevSlide()" aria-label="Previous Slide">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <div class="slide-counter">
+                <span id="slide-num">1</span> / <span id="slide-total">21</span>
+            </div>
+            <button class="nav-btn" onclick="nextSlide()" aria-label="Next Slide">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
         </div>
 
         <div class="relative w-full h-full deck">
+            
+            <!-- Slide 0: Title -->
             <div class="slide slide-active" id="s0">
-                <div class="font-mono text-[12px] text-muted tracking-[0.2em] uppercase mb-8 flex items-center gap-4 before:content-[''] before:inline-block before:w-[40px] before:h-[2px] before:bg-accent2 before:rounded-full">
-                    Book Day 2026 · Data Privacy
+                <div class="m-auto w-full max-w-[1400px]">
+                    <div class="font-mono text-[clamp(0.9rem,1.2vw,1.2rem)] text-accent tracking-[0.25em] uppercase mb-8 flex items-center gap-4 before:content-[''] before:inline-block before:w-[40px] before:h-[2px] before:bg-accent before:rounded-full before:shadow-[0_0_15px_rgba(14,165,233,0.9)]">
+                        Cybersecurity Masterclass · 50 Mins
+                    </div>
+                    <h1 class="heading-1">How NOT to<br><em class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent2 drop-shadow-[0_0_25px_rgba(217,70,239,0.5)]">Dox</em> Yourself</h1>
+                    <p class="text-[clamp(1.2rem,2vw,1.6rem)] text-slate-300 max-w-[800px] leading-[1.6] font-medium mt-8 border-l-[4px] border-muted pl-6">
+                        How surveillance capitalism turned your daily life into a data stream, and the practical steps to take your power back.
+                    </p>
                 </div>
-                <h1 class="heading-1">How NOT to<br><em class="italic text-accent">Dox</em> Yourself</h1>
-                <p class="text-[1.2rem] text-text max-w-[600px] leading-[1.7] font-semibold mt-2">
-                    How surveillance capitalism turned your daily life into a data stream, and what you can do about it.
-                </p>
             </div>
 
+            <!-- Slide 1: Live Demos -->
             <div class="slide" id="s1">
-                <div class="section-label">Section 00: Live Demos</div>
-                <h2 class="heading-2">See it in action.</h2>
-                <p class="text-p">Four interactive demos showing exactly how your data is collected, profiled, and weaponized. <strong>Pick a tab to explore.</strong></p>
+                <div class="m-auto w-full max-w-[1400px]">
+                    <div class="section-label">Section 00: Live Demonstrations</div>
+                    <h2 class="heading-2">See it in action.</h2>
+                    <p class="text-p text-[1.2rem]">Four interactive simulations showing exactly how your data is collected, profiled, and weaponized. <strong>Pick a tab to explore.</strong></p>
 
-                <div class="demo-tabs" id="demo-tab-bar">
-                    <button class="demo-tab active" onclick="switchDemo('phishing')">🎣 Phishing Attack</button>
-                    <button class="demo-tab" onclick="switchDemo('ads')">🎯 Ad Targeting</button>
-                    <button class="demo-tab" onclick="switchDemo('fingerprint')">🔍 Browser Fingerprint</button>
-                    <button class="demo-tab" onclick="switchDemo('broker')">📋 Data Broker Profile</button>
-                </div>
+                    <div class="demo-tabs" id="demo-tab-bar">
+                        <button class="demo-tab active" onclick="switchDemo(event, 'phishing')">🎣 Phishing</button>
+                        <button class="demo-tab" onclick="switchDemo(event, 'ads')">🎯 Ad Targeting</button>
+                        <button class="demo-tab" onclick="switchDemo(event, 'fingerprint')">🔍 Fingerprinting</button>
+                        <button class="demo-tab" onclick="switchDemo(event, 'broker')">📋 Data Broker</button>
+                    </div>
 
-                <!-- ── Demo: Phishing ── -->
-                <div class="demo-panel active" id="demo-phishing">
-                    <p class="text-[0.95rem] text-muted font-bold mb-4 max-w-[760px]">When your personal data is public, this is what a scammer can craft. <strong class="text-heading">Read the email, then click the link.</strong></p>
-                    <div class="email-shell">
-                        <div class="phishing-overlay" id="phishing-overlay">
-                            <div class="phish-login-box" id="phishing-step-1">
-                                <div class="text-center font-bold text-2xl mb-1 text-gray-800">Legal Portal</div>
-                                <p class="text-sm text-gray-500 mb-6 text-center">Sign in to securely view your summons</p>
-                                <input type="text" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 mb-4 text-[0.95rem] bg-gray-50 text-gray-500 font-medium" value="jane.doe@gmail.com" readonly style="width:100%;border:2px solid #e5e7eb;border-radius:12px;padding:11px 14px;margin-bottom:12px;font-size:0.93rem;background:#f9fafb;color:#6b7280;font-family:sans-serif">
-                                <input type="password" id="phishing-pwd" placeholder="Enter your password" style="width:100%;border:2px solid #e5e7eb;border-radius:12px;padding:11px 14px;margin-bottom:20px;font-size:0.93rem;font-family:sans-serif;outline:none;transition:border-color 0.2s" onfocus="this.style.borderColor='#3b82f6'" onblur="this.style.borderColor='#e5e7eb'">
-                                <button onclick="submitPhishing()" style="width:100%;background:#3b82f6;color:white;font-weight:700;font-size:0.93rem;padding:12px;border-radius:12px;border:none;cursor:pointer;font-family:sans-serif;transition:background 0.2s" onmouseover="this.style.background='#2563eb'" onmouseout="this.style.background='#3b82f6'">Sign In</button>
+                    <!-- Demo: Phishing -->
+                    <div class="demo-panel active" id="demo-phishing">
+                        <p class="text-[1.1rem] text-accent font-bold mb-6 max-w-[900px] tracking-wide">When your personal data is public, this is what a scammer crafts. <strong class="text-heading">Read the email, then click the link.</strong></p>
+                        <div class="email-shell">
+                            <div class="phishing-overlay" id="phishing-overlay">
+                                <div class="phish-login-box" id="phishing-step-1">
+                                    <div class="text-center font-bold text-2xl mb-2 text-white">Secure Portal</div>
+                                    <p class="text-sm text-gray-400 mb-6 text-center">Sign in to securely view your summons</p>
+                                    <input type="text" value="jane.doe@gmail.com" readonly style="width:100%;border:2px solid #334155;border-radius:6px;padding:12px;margin-bottom:12px;font-size:1rem;background:#0F172A;color:#94A3B8;outline:none;">
+                                    <input type="password" id="phishing-pwd" placeholder="Enter your password" style="width:100%;border:2px solid #334155;border-radius:6px;padding:12px;margin-bottom:20px;font-size:1rem;background:#1E293B;color:white;outline:none;transition:all 0.2s" onfocus="this.style.borderColor='#0EA5E9'; this.style.boxShadow='0 0 15px rgba(14,165,233,0.4)'" onblur="this.style.borderColor='#334155'; this.style.boxShadow='none'">
+                                    <button onclick="submitPhishing()" style="width:100%;background:#0EA5E9;color:#05070A;font-weight:800;font-size:1.1rem;padding:12px;border-radius:6px;border:none;cursor:pointer;transition:all 0.2s;box-shadow:0 0 20px rgba(14,165,233,0.4)" onmouseover="this.style.background='#38BDF8'" onmouseout="this.style.background='#0EA5E9'">Sign In</button>
+                                </div>
+                                <div class="phish-gotcha" id="phishing-step-2">
+                                    <div class="font-mono text-[12px] font-bold tracking-[0.2em] text-red uppercase mb-4 bg-red/10 px-4 py-1.5 rounded border border-red/40 shadow-[0_0_25px_rgba(244,63,94,0.4)]">Demo Alert</div>
+                                    <h3 class="font-sans text-[2.5rem] font-bold text-heading mb-4 tracking-tight drop-shadow-lg">Credentials Stolen.</h3>
+                                    <p class="text-slate-300 text-[1.2rem] font-bold max-w-[600px] mb-4">The attacker just captured your actual password.</p>
+                                    <p class="text-[1rem] text-slate-400 max-w-[600px] leading-relaxed">
+                                        You thought you were logging into a secure portal — but this was a <strong class="text-heading">fake overlay</strong>. By knowing your exact address and family members, the attacker crafted a scenario urgent enough to bypass critical thinking.
+                                    </p>
+                                    <button onclick="resetPhishing()" class="mt-8 text-[0.9rem] text-accent font-bold uppercase tracking-widest hover:bg-accent/10 px-6 py-3 rounded transition font-mono border border-accent/40 hover:shadow-[0_0_25px_rgba(14,165,233,0.3)]">↩ Reset Demo</button>
+                                </div>
                             </div>
-                            <div class="phish-gotcha" id="phishing-step-2">
-                                <div class="font-mono text-[10px] font-bold tracking-[0.2em] text-red uppercase mb-3 bg-red/10 px-4 py-1.5 rounded-full inline-block border border-red/20">Demo Alert</div>
-                                <h3 class="font-serif text-[2.2rem] font-bold text-heading mb-3 tracking-tight">Credentials Stolen!</h3>
-                                <p class="text-text text-[1.05rem] font-bold max-w-[420px]">The attacker just captured your email and your actual password.</p>
-                                <p class="text-[0.92rem] text-muted mt-3 max-w-[480px] leading-relaxed">
-                                    You thought you were logging into a secure portal — but this was a <strong class="text-heading">fake overlay</strong>. By knowing your exact address and family members, the attacker crafted a scenario urgent enough to bypass your critical thinking.
-                                </p>
-                                <button onclick="resetPhishing()" class="mt-6 text-[0.85rem] text-accent font-bold uppercase tracking-widest hover:bg-accent/10 px-6 py-2 rounded-full transition font-mono border-2 border-accent/20">↩ Reset Demo</button>
+                            <div class="email-header-bar">
+                                <div class="flex justify-between items-center mb-2 flex-wrap gap-2">
+                                    <span class="font-bold text-[1.1rem] text-slate-800">URGENT: Attempted Delivery of Legal Notice</span>
+                                    <span class="text-[0.9rem] font-bold text-slate-400">10:42 AM (2 mins ago)</span>
+                                </div>
+                                <div class="text-[0.95rem] break-words">
+                                    <span class="text-slate-400 font-bold">From:</span> <span class="font-bold text-slate-700">Court Summons Dispatch</span> &lt;notices@legal-delivery.com&gt;<br>
+                                    <span class="text-slate-400 font-bold">To:</span> <span class="font-bold text-slate-700">jane.doe@gmail.com</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="email-header-bar">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-bold text-[1rem] text-gray-800">URGENT: Attempted Delivery of Legal Notice</span>
-                                <span class="text-[0.82rem] font-bold text-gray-400">10:42 AM (2 mins ago)</span>
+                            <div class="p-[20px] md:p-[32px] text-[1.05rem] leading-[1.6] text-slate-700 bg-white">
+                                <p class="mb-4">Dear <strong class="text-slate-900">Jane Doe (DOB: 08/23/1990)</strong>,</p>
+                                <p class="mb-4">We made repeated attempts to deliver a legal notice to your residence at <strong style="background:rgba(244,63,94,0.1);color:#E11D48;padding:2px 6px;border-radius:4px;font-weight:700">1428 Elm Street, Apt 4B</strong>.</p>
+                                <p class="mb-4">Because we could not reach you at <strong>(646) 555-8372</strong>, and you are no longer listed at your previous address on <strong>742 Evergreen Terrace</strong>, we are legally required to pursue alternative contact methods.</p>
+                                <p class="mb-4">If you do not respond within 24 hours, process servers will be dispatched to your employer, <strong>Initech Corporation</strong>. We will also contact your known relatives: <strong>John Doe (Father)</strong> and <strong>Mary Smith (Sister)</strong>.</p>
+                                <p class="mb-6">To avoid public service of this complaint, click the secure link below:</p>
+                                <button onclick="showPhishingLogin(event)" style="display:inline-block;background:#2563EB;color:white;font-weight:700;padding:12px 24px;border-radius:6px;border:none;cursor:pointer;font-size:1rem;margin-bottom:16px;transition:background 0.2s;box-shadow: 0 4px 15px rgba(37,99,235,0.4)" onmouseover="this.style.background='#1D4ED8'" onmouseout="this.style.background='#2563EB'">VIEW SECURE COMPLAINT</button>
+                                <p class="text-[0.8rem] text-slate-400 font-medium leading-tight max-w-[600px]">Notice ID: #8492-B. This communication is from a debt collection agency.</p>
                             </div>
-                            <div class="text-[0.88rem]">
-                                <span class="text-gray-400 font-bold">From:</span> <span class="font-bold text-gray-700">Court Summons Dispatch</span> &lt;notices@legal-delivery-sys.com&gt;<br>
-                                <span class="text-gray-400 font-bold">To:</span> <span class="font-bold text-gray-700">jane.doe@gmail.com</span>
-                            </div>
-                        </div>
-                        <div class="p-[22px_28px] text-[0.95rem] leading-[1.7] text-gray-700">
-                            <p class="mb-3">Dear <strong class="text-gray-900">Jane Doe (DOB: 08/23/2010)</strong>,</p>
-                            <p class="mb-3">We have made repeated attempts to deliver a legal notice to your residence at <strong style="background:rgba(250,122,122,0.12);color:#fa7a7a;padding:2px 8px;border-radius:6px;font-weight:700">1428 Elm Street, Apt 4B, Springfield</strong>.</p>
-                            <p class="mb-3">Because we could not reach you at <strong>(646) 555-8372</strong>, and you are no longer listed at your previous address on <strong>742 Evergreen Terrace</strong>, we are legally required to pursue alternative contact methods.</p>
-                            <p class="mb-3">If you do not respond within 24 hours, process servers will be dispatched to your employer, <strong>Initech Corporation</strong>. We will also contact your known relatives: <strong>John Doe (Father)</strong> and <strong>Mary Smith (Sister)</strong>.</p>
-                            <p class="mb-5">To avoid public service of this complaint, click the secure link below:</p>
-                            <button onclick="showPhishingLogin(event)" style="display:inline-block;background:#3b82f6;color:white;font-weight:700;padding:11px 22px;border-radius:12px;border:none;cursor:pointer;font-size:0.9rem;font-family:sans-serif;margin-bottom:16px;transition:background 0.2s" onmouseover="this.style.background='#2563eb'" onmouseout="this.style.background='#3b82f6'">VIEW SECURE COMPLAINT</button>
-                            <p class="text-[0.75rem] text-gray-400 font-medium leading-tight">Notice ID: #8492-B. This communication is from a debt collection and legal processing agency. Any information obtained will be used for that purpose.</p>
                         </div>
                     </div>
-                </div>
 
-                <!-- ── Demo: Ad Targeting ── -->
-                <div class="demo-panel" id="demo-ads">
-                    <p class="text-[0.95rem] text-muted font-bold mb-4 max-w-[760px]">Check the sites you visited today. Watch ads update in real-time to reflect what trackers now "know" about you. <strong class="text-heading">This happens invisibly on every page you visit.</strong></p>
-                    <div class="profile-builder">
-                        <div class="profile-col">
-                            <h4>Your browsing history</h4>
-                            <div id="browse-items"></div>
-                            <p style="font-size:0.78rem;color:#b8ada5;margin-top:10px;font-family:'JetBrains Mono',monospace">Simulated — but this is precisely what tracker cookies see.</p>
-                        </div>
-                        <div class="profile-col">
-                            <h4>Ads now targeting you</h4>
-                            <div id="ad-slots"></div>
-                            <div id="profile-tags" style="margin-top:10px;display:flex;flex-wrap:wrap;gap:5px"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ── Demo: Browser Fingerprint ── -->
-                <div class="demo-panel" id="demo-fingerprint">
-                    <p class="text-[0.95rem] text-muted font-bold mb-4 max-w-[760px]">No cookies needed. Your browser reveals a unique identity just from its configuration. <strong class="text-heading">Click to scan your actual browser.</strong></p>
-                    <button class="fp-reveal-btn" id="fp-btn" onclick="runFingerprint()">
-                        <span>▶ Scan My Browser</span>
-                    </button>
-                    <div class="fp-grid" id="fp-grid"></div>
-                    <div class="fp-hash" id="fp-hash">
-                        <span style="opacity:0.4">Your fingerprint hash will appear here...</span>
-                    </div>
-                    <div id="fp-result-text" style="margin-top:10px;font-size:0.88rem;color:#9e97a3;max-width:760px;display:none">
-                        This hash is <strong style="color:#352e3b">statistically unique to your browser</strong>. Trackers generate this silently on every page load — no cookies, no login, no consent required. Even if you clear your cookies, the fingerprint stays the same.
-                    </div>
-                </div>
-
-                <!-- ── Demo: Data Broker Profile ── -->
-                <div class="demo-panel" id="demo-broker">
-                    <p class="text-[0.95rem] text-muted font-bold mb-4 max-w-[760px]">This is the kind of profile that exists on you right now — freely searchable by anyone. <strong class="text-heading">Click the redacted fields to reveal what's exposed.</strong></p>
-                    <div class="broker-profile">
-                        <div class="broker-header">
-                            <div class="broker-logo">PEOPLEFIND.IO</div>
-                            <div class="broker-url">peoplefind.io/search?name=Jane+Doe&state=IL</div>
-                        </div>
-                        <div class="broker-body">
-                            <div class="broker-name">Jane Marie Doe</div>
-                            <div class="broker-sub">Age 33 · Springfield, IL · Last updated 2 days ago</div>
-                            <div class="broker-fields">
-                                <div class="broker-field danger">
-                                    <div class="bf-label">Current Address</div>
-                                    <div class="bf-val">
-                                        <span class="broker-redact" id="br-addr" onclick="revealBroker('br-addr','1428 Elm St, Apt 4B')">████████████████</span>
-                                    </div>
-                                </div>
-                                <div class="broker-field danger">
-                                    <div class="bf-label">Phone Number</div>
-                                    <div class="bf-val">
-                                        <span class="broker-redact" id="br-phone" onclick="revealBroker('br-phone','(646) 555-8372')">████████████</span>
-                                    </div>
-                                </div>
-                                <div class="broker-field">
-                                    <div class="bf-label">Previous Address</div>
-                                    <div class="bf-val">
-                                        <span class="broker-redact" id="br-prev" onclick="revealBroker('br-prev','742 Evergreen Terrace')">██████████████████</span>
-                                    </div>
-                                </div>
-                                <div class="broker-field">
-                                    <div class="bf-label">Employer</div>
-                                    <div class="bf-val">
-                                        <span class="broker-redact" id="br-emp" onclick="revealBroker('br-emp','Initech Corporation')">████████████████</span>
-                                    </div>
-                                </div>
-                                <div class="broker-field">
-                                    <div class="bf-label">Email Address</div>
-                                    <div class="bf-val">
-                                        <span class="broker-redact" id="br-email" onclick="revealBroker('br-email','jane.doe@gmail.com')">███████████████████</span>
-                                    </div>
-                                </div>
-                                <div class="broker-field">
-                                    <div class="bf-label">DOB</div>
-                                    <div class="bf-val">
-                                        <span class="broker-redact" id="br-dob" onclick="revealBroker('br-dob','Aug 23, 2010')">████████████</span>
-                                    </div>
-                                </div>
+                    <!-- Demo: Ad Targeting -->
+                    <div class="demo-panel" id="demo-ads">
+                        <p class="text-[1.1rem] text-accent font-bold mb-6 max-w-[900px] tracking-wide">Watch ads update in real-time based on what trackers "learn" about you. <strong class="text-heading">Click sites below to simulate browsing.</strong></p>
+                        <div class="profile-builder">
+                            <div class="profile-col">
+                                <h4><span>Your Browsing History</span> <span class="reset-btn" onclick="resetAds()">Reset</span></h4>
+                                <div id="browse-items"></div>
                             </div>
-                            <div class="broker-relatives">
-                                <div class="bf-label">Known Associates / Relatives</div>
-                                <div class="rel-item">
-                                    <span class="broker-redact" id="br-r1" onclick="revealBroker('br-r1','John Doe')" style="flex:1">████████</span>
-                                    <span class="rel-type">Father</span>
-                                </div>
-                                <div class="rel-item">
-                                    <span class="broker-redact" id="br-r2" onclick="revealBroker('br-r2','Mary Smith')" style="flex:1">██████████</span>
-                                    <span class="rel-type">Sister</span>
-                                </div>
-                                <div class="rel-item">
-                                    <span class="broker-redact" id="br-r3" onclick="revealBroker('br-r3','Robert Doe')" style="flex:1">███████████</span>
-                                    <span class="rel-type">Spouse</span>
-                                </div>
+                            <div class="profile-col">
+                                <h4>Ads Targeting You</h4>
+                                <div id="ad-slots"></div>
+                                <div id="profile-tags" style="margin-top:16px;display:flex;flex-wrap:wrap;gap:6px"></div>
                             </div>
-                            <div class="broker-cta">
-                                <span style="font-size:16px">⚠️</span>
-                                <span>This profile was compiled automatically from <strong>voter records, property filings, court documents,</strong> and previous data breaches. No consent was required.</span>
+                        </div>
+                    </div>
+
+                    <!-- Demo: Browser Fingerprint -->
+                    <div class="demo-panel" id="demo-fingerprint">
+                        <p class="text-[1.1rem] text-accent font-bold mb-6 max-w-[900px] tracking-wide">No cookies needed. Your browser reveals a unique identity just from its configuration. <strong class="text-heading">Click to scan.</strong></p>
+                        <button class="bg-green text-[#05070A] font-bold font-mono tracking-widest uppercase py-3 px-6 rounded-lg text-[1rem] hover:bg-green/80 transition-all shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:shadow-[0_0_30px_rgba(16,185,129,0.6)] mb-6" id="fp-btn" onclick="runFingerprint()">
+                            <span>▶ Scan My Browser</span>
+                        </button>
+                        <div class="fp-grid" id="fp-grid"></div>
+                        <div class="fp-hash" id="fp-hash">
+                            <span style="opacity:0.3; font-size:1rem;">Your fingerprint hash will appear here...</span>
+                        </div>
+                        <div id="fp-result-text" style="margin-top:20px;font-size:1rem;color:#94A3B8;max-width:1000px;display:none;line-height:1.6;text-align:center;border-top:1px solid #1F2937;padding-top:20px;">
+                            This hash is <strong style="color:#FFF;">statistically unique to your browser</strong>.<br>Trackers generate this silently on every page load — no cookies, no consent required.
+                        </div>
+                    </div>
+
+                    <!-- Demo: Data Broker Profile -->
+                    <div class="demo-panel" id="demo-broker">
+                        <p class="text-[1.1rem] text-accent font-bold mb-6 max-w-[900px] tracking-wide">This profile exists on you right now, freely searchable by anyone. <strong class="text-heading text-red">Click the pulsing redacted fields to reveal what's exposed.</strong></p>
+                        <div class="broker-profile">
+                            <div class="broker-header">
+                                <div class="flex items-center gap-3">
+                                    <div class="broker-logo">PEOPLEFIND.IO</div>
+                                    <div class="broker-url">/search?name=Jane+Doe</div>
+                                </div>
+                                <span class="reset-btn" onclick="resetBroker()">Reset Demo</span>
+                            </div>
+                            <div class="broker-body">
+                                <div class="broker-name">Jane Marie Doe</div>
+                                <div class="broker-sub">Age 33 · Springfield, IL · Last updated 2 days ago</div>
+                                <div class="broker-fields">
+                                    <div class="broker-field border-red/40 bg-red/5">
+                                        <div class="bf-label text-red">Current Address</div>
+                                        <div class="bf-val">
+                                            <span class="broker-redact" data-val="1428 Elm St, Apt 4B" onclick="revealBroker(this)">██████████████</span>
+                                        </div>
+                                    </div>
+                                    <div class="broker-field border-red/40 bg-red/5">
+                                        <div class="bf-label text-red">Phone Number</div>
+                                        <div class="bf-val">
+                                            <span class="broker-redact" data-val="(646) 555-8372" onclick="revealBroker(this)">██████████</span>
+                                        </div>
+                                    </div>
+                                    <div class="broker-field">
+                                        <div class="bf-label">Previous Address</div>
+                                        <div class="bf-val">
+                                            <span class="broker-redact" data-val="742 Evergreen Terrace" onclick="revealBroker(this)">████████████████</span>
+                                        </div>
+                                    </div>
+                                    <div class="broker-field">
+                                        <div class="bf-label">Employer</div>
+                                        <div class="bf-val">
+                                            <span class="broker-redact" data-val="Initech Corporation" onclick="revealBroker(this)">██████████████</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="broker-relatives">
+                                    <div class="bf-label">Known Associates / Relatives</div>
+                                    <div class="rel-item">
+                                        <span class="broker-redact" data-val="John Doe" onclick="revealBroker(this)" style="flex:1">████████</span>
+                                        <span class="rel-type">Father</span>
+                                    </div>
+                                    <div class="rel-item">
+                                        <span class="broker-redact" data-val="Mary Smith" onclick="revealBroker(this)" style="flex:1">██████████</span>
+                                        <span class="rel-type">Sister</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Slide 2 -->
             <div class="slide" id="s2">
-                <div class="section-label">Obligatory Book Tie-In</div>
-                <h2 class="heading-2">Measurement and Profit.</h2>
-                <p class="text-p">James Vincent's <strong>Beyond Measure</strong> is about our obsession with quantifying the world. It traces how humans have used measurement to make sense of the universe, but warns of the danger of <strong>reducing complex human experiences into mere data points</strong>.</p>
-                <p class="text-p">Measurement is never neutral. Whoever controls what gets measured, and how, holds power over everyone else.</p>
-                <div class="callout-yellow mt-6">
-                    <h3 class="heading-3">An Inevitable Outcome</h3>
-                    <p class="m-0 text-text">Surveillance captialism, a term coined by social psychologist and philosopher Shoshana Zuboff, is an inevitable outcome as we continue to prioritize metrics, measurement, and profit to its extremes. It is the process of taking a human being with complexities, flaws, and desires, and <strong>measuring them down to a spreadsheet of clickable behaviors</strong> to be categorized and sold to the highest bidder.</p>
+                <div class="m-auto w-full max-w-[1400px]">
+                    <div class="section-label">Obligatory Book Tie-In</div>
+                    <h2 class="heading-2">Measurement and Profit.</h2>
+                    <p class="text-p">James Vincent's <strong>Beyond Measure</strong> is about our obsession with quantifying the world. It traces how humans have used measurement to make sense of the universe, but warns of the danger of <strong>reducing complex human experiences into mere data points</strong>.</p>
+                    <p class="text-p">Measurement is never neutral. Whoever controls what gets measured holds power.</p>
+                    <div class="callout-yellow">
+                        <h3 class="heading-3">An Inevitable Outcome</h3>
+                        <p class="m-0 text-[1.1rem] text-slate-300 leading-[1.7]">Surveillance capitalism is an inevitable outcome as we continue to prioritize measurement and profit to its extremes. It is the process of taking a human being with complexities and desires, and <strong>measuring them down to a spreadsheet of clickable behaviors</strong> to be categorized and sold to the highest bidder.</p>
+                    </div>
                 </div>
             </div>
 
+            <!-- Slide 3 -->
             <div class="slide" id="s3">
-                <div class="section-label">Section 01: The Philosophy</div>
-                <h2 class="heading-2">The "Free"<br>Web (Web 2.0)</h2>
-                <p class="text-p">Privacy is about <strong>what is taken from us</strong> silently.</p>
-                <p class="text-p">When people talk about data privacy, it can seem pretty suspicious and obscure, but it's not actually about hiding any dirty secrets. Data privacy is better seen as <strong>resisting the capitalist commodification of our human experiences</strong>.</p>
+                <div class="m-auto w-full max-w-[1400px]">
+                    <div class="section-label">Section 01: The Philosophy</div>
+                    <h2 class="heading-2">The "Free"<br>Web (Web 2.0)</h2>
+                    <p class="text-p text-[1.4rem] font-medium text-white drop-shadow-md">Privacy is about <strong>what is taken from us</strong> silently.</p>
+                    <p class="text-p">Data privacy can seem suspicious, but it's not actually about hiding dirty secrets. Data privacy is better seen as <strong>resisting the capitalist commodification of our human experiences</strong>.</p>
 
-                <div class="card border-t-4 border-t-accent mt-6 max-w-[860px]">
-                    <h3 class="heading-3 mb-2">Data Minimization</h3>
-                    <p class="text-text mb-0 leading-[1.6]">The concept that a company should only collect the absolute minimum amount of data required to provide a service. If a flashlight app needs your GPS location, that should raise alarm bells.</p>
+                    <div class="card border-l-[6px] border-l-accent mt-8 max-w-[1000px]">
+                        <h3 class="heading-3 mb-2">Data Minimization</h3>
+                        <p class="text-[1.1rem] text-slate-300 mb-0 leading-[1.6]">The concept that a company should only collect the absolute minimum amount of data required to provide a service. If a flashlight app needs your GPS location, that should raise alarm bells.</p>
+                    </div>
                 </div>
             </div>
 
+            <!-- Slide 4 -->
             <div class="slide" id="s4">
-                <div class="section-label">Section 02: The Myth</div>
-                <h2 class="heading-2">"I have nothing<br>to hide."</h2>
-                <p class="text-p">There is a phrase that kills more privacy legislation than even the biggest tech lobby could dream of: <strong>"I have nothing to hide."</strong></p>
-                <p class="text-p">It's a comforting thought. It makes us feel safe. But what does it actually mean?</p>
+                <div class="m-auto w-full max-w-[1400px]">
+                    <div class="section-label">Section 02: The Myth</div>
+                    <h2 class="heading-2">"I have nothing<br>to hide."</h2>
+                    <p class="text-p">There is a phrase that kills more privacy legislation than even the biggest tech lobby could dream of: <strong>"I have nothing to hide."</strong> It's a comforting thought. But what does it mean?</p>
 
-                <div class="callout-blue">
-                    <p class="m-0 text-[1.1rem] leading-[1.7]">We all know what happens in bathrooms. It's not a secret. There are no classified documents protecting toilets and sinks. <strong>But you still close the door.</strong></p>
-                    <p class="mt-4 mb-0 text-[1.1rem] leading-[1.7]">You don't close the door because you're doing something wrong; you close the door because existing in a space in which you’re constantly observed <strong>strips you of your dignity and humanity</strong>.</p>
+                    <div class="callout-blue group">
+                        <p class="m-0 text-[1.2rem] leading-[1.7] group-hover:text-white transition-colors">We all know what happens in bathrooms. It's not a secret. There are no classified documents protecting toilets and sinks. <strong>But you still close the door.</strong></p>
+                        <p class="mt-4 mb-0 text-[1.2rem] leading-[1.7] group-hover:text-white transition-colors">You don't close the door because you're doing something wrong; you close the door because existing in a space in which you’re constantly observed <strong>strips you of your dignity and humanity</strong>.</p>
+                    </div>
+
+                    <p class="text-p mt-8 text-[1.3rem]">This is because you want privacy, not secrecy. <br><strong class="text-accent drop-shadow-[0_0_10px_rgba(14,165,233,0.5)]">Privacy is the boundary between being a human and being a specimen.</strong></p>
                 </div>
-
-                <p class="text-p mt-6">This is because you want privacy, not secrecy. <strong>Privacy is the boundary between being a human and being a specimen.</strong></p>
             </div>
 
+            <!-- Slide 5 -->
             <div class="slide" id="s5">
-                <div class="section-label">Section 03: Defining terms</div>
-                <h2 class="heading-2">Privacy is<br>about power.</h2>
-                <p class="text-p">You don't need to be a hacker in a dimly-lit room to care about privacy. Let's clarify some distinct concepts:</p>
-                <div class="three-col mt-8">
-                    <div class="card border-t-4 border-t-accent3">
-                        <h3 class="heading-3">Privacy</h3>
-                        <p class="text-[1rem] text-text m-0 leading-[1.6]">Data is only seen by who you intend to see it. It is entirely about <strong>consent and control</strong>.</p>
-                    </div>
-                    <div class="card border-t-4 border-t-green">
-                        <h3 class="heading-3 text-green">Security</h3>
-                        <p class="text-[1rem] text-text m-0 leading-[1.6]">You can trust the tools you're using. Your data is protected against unauthorized access or breaches.</p>
-                    </div>
-                    <div class="card border-t-4 border-t-accent2">
-                        <h3 class="heading-3">Anonymity</h3>
-                        <p class="text-[1rem] text-text m-0 leading-[1.6]">Acting without being identified. Completely disconnecting your digital actions from your real-world identity.</p>
-                    </div>
-                </div>
-                <div class="callout-red max-w-[1100px] mt-8 text-center">
-                    <p class="m-0 text-[1.1rem] font-bold text-heading">You don't need all three all the time. Right now, on the modern web, you barely have one.</p>
-                </div>
-            </div>
-
-            <div class="slide" id="s6">
-                <div class="section-label">Section 04: Public Records</div>
-                <h2 class="heading-2">What do we<br>already know about you?</h2>
-                <p class="text-p">Before we get into complicated browser trackers, there is a category of data openly available to anyone with a browser and thirty seconds of free time—the exact data used in the phishing email we just saw.</p>
-                <div class="two-col mt-8">
-                    <div class="card">
-                        <h3 class="heading-3">What's available for free</h3>
-                        <ul class="clean-list">
-                            <li class="clean-list-item"><strong>Full name + exact age</strong></li>
-                            <li class="clean-list-item"><strong>Current & past home addresses</strong></li>
-                            <li class="clean-list-item"><strong>Phone numbers & emails</strong></li>
-                            <li class="clean-list-item"><strong>Family members' names</strong> (parents, siblings)</li>
-                            <li class="clean-list-item"><strong>Marriage & divorce records</strong></li>
-                        </ul>
-                    </div>
-                    <div class="card bg-bg2/30 border-dashed">
-                        <h3 class="heading-3">Where does it come from?</h3>
-                        <ul class="clean-list">
-                            <li class="clean-list-item"><strong>Voter registration records</strong> (public in most states)</li>
-                            <li class="clean-list-item"><strong>Property/housing records</strong> (publicly accessible)</li>
-                            <li class="clean-list-item"><strong>Court & DMV records</strong></li>
-                            <li class="clean-list-item"><strong>Old data breaches</strong> scraped and compiled</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slide" id="s7">
-                <div class="section-label">Section 05: Data Brokers</div>
-                <h2 class="heading-2">The People-Search<br>Industry.</h2>
-                <p class="text-p">People-search sites aggregate public record data into a single, highly readable profile. They require no login. They're designed for the average consumer, but they are routinely weaponized by stalkers, scammers, and abusers.</p>
-                <div class="card mt-6 max-w-[800px]">
-                    <p class="font-bold text-heading text-[1.1rem] mb-4">When we looked up a random adult, here is what came back instantly:</p>
-                    <ul class="clean-list">
-                        <li class="clean-list-item">Full address history going back 15 years, including <strong>childhood homes</strong>.</li>
-                        <li class="clean-list-item">Names of close relatives: parents, siblings, and adult children.</li>
-                        <li class="clean-list-item">Associated phone numbers and email addresses.</li>
-                        <li class="clean-list-item">Their employment history and current employer.</li>
-                    </ul>
-                    <div class="bg-accent2/10 text-heading p-4 mt-4 rounded-xl font-bold text-[0.95rem]">
-                        This provides enough detail to craft a convincing, highly personalized attack on anyone.
-                    </div>
-                </div>
-            </div>
-
-            <div class="slide" id="s8">
-                <div class="section-label">Section 06: Why is this legal?</div>
-                <h2 class="heading-2">A failure of<br>legislation.</h2>
-                <div class="two-col-wide">
-                    <div>
-                        <p class="text-p">In the US, <strong>there is no comprehensive federal data privacy law</strong>. Aggregating and reselling public records is entirely legal. The companies doing this have spent heavily to keep it that way.</p>
-                        <p class="text-p">In the EU, the <strong>General Data Protection Regulation (GDPR)</strong> fundamentally changed this:</p>
-                        <ul class="clean-list">
-                            <li class="clean-list-item">Companies must have a <strong>legal basis</strong> to collect your data.</li>
-                            <li class="clean-list-item">You have the <strong>right to be forgotten</strong>.</li>
-                            <li class="clean-list-item">People-search sites of this type <strong>cannot legally operate</strong> for EU residents.</li>
-                        </ul>
-                        <p class="text-[0.95rem] text-muted font-bold mt-6 leading-relaxed">
-                            The only reason you can download your Instagram, TikTok, or Google data today is because of global GDPR pressure.
-                        </p>
-                    </div>
-                    <div>
-                        <h3 class="heading-3 mb-4">Regulatory Landscape</h3>
-                        <div class="tl-item">
-                            <div class="tl-year text-accent3 bg-accent3/10">EU</div>
-                            <div class="tl-content">
-                                <strong>GDPR (2018)</strong>
-                                <p>Comprehensive federal-level data protection. Mandates data minimization, purpose limitation, right to erasure, and breach notification within 72 hours.</p>
-                            </div>
-                        </div>
-                        <div class="tl-item border-none">
-                            <div class="tl-year text-red bg-red/10">US</div>
-                            <div class="tl-content">
-                                <strong>No Federal Equivalent</strong>
-                                <p>A patchwork of sector-specific laws (HIPAA for health, FERPA for education). No general right to erasure. People search sites are fully legal.</p>
-                            </div>
-                        </div>
-                        <div class="callout-red mt-4 px-5 py-4">
-                            <p class="m-0 text-[0.95rem] font-bold text-heading">Tech lobbyists spent hundreds of millions to prevent a US equivalent to the GDPR.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slide" id="s9">
-                <div class="section-label">Section 07: Real Consequences</div>
-                <h2 class="heading-2">This is <em>not</em><br>an abstract problem.</h2>
-                <div class="scroll-content overflow-y-auto max-h-[calc(100vh-220px)] pr-4 pb-4">
+                <div class="m-auto w-full max-w-[1400px]">
+                    <div class="section-label">Section 03: Defining terms</div>
+                    <h2 class="heading-2">Privacy is<br>about power.</h2>
+                    <p class="text-p">You don't need to be a hacker in a dimly-lit room to care about privacy.</p>
                     <div class="three-col">
-                        <div class="card border-t-4 border-t-red">
-                            <h3 class="heading-3">Domestic Violence</h3>
-                            <p class="text-[1rem] text-text m-0 leading-[1.6]">Survivors attempting to rebuild their lives are findable in seconds by abusers using free tools. Confidential shelter locations are often compromised through family member lookups.</p>
+                        <div class="card border-t-[4px] border-t-accent">
+                            <h3 class="heading-3 text-accent text-[1.4rem]">Privacy</h3>
+                            <p class="text-[1rem] text-slate-300 m-0 leading-[1.6]">Data is only seen by who you intend to see it. It is entirely about <strong>consent and control</strong>.</p>
                         </div>
-                        <div class="card border-t-4 border-t-red">
-                            <h3 class="heading-3">Stalking</h3>
-                            <p class="text-[1rem] text-text m-0 leading-[1.6]">Journalists, activists, and public figures can be physically located instantly. <strong>From popular creators to school teachers</strong>, no one is exempt from being mapped.</p>
+                        <div class="card border-t-[4px] border-t-green">
+                            <h3 class="heading-3 text-green text-[1.4rem]">Security</h3>
+                            <p class="text-[1rem] text-slate-300 m-0 leading-[1.6]">You can trust the tools you're using. Your data is protected against unauthorized access or breaches.</p>
                         </div>
-                        <div class="card border-t-4 border-t-red">
-                            <h3 class="heading-3">Targeted Scams</h3>
-                            <p class="text-[1rem] text-text m-0 leading-[1.6]">Armed with address history, relatives' names, and employers, scammers craft impersonations pretending to be a family member in trouble, a bank, or law enforcement.</p>
+                        <div class="card border-t-[4px] border-t-accent2">
+                            <h3 class="heading-3 text-accent2 text-[1.4rem]">Anonymity</h3>
+                            <p class="text-[1rem] text-slate-300 m-0 leading-[1.6]">Acting without being identified. Disconnecting your digital actions from your real-world identity.</p>
                         </div>
                     </div>
-                    <div class="callout-yellow max-w-full mt-6">
-                        <p class="m-0 text-[1.05rem] leading-[1.6]"><strong>Law Enforcement Bypass:</strong> Government agencies are explicitly purchasing data broker databases to bypass the need for warrants. If they can buy your location data from an app developer, they don't need a judge's permission.</p>
+                    <div class="callout-red max-w-[1400px] mt-8 text-center bg-red/10 border-none shadow-[0_0_30px_rgba(244,63,94,0.15)]">
+                        <p class="m-0 text-[1.2rem] font-bold text-heading">You don't need all three all the time. Right now, on the modern web, you barely have one.</p>
                     </div>
                 </div>
             </div>
 
+            <!-- Slide 6 -->
+            <div class="slide" id="s6">
+                <div class="m-auto w-full max-w-[1400px]">
+                    <div class="section-label">Section 04: Public Records</div>
+                    <h2 class="heading-2">What do we<br>already know about you?</h2>
+                    <p class="text-p">Before we get into complicated browser trackers, there is data openly available to anyone with a browser and thirty seconds of free time—the exact data used in the phishing demo.</p>
+                    <div class="two-col">
+                        <div class="card border-l-[4px] border-l-accent">
+                            <h3 class="heading-3 mb-4">Available for free</h3>
+                            <ul class="clean-list m-0">
+                                <li class="clean-list-item"><strong>Full name + exact age</strong></li>
+                                <li class="clean-list-item"><strong>Current & past home addresses</strong></li>
+                                <li class="clean-list-item"><strong>Phone numbers & emails</strong></li>
+                                <li class="clean-list-item"><strong>Family members' names</strong></li>
+                            </ul>
+                        </div>
+                        <div class="card border-dashed bg-bg2/40 border-border/80">
+                            <h3 class="heading-3 text-muted mb-4">Where does it come from?</h3>
+                            <ul class="clean-list m-0">
+                                <li class="clean-list-item text-muted"><strong>Voter registration records</strong></li>
+                                <li class="clean-list-item text-muted"><strong>Property/housing records</strong></li>
+                                <li class="clean-list-item text-muted"><strong>Court & DMV records</strong></li>
+                                <li class="clean-list-item text-muted"><strong>Old data breaches</strong> scraped and compiled</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 7 -->
+            <div class="slide" id="s7">
+                <div class="m-auto w-full max-w-[1400px]">
+                    <div class="section-label">Section 05: Data Brokers</div>
+                    <h2 class="heading-2">The People-Search<br>Industry.</h2>
+                    <p class="text-p">People-search sites aggregate public record data into a single, highly readable profile. They require no login. They are routinely weaponized by stalkers, scammers, and abusers.</p>
+                    <div class="card mt-8 max-w-[1000px] border-accent/30 border-l-[6px] border-l-accent shadow-[0_10px_40px_rgba(14,165,233,0.1)]">
+                        <p class="font-bold text-heading text-[1.2rem] mb-4">When we looked up a random adult, here is what came back instantly:</p>
+                        <ul class="clean-list border-none mt-0">
+                            <li class="clean-list-item">Full address history going back 15 years, including <strong>childhood homes</strong>.</li>
+                            <li class="clean-list-item">Names of close relatives: parents, siblings, and adult children.</li>
+                            <li class="clean-list-item">Their employment history and current employer.</li>
+                        </ul>
+                        <div class="bg-red/10 text-heading p-4 mt-4 rounded-xl border border-red/40 shadow-[0_0_20px_rgba(244,63,94,0.2)] font-bold text-[1.05rem] text-center tracking-wide">
+                            This provides enough detail to craft a convincing, highly personalized attack on anyone.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 8 -->
+            <div class="slide" id="s8">
+                <div class="m-auto w-full max-w-[1400px]">
+                    <div class="section-label">Section 06: Why is this legal?</div>
+                    <h2 class="heading-2">A failure of<br>legislation.</h2>
+                    <div class="two-col-wide">
+                        <div>
+                            <p class="text-p text-[1.1rem]">In the US, <strong>there is no comprehensive federal data privacy law</strong>. Aggregating and reselling public records is entirely legal.</p>
+                            <p class="text-p text-[1.1rem]">In the EU, the <strong>General Data Protection Regulation (GDPR)</strong> fundamentally changed this:</p>
+                            <ul class="clean-list mt-0">
+                                <li class="clean-list-item py-2 text-[1rem]">Companies must have a <strong>legal basis</strong> to collect data.</li>
+                                <li class="clean-list-item py-2 text-[1rem]">You have the <strong>right to be forgotten</strong>.</li>
+                                <li class="clean-list-item py-2 text-[1rem]">People-search sites <strong>cannot legally operate</strong>.</li>
+                            </ul>
+                            <p class="text-[1rem] text-accent font-mono font-bold mt-6 leading-relaxed border-l-2 border-accent pl-4">
+                                > The only reason you can download your Instagram or TikTok data today is because of global GDPR pressure.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="heading-3 mb-4 text-muted uppercase tracking-widest text-[0.9rem] font-mono">Regulatory Landscape</h3>
+                            <div class="tl-item py-4">
+                                <div class="tl-year shadow-[0_0_15px_rgba(16,185,129,0.3)] text-green border-green/30 bg-green/10 text-[1.1rem]">EU</div>
+                                <div class="tl-content">
+                                    <strong class="text-[1.2rem]">GDPR (2018)</strong>
+                                    <p class="text-[0.95rem]">Comprehensive protection. Mandates data minimization, purpose limitation, and breach notification.</p>
+                                </div>
+                            </div>
+                            <div class="tl-item border-none py-4">
+                                <div class="tl-year shadow-[0_0_15px_rgba(244,63,94,0.3)] text-red border-red/30 bg-red/10 text-[1.1rem]">US</div>
+                                <div class="tl-content">
+                                    <strong class="text-[1.2rem]">No Federal Equivalent</strong>
+                                    <p class="text-[0.95rem]">A patchwork of sector-specific laws. No general right to erasure. People search sites are fully legal.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 9 -->
+            <div class="slide" id="s9">
+                <div class="m-auto w-full max-w-[1400px]">
+                    <div class="section-label">Section 07: Real Consequences</div>
+                    <h2 class="heading-2">This is <em>not</em><br>an abstract problem.</h2>
+                    <div class="three-col">
+                        <div class="card border-t-[4px] border-t-red hover:shadow-[0_0_30px_rgba(244,63,94,0.2)] hover:border-red/50 transition-all">
+                            <h3 class="heading-3 text-[1.4rem]">Domestic Violence</h3>
+                            <p class="text-[1rem] text-slate-300 m-0 leading-[1.6]">Survivors attempting to rebuild their lives are findable in seconds by abusers. Confidential shelter locations are often compromised.</p>
+                        </div>
+                        <div class="card border-t-[4px] border-t-red hover:shadow-[0_0_30px_rgba(244,63,94,0.2)] hover:border-red/50 transition-all">
+                            <h3 class="heading-3 text-[1.4rem]">Stalking</h3>
+                            <p class="text-[1rem] text-slate-300 m-0 leading-[1.6]">Journalists, activists, and public figures can be physically located instantly. <strong>From creators to school teachers</strong>, no one is exempt.</p>
+                        </div>
+                        <div class="card border-t-[4px] border-t-red hover:shadow-[0_0_30px_rgba(244,63,94,0.2)] hover:border-red/50 transition-all">
+                            <h3 class="heading-3 text-[1.4rem]">Targeted Scams</h3>
+                            <p class="text-[1rem] text-slate-300 m-0 leading-[1.6]">Armed with address history and relatives' names, scammers craft impersonations pretending to be a family member in trouble.</p>
+                        </div>
+                    </div>
+                    <div class="callout-yellow max-w-full mt-8 shadow-[0_0_25px_rgba(217,70,239,0.15)] border-l-[8px]">
+                        <p class="m-0 text-[1.1rem] leading-[1.7]"><strong>Law Enforcement Bypass:</strong> Government agencies are explicitly purchasing data broker databases to bypass the need for warrants. If they can buy your location data from an app developer, they don't need a judge's permission.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 10 -->
             <div class="slide" id="s10">
-                <div class="section-label">Section 08: Browser Tracking</div>
-                <h2 class="heading-2">The invisible<br>follow.</h2>
-                <p class="text-p">People search is layer one. Layer two is the browser. Your activity across the entire web is tracked — not just on sites you use, but on sites you've never heard of.</p>
-                <div class="two-col">
-                    <div class="card">
-                        <h3 class="heading-3 mb-4">How tracking works</h3>
-                        <ul class="clean-list">
-                            <li class="clean-list-item"><strong>Third-party cookies:</strong> Small files that follow you from site to site.</li>
-                            <li class="clean-list-item"><strong>Tracking pixels:</strong> Invisible 1x1 images embedded in pages and emails that log when you open them.</li>
-                            <li class="clean-list-item"><strong>Browser fingerprinting:</strong> Your screen size, installed fonts, and hardware config form a unique identifier.</li>
-                            <li class="clean-list-item"><strong>Link decorators:</strong> The cluttered <code class="text-accent bg-accent/10 px-1 rounded text-[0.85rem]">?utm_source=</code> strings at the end of URLs.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="heading-3 mb-4">Who is doing it?</h3>
-                        <div class="callout-blue mt-0">
-                            <p class="m-0 text-[1.05rem] leading-[1.6]">You are not just tracked while on Google or Meta. Their tracking scripts are invisibly embedded across news sites, health forums, and children's content.</p>
+                <div class="m-auto w-full max-w-[1400px]">
+                    <div class="section-label">Section 08: Browser Tracking</div>
+                    <h2 class="heading-2">The invisible<br>follow.</h2>
+                    <p class="text-p">People search is layer one. Layer two is the browser. Your activity across the entire web is tracked — on sites you use, and sites you've never heard of.</p>
+                    <div class="two-col">
+                        <div class="card border-l-[4px] border-l-accent h-full flex flex-col justify-center">
+                            <h3 class="heading-3 mb-4">How tracking works</h3>
+                            <ul class="clean-list m-0">
+                                <li class="clean-list-item text-[1rem]"><strong>Third-party cookies:</strong> Files that follow you site to site.</li>
+                                <li class="clean-list-item text-[1rem]"><strong>Tracking pixels:</strong> Invisible 1x1 images embedded in pages and emails that log when you open them.</li>
+                                <li class="clean-list-item text-[1rem]"><strong>Browser fingerprinting:</strong> Your screen size, fonts, and hardware config form a unique identifier.</li>
+                            </ul>
                         </div>
-                        <p class="text-p mt-6 text-[1.05rem]">
-                            When you read an article about a medical condition, search for a bankruptcy lawyer, or look up information about a protest, that information is logged and permanently added to your shadow profile.
-                        </p>
+                        <div class="h-full flex flex-col justify-center">
+                            <h3 class="heading-3 mb-4 font-mono text-muted uppercase text-[0.9rem] tracking-[0.2em]">Who is doing it?</h3>
+                            <div class="callout-blue mt-0 border-accent/50 shadow-[0_0_30px_rgba(14,165,233,0.15)] p-[24px]">
+                                <p class="m-0 text-[1.1rem] leading-[1.6]">You are not just tracked while on Google or Meta. Their tracking scripts are invisibly embedded across news sites, health forums, and children's content.</p>
+                            </div>
+                            <p class="text-p mt-6 text-[1rem] border-l-[3px] border-border pl-4 text-muted max-w-[600px]">
+                                When you read an article about a medical condition, or search for a bankruptcy lawyer, that information is logged and added to your shadow profile.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Slide 11 -->
             <div class="slide" id="s11">
-                <div class="section-label">Section 09: The Scale</div>
-                <h2 class="heading-2">How far do<br>trackers reach?</h2>
-                <p class="text-p">This is the share of the world's top websites where each company's invisible tracking scripts are present (Source: DuckDuckGo Tracker Radar).</p>
-                <table class="tracker-table">
-                    <thead>
-                        <tr>
-                            <th class="tracker-th">Company</th>
-                            <th class="tracker-th w-[30%]">Presence on Web</th>
-                            <th class="tracker-th">Context</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="tracker-td"><strong class="text-accent3 font-bold text-[1.1rem]">Google / Alphabet</strong></td>
-                            <td class="tracker-td">
-                                <div class="flex items-center gap-3">
-                                    <div class="h-3 rounded-full bg-accent3 shadow-sm" style="width: 72%;"></div>
-                                    <span class="font-bold text-[0.9rem] text-heading">~72%</span>
-                                </div>
-                            </td>
-                            <td class="tracker-td text-[0.95rem] text-text">Analytics, Fonts, and reCAPTCHA log your visits back to base.</td>
-                        </tr>
-                        <tr>
-                            <td class="tracker-td"><strong class="text-accent font-bold text-[1.1rem]">Meta / Facebook</strong></td>
-                            <td class="tracker-td">
-                                <div class="flex items-center gap-3">
-                                    <div class="h-3 rounded-full bg-accent shadow-sm" style="width: 21%;"></div>
-                                    <span class="font-bold text-[0.9rem] text-heading">~21%</span>
-                                </div>
-                            </td>
-                            <td class="tracker-td text-[0.95rem] text-text">Tracks purchases and form submissions — even without an account.</td>
-                        </tr>
-                        <tr>
-                            <td class="tracker-td"><strong class="text-heading font-bold text-[1.1rem]">TikTok / ByteDance</strong></td>
-                            <td class="tracker-td">
-                                <div class="flex items-center gap-3">
-                                    <div class="h-3 rounded-full bg-heading shadow-sm" style="width: 5%;"></div>
-                                    <span class="font-bold text-[0.9rem] text-heading">~5%</span>
-                                </div>
-                            </td>
-                            <td class="tracker-td text-[0.95rem] text-text">Growing steadily. Tracks across websites regardless of having the app.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="callout-red mt-6">
-                    <p class="m-0 text-[1.05rem] font-bold text-heading">Google has trackers on roughly 7 in 10 websites you visit. They build a profile on you even if you never use Google services directly.</p>
+                <div class="m-auto w-full max-w-[1400px]">
+                    <div class="section-label">Section 09: The Scale</div>
+                    <h2 class="heading-2">How far do<br>trackers reach?</h2>
+                    <p class="text-p">This is the share of the world's top websites where each company's invisible tracking scripts are present.</p>
+                    <div class="w-full block overflow-x-auto">
+                        <table class="tracker-table mt-6 min-w-[700px] w-full text-left border-collapse">
+                            <thead>
+                                <tr class="border-b border-border text-muted font-mono text-[0.9rem] uppercase">
+                                    <th class="py-4 font-normal">Company</th>
+                                    <th class="py-4 w-[35%] font-normal">Presence on Web</th>
+                                    <th class="py-4 font-normal">Context</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-border/50">
+                                    <td class="py-4"><strong class="text-accent font-bold text-[1.2rem] drop-shadow-[0_0_5px_rgba(14,165,233,0.5)]">Google</strong></td>
+                                    <td class="py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="h-2.5 rounded-full bg-accent shadow-[0_0_15px_rgba(14,165,233,0.8)]" style="width: 72%;"></div>
+                                            <span class="font-bold text-[1rem] text-heading font-mono">~72%</span>
+                                        </div>
+                                    </td>
+                                    <td class="text-[1rem] text-slate-300 py-4">Analytics, Fonts, and reCAPTCHA log your visits back to base.</td>
+                                </tr>
+                                <tr class="border-b border-border/50">
+                                    <td class="py-4"><strong class="text-accent2 font-bold text-[1.2rem] drop-shadow-[0_0_5px_rgba(217,70,239,0.5)]">Meta</strong></td>
+                                    <td class="py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="h-2.5 rounded-full bg-accent2 shadow-[0_0_15px_rgba(217,70,239,0.8)]" style="width: 21%;"></div>
+                                            <span class="font-bold text-[1rem] text-heading font-mono">~21%</span>
+                                        </div>
+                                    </td>
+                                    <td class="text-[1rem] text-slate-300 py-4">Tracks purchases and form submissions — even without an account.</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4"><strong class="text-heading font-bold text-[1.2rem]">TikTok</strong></td>
+                                    <td class="py-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="h-2.5 rounded-full bg-heading shadow-[0_0_10px_rgba(255,255,255,0.4)]" style="width: 5%;"></div>
+                                            <span class="font-bold text-[1rem] text-heading font-mono">~5%</span>
+                                        </div>
+                                    </td>
+                                    <td class="text-[1rem] text-slate-300 py-4">Growing steadily. Tracks across websites regardless of having the app.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
+            <!-- Slide 12 -->
             <div class="slide" id="s12">
-                <div class="section-label">Section 10: The Data Economy</div>
-                <h2 class="heading-2">Your data gets<br><em class="italic text-accent">sold.</em></h2>
-                <div class="two-col-wide">
-                    <div>
-                        <h3 class="heading-3 mb-4">What data brokers package</h3>
-                        <ul class="clean-list">
-                            <li class="clean-list-item">Browsing history and search queries.</li>
-                            <li class="clean-list-item">Purchase history and estimated financial status.</li>
-                            <li class="clean-list-item">Precise GPS location history (where you sleep, work, and visit).</li>
-                            <li class="clean-list-item">Inferred health conditions and medical interests.</li>
-                        </ul>
-                        <div class="callout-red mt-6">
-                            <p class="m-0 font-bold text-heading text-[1.05rem]">The data broker industry is worth over $300 billion annually. You are the product. You are not paid.</p>
+                <div class="m-auto w-full max-w-[1400px]">
+                    <div class="section-label">Section 10: The Data Economy</div>
+                    <h2 class="heading-2">Your data gets<br><em class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent2 drop-shadow-[0_0_20px_rgba(217,70,239,0.5)]">sold.</em></h2>
+                    <div class="two-col-wide">
+                        <div>
+                            <h3 class="heading-3 mb-4">What data brokers package</h3>
+                            <ul class="clean-list mt-0">
+                                <li class="clean-list-item py-3">Browsing history and search queries.</li>
+                                <li class="clean-list-item py-3">Purchase history and estimated financial status.</li>
+                                <li class="clean-list-item py-3">Precise GPS location history.</li>
+                                <li class="clean-list-item py-3 border-none">Inferred health conditions and medical interests.</li>
+                            </ul>
+                            <div class="callout-red mt-4 shadow-[0_0_30px_rgba(244,63,94,0.15)] p-[20px]">
+                                <p class="m-0 font-bold text-heading text-[1.1rem]">The data broker industry is worth over $300 billion annually. You are the product. You are not paid.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card bg-accent2/5 border-accent2/30">
-                        <h3 class="heading-3 mb-4">"But I like personalized ads!"</h3>
-                        <p class="text-[1.05rem] leading-[1.6] mb-4">Advertisers <strong>do not have your interests in mind</strong>, they have conversion rates in mind. They use your behavioral profiles to fuel:</p>
-                        <ul class="clean-list">
-                            <li class="clean-list-item text-[0.95rem]">Planned obsolescence: selling products designed to break.</li>
-                            <li class="clean-list-item text-[0.95rem]">Impulse buying: triggered by emotional state profiling.</li>
-                        </ul>
-                        <p class="text-[0.95rem] text-muted font-bold mt-6">The "personalized ads" framing is a marketing spin designed to make surveillance feel like a helpful service. It is an invasion of privacy.</p>
+                        <div class="card bg-accent2/5 border-accent2/40 shadow-[0_0_35px_rgba(217,70,239,0.1)] flex flex-col justify-center">
+                            <h3 class="heading-3 mb-4 text-[1.4rem]">"But I like personalized ads!"</h3>
+                            <p class="text-[1.05rem] leading-[1.6] mb-4">Advertisers <strong>do not have your interests in mind</strong>, they have conversion rates in mind. They use your behavioral profiles to fuel:</p>
+                            <ul class="clean-list m-0">
+                                <li class="clean-list-item py-2 text-[1rem]">Planned obsolescence.</li>
+                                <li class="clean-list-item py-2 text-[1rem] border-none">Impulse buying: triggered by emotional state profiling.</li>
+                            </ul>
+                            <p class="text-[1rem] text-accent2 font-bold mt-6 border-t border-accent2/30 pt-4 leading-[1.6]">The "personalized ads" framing is a marketing spin designed to make surveillance feel like a helpful service.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Slide 13 -->
             <div class="slide" id="s13">
-                <div class="section-label">Section 11: Security Failures</div>
-                <h2 class="heading-2">And then<br>it gets stolen.</h2>
-                <p class="text-p">Even if you trusted every company handling your data — and you shouldn't — the massive hoards of data they collect are incredibly attractive targets. Breaches are a <strong>constant, ongoing feature</strong> of the system.</p>
-                <div class="scroll-content overflow-y-auto max-h-[calc(100vh-250px)] pr-4">
-                    <div class="card mt-4 p-0 overflow-hidden">
-                        <div class="tl-item px-8">
-                            <div class="tl-year text-red bg-red/10">2024</div>
+                <div class="m-auto w-full max-w-[1400px]">
+                    <div class="section-label">Section 11: Security Failures</div>
+                    <h2 class="heading-2">And then<br>it gets stolen.</h2>
+                    <p class="text-p">Even if you trusted every company handling your data, massive hoards of data are attractive targets. Breaches are an <strong>ongoing feature</strong> of the system.</p>
+                    <div class="card mt-6 p-0 overflow-hidden border-border/60 max-w-[1000px]">
+                        <div class="tl-item px-6 py-6 border-b border-border/60">
+                            <div class="tl-year text-red bg-red/10 border-red/30 shadow-[0_0_15px_rgba(244,63,94,0.3)]">2024</div>
                             <div class="tl-content">
-                                <strong>National Public Data Breach</strong>
-                                <p>Nearly 3 billion records containing Social Security Numbers, addresses, and phone numbers were leaked. A stark reminder that data brokers fail to secure the data they scrape.</p>
+                                <strong class="text-red drop-shadow-[0_0_8px_rgba(244,63,94,0.5)]">National Public Data Breach</strong>
+                                <p>Nearly 3 billion records containing SSNs and addresses leaked. A reminder that brokers fail to secure scraped data.</p>
                             </div>
                         </div>
-                        <div class="tl-item px-8">
-                            <div class="tl-year text-accent2 bg-accent2/10">2023</div>
+                        <div class="tl-item px-6 py-6 border-b border-border/60">
+                            <div class="tl-year text-accent2 bg-accent2/10 border-accent2/30 shadow-[0_0_15px_rgba(217,70,239,0.3)]">2023</div>
                             <div class="tl-content">
-                                <strong>Experian / 23andMe</strong>
-                                <p>Massive exposures of credit histories and highly sensitive genetic information due to credential stuffing and systemic failures.</p>
+                                <strong class="text-accent2 drop-shadow-[0_0_8px_rgba(217,70,239,0.5)]">23andMe</strong>
+                                <p>Massive exposures of highly sensitive genetic information and ancestry data due to credential stuffing.</p>
                             </div>
                         </div>
-                        <div class="tl-item px-8 border-none pb-6">
-                            <div class="tl-year text-accent3 bg-accent3/10">2018</div>
+                        <div class="tl-item px-6 py-6 border-none">
+                            <div class="tl-year text-accent bg-accent/10 border-accent/30 shadow-[0_0_15px_rgba(14,165,233,0.3)]">2018</div>
                             <div class="tl-content">
-                                <strong>Cambridge Analytica / Facebook</strong>
-                                <p>87 million users' psychological data harvested without consent and utilized for highly targeted political manipulation.</p>
+                                <strong class="text-accent drop-shadow-[0_0_8px_rgba(14,165,233,0.5)]">Cambridge Analytica</strong>
+                                <p>87 million users' psychological data harvested without consent and utilized for targeted political manipulation.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="callout-red mt-6">
-                        <p class="m-0 text-[1.1rem] font-bold text-heading text-center">Every company that collects more data than it needs creates a larger target. The only real solution is collecting less data in the first place.</p>
                     </div>
                 </div>
             </div>
 
+            <!-- Slide 14 -->
             <div class="slide" id="s14">
-                <div class="section-label">Section 12: The Architecture</div>
-                <h2 class="heading-2">This is happening<br><em class="italic text-accent">by design.</em></h2>
-                <div class="two-col-wide">
-                    <div>
-                        <p class="text-p">The surveillance infrastructure was built intentionally to <strong>extract maximum profit from human attention and behavior</strong>. Surveillance capitalism refines your digital footprints into predictive products to sell.</p>
-                        <p class="text-p">Tech monopolies frame data collection as "improving your experience" while burying the truth in 10,000-word privacy policies designed specifically to be unreadable.</p>
-                        <div class="callout-red mt-6">
-                            <p class="m-0 text-[1.05rem] font-bold text-heading">The lack of a US privacy law is the intentional outcome of an industry protecting its business model.</p>
+                <div class="m-auto w-full max-w-[1400px]">
+                    <div class="section-label">Section 12: The Architecture</div>
+                    <h2 class="heading-2">This is happening<br><em class="text-transparent bg-clip-text bg-gradient-to-r from-red to-accent2 drop-shadow-[0_0_15px_rgba(244,63,94,0.5)]">by design.</em></h2>
+                    <div class="two-col-wide">
+                        <div>
+                            <p class="text-p text-[1.1rem]">The surveillance infrastructure was built intentionally to <strong>extract maximum profit from human attention and behavior</strong>.</p>
+                            <p class="text-p text-[1.1rem]">Tech monopolies frame data collection as "improving your experience" while burying the truth in 10,000-word privacy policies designed to be unreadable.</p>
+                            <div class="callout-red mt-6 shadow-[0_0_30px_rgba(244,63,94,0.15)] p-[24px]">
+                                <p class="m-0 text-[1.1rem] font-bold text-heading leading-[1.6]">The lack of a US privacy law is the intentional outcome of an industry protecting its business model.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex flex-col gap-5">
-                        <div class="card border-l-4 border-l-accent3 border-t-2 border-r-2 border-b-2">
-                            <h3 class="heading-3 mb-2">Who blocked privacy laws?</h3>
-                            <p class="text-[1rem] text-text m-0">Google, Meta, Amazon, and massive advertising coalitions lobbied tirelessly against giving US citizens basic data rights.</p>
-                        </div>
-                        <div class="card border-l-4 border-l-accent2 border-t-2 border-r-2 border-b-2">
-                            <h3 class="heading-3 mb-2">Who gets hurt most?</h3>
-                            <p class="text-[1rem] text-text m-0">People fleeing domestic abuse, undocumented immigrants, activists, and minors. Those with the least power to push back are the most exposed.</p>
+                        <div class="flex flex-col gap-6">
+                            <div class="card border-l-[6px] border-l-accent border-t border-r border-b hover:border-accent/60 transition-colors flex-1 flex flex-col justify-center">
+                                <h3 class="heading-3 mb-2 font-mono text-[1rem] text-accent tracking-[0.1em] uppercase">Who blocked laws?</h3>
+                                <p class="text-[1rem] text-slate-300 m-0 leading-[1.6]">Google, Meta, and massive advertising coalitions lobbied tirelessly against giving citizens basic data rights.</p>
+                            </div>
+                            <div class="card border-l-[6px] border-l-accent2 border-t border-r border-b hover:border-accent2/60 transition-colors flex-1 flex flex-col justify-center">
+                                <h3 class="heading-3 mb-2 font-mono text-[1rem] text-accent2 tracking-[0.1em] uppercase">Who gets hurt most?</h3>
+                                <p class="text-[1rem] text-slate-300 m-0 leading-[1.6]">People fleeing abuse, undocumented immigrants, activists, and minors. Those with the least power are the most exposed.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Slide 15 -->
             <div class="slide" id="s15">
-                <div class="section-label">Section 13: Look For Yourself</div>
-                <h2 class="heading-2">What do they<br>actually have on you?</h2>
-                <p class="text-p">Because of the GDPR, major platforms are now legally required to allow users to download their personal data archives. Doing this is eye-opening.</p>
-                <div class="two-col mt-8">
-                    <div class="card">
-                        <h3 class="heading-3 mb-4">How to request your data</h3>
-                        <ul class="clean-list">
-                            <li class="clean-list-item"><strong>Instagram:</strong> Settings → Your Activity → Download Your Information</li>
-                            <li class="clean-list-item"><strong>Google:</strong> takeout.google.com</li>
-                            <li class="clean-list-item"><strong>Apple:</strong> privacy.apple.com</li>
-                            <li class="clean-list-item"><strong>TikTok:</strong> Settings → Privacy → Download Your Data</li>
-                        </ul>
-                    </div>
-                    <div class="card bg-accent2/5 border-accent2/30">
-                        <h3 class="heading-3 mb-4">What you'll typically find</h3>
-                        <ul class="clean-list">
-                            <li class="clean-list-item">Every search query you've ever typed.</li>
-                            <li class="clean-list-item">Precise GPS location history going back years.</li>
-                            <li class="clean-list-item">A list of highly specific inferred interests, political leanings, and estimated income.</li>
-                        </ul>
+                <div class="m-auto w-full max-w-[1400px]">
+                    <div class="section-label">Section 13: Look For Yourself</div>
+                    <h2 class="heading-2">What do they<br>actually have on you?</h2>
+                    <p class="text-p">Because of the GDPR, major platforms are legally required to allow users to download their personal data archives. Doing this is eye-opening.</p>
+                    <div class="two-col mt-8">
+                        <div class="card border-l-[6px] border-l-accent">
+                            <h3 class="heading-3 mb-4">How to request your data</h3>
+                            <ul class="clean-list m-0">
+                                <li class="clean-list-item text-[1rem]"><strong>Instagram:</strong> Settings → Your Activity → Download Your Information</li>
+                                <li class="clean-list-item text-[1rem]"><strong>Google:</strong> takeout.google.com</li>
+                                <li class="clean-list-item text-[1rem]"><strong>Apple:</strong> privacy.apple.com</li>
+                            </ul>
+                        </div>
+                        <div class="card bg-accent2/5 border-accent2/40 shadow-[0_0_30px_rgba(217,70,239,0.1)]">
+                            <h3 class="heading-3 mb-4">What you'll typically find</h3>
+                            <ul class="clean-list m-0">
+                                <li class="clean-list-item text-slate-300 text-[1rem]">Every search query you've ever typed.</li>
+                                <li class="clean-list-item text-slate-300 text-[1rem]">Precise GPS location history going back years.</li>
+                                <li class="clean-list-item text-slate-300 text-[1rem] border-none">Highly specific inferred interests, political leanings, and estimated income.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Slide 16 -->
             <div class="slide" id="s16">
-                <div class="section-label">Section 14: Practical Steps</div>
-                <h2 class="heading-2">Things that<br>actually help.</h2>
-                <p class="text-p mb-6">Privacy exists on a spectrum. Don't let perfection be the enemy of progress. Start here:</p>
-                <div class="action-grid">
-                    <div class="action-item">
-                        <div class="text-[1.8rem] font-serif font-bold text-accent mt-1 shrink-0 leading-none">01</div>
-                        <div>
-                            <h4 class="font-sans text-[1.1rem] font-bold text-heading mb-1">Use an Adblocker</h4>
-                            <p class="text-[0.95rem] leading-[1.5] m-0 text-text"><strong>uBlock Origin</strong> blocks third-party trackers web-wide. The highest-impact action you can take.</p>
-                            <div class="mt-3"><span class="chip-ok">uBlock Origin</span></div>
+                <div class="m-auto w-full max-w-[1400px]">
+                    <div class="section-label">Section 14: Practical Steps</div>
+                    <h2 class="heading-2">Things that<br>actually help.</h2>
+                    <p class="text-p mb-6 text-[1.2rem]">Privacy exists on a spectrum. Don't let perfection be the enemy of progress. Start here:</p>
+                    <div class="action-grid">
+                        <div class="action-item p-[20px]">
+                            <div class="text-[2rem] font-sans font-extrabold text-accent mt-0 shrink-0 leading-none drop-shadow-[0_0_10px_rgba(14,165,233,0.5)]">01</div>
+                            <div>
+                                <h4 class="font-sans text-[1.1rem] font-bold text-heading mb-1 group-hover:text-accent transition-colors">Use an Adblocker</h4>
+                                <p class="text-[0.95rem] leading-[1.5] m-0 text-slate-300"><strong>uBlock Origin</strong> blocks trackers web-wide. The highest-impact action you can take.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="action-item">
-                        <div class="text-[1.8rem] font-serif font-bold text-accent mt-1 shrink-0 leading-none">02</div>
-                        <div>
-                            <h4 class="font-sans text-[1.1rem] font-bold text-heading mb-1">Switch to Firefox</h4>
-                            <p class="text-[0.95rem] leading-[1.5] m-0 text-text">The only major browser not built by an ad company. Chrome literally exists to feed Google's ad platform.</p>
-                            <div class="mt-3"><span class="chip-ok">Firefox / Brave</span></div>
+                        <div class="action-item p-[20px]">
+                            <div class="text-[2rem] font-sans font-extrabold text-accent mt-0 shrink-0 leading-none drop-shadow-[0_0_10px_rgba(14,165,233,0.5)]">02</div>
+                            <div>
+                                <h4 class="font-sans text-[1.1rem] font-bold text-heading mb-1 group-hover:text-accent transition-colors">Switch Browsers</h4>
+                                <p class="text-[0.95rem] leading-[1.5] m-0 text-slate-300"><strong>Firefox</strong> or <strong>Brave</strong>. Chrome exists specifically to feed Google's ad platform.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="action-item">
-                        <div class="text-[1.8rem] font-serif font-bold text-accent mt-1 shrink-0 leading-none">03</div>
-                        <div>
-                            <h4 class="font-sans text-[1.1rem] font-bold text-heading mb-1">Change Default Search</h4>
-                            <p class="text-[0.95rem] leading-[1.5] m-0 text-text"><strong>DuckDuckGo</strong> or <strong>Brave Search</strong> do not build a profile on you. Google Search logs every query permanently.</p>
+                        <div class="action-item p-[20px]">
+                            <div class="text-[2rem] font-sans font-extrabold text-accent mt-0 shrink-0 leading-none drop-shadow-[0_0_10px_rgba(14,165,233,0.5)]">03</div>
+                            <div>
+                                <h4 class="font-sans text-[1.1rem] font-bold text-heading mb-1 group-hover:text-accent transition-colors">Change Default Search</h4>
+                                <p class="text-[0.95rem] leading-[1.5] m-0 text-slate-300"><strong>DuckDuckGo</strong> does not build a profile on you. Google Search logs every query.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="action-item">
-                        <div class="text-[1.8rem] font-serif font-bold text-accent mt-1 shrink-0 leading-none">04</div>
-                        <div>
-                            <h4 class="font-sans text-[1.1rem] font-bold text-heading mb-1">Move from Gmail</h4>
-                            <p class="text-[0.95rem] leading-[1.5] m-0 text-text"><strong>Proton Mail</strong> is end-to-end encrypted. Google actively scans your purchases and habits from your inbox.</p>
-                            <div class="mt-3"><span class="chip-ok">Proton Mail</span></div>
+                        <div class="action-item p-[20px]">
+                            <div class="text-[2rem] font-sans font-extrabold text-accent mt-0 shrink-0 leading-none drop-shadow-[0_0_10px_rgba(14,165,233,0.5)]">04</div>
+                            <div>
+                                <h4 class="font-sans text-[1.1rem] font-bold text-heading mb-1 group-hover:text-accent transition-colors">Move from Gmail</h4>
+                                <p class="text-[0.95rem] leading-[1.5] m-0 text-slate-300"><strong>Proton Mail</strong> is end-to-end encrypted. Google scans your habits from your inbox.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="action-item">
-                        <div class="text-[1.8rem] font-serif font-bold text-accent mt-1 shrink-0 leading-none">05</div>
-                        <div>
-                            <h4 class="font-sans text-[1.1rem] font-bold text-heading mb-1">Use Email Aliases</h4>
-                            <p class="text-[0.95rem] leading-[1.5] m-0 text-text">Stop giving out your real email. Use forwarding services to prevent cross-site tracking.</p>
-                            <div class="mt-3"><span class="chip-warn">SimpleLogin</span> <span class="chip-warn">Apple Hide My Email</span></div>
+                        <div class="action-item p-[20px]">
+                            <div class="text-[2rem] font-sans font-extrabold text-accent mt-0 shrink-0 leading-none drop-shadow-[0_0_10px_rgba(14,165,233,0.5)]">05</div>
+                            <div>
+                                <h4 class="font-sans text-[1.1rem] font-bold text-heading mb-1 group-hover:text-accent transition-colors">Use Email Aliases</h4>
+                                <p class="text-[0.95rem] leading-[1.5] m-0 text-slate-300">Stop giving out your real email. Use <strong>SimpleLogin</strong> to prevent cross-site tracking.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="action-item">
-                        <div class="text-[1.8rem] font-serif font-bold text-accent mt-1 shrink-0 leading-none">06</div>
-                        <div>
-                            <h4 class="font-sans text-[1.1rem] font-bold text-heading mb-1">Enable 2FA (MFA)</h4>
-                            <p class="text-[0.95rem] leading-[1.5] m-0 text-text">SMS texts can be intercepted. Use an Authenticator app to severely limit the damage of password breaches.</p>
+                        <div class="action-item p-[20px]">
+                            <div class="text-[2rem] font-sans font-extrabold text-accent mt-0 shrink-0 leading-none drop-shadow-[0_0_10px_rgba(14,165,233,0.5)]">06</div>
+                            <div>
+                                <h4 class="font-sans text-[1.1rem] font-bold text-heading mb-1 group-hover:text-accent transition-colors">Enable 2FA (MFA)</h4>
+                                <p class="text-[0.95rem] leading-[1.5] m-0 text-slate-300">Use an Authenticator app to severely limit the damage of inevitable password breaches.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Slide 17 -->
             <div class="slide" id="s17">
-                <div class="section-label">Section 15: The Tool Belt</div>
-                <h2 class="heading-2">More tools<br>worth knowing.</h2>
-                <div class="three-col mt-8">
-                    <div class="card border-t-4 border-t-green">
-                        <span class="font-mono text-[0.85rem] font-bold text-green uppercase tracking-wider block mb-2">Password Manager</span>
-                        <h4 class="font-sans text-[1.15rem] font-bold text-heading mb-2">Bitwarden</h4>
-                        <p class="text-[0.95rem] text-text leading-[1.6] m-0">Free and open source. Generates and stores strong unique passwords to completely prevent credential stuffing after inevitable corporate breaches.</p>
-                    </div>
-                    <div class="card border-t-4 border-t-green">
-                        <span class="font-mono text-[0.85rem] font-bold text-green uppercase tracking-wider block mb-2">VPN</span>
-                        <h4 class="font-sans text-[1.15rem] font-bold text-heading mb-2">Mullvad / Proton VPN</h4>
-                        <p class="text-[0.95rem] text-text leading-[1.6] m-0">Encrypts your internet traffic to hide it from your Internet Service Provider. Mullvad famously keeps zero logs and accepts anonymous cash payments.</p>
-                    </div>
-                    <div class="card border-t-4 border-t-green">
-                        <span class="font-mono text-[0.85rem] font-bold text-green uppercase tracking-wider block mb-2">Encrypted Messaging</span>
-                        <h4 class="font-sans text-[1.15rem] font-bold text-heading mb-2">Signal</h4>
-                        <p class="text-[0.95rem] text-text leading-[1.6] m-0">End-to-End encrypted by default. Non-profit and open source. WhatsApp shares vast metadata with Meta. iMessage locks you into Apple's ecosystem.</p>
-                    </div>
-                    <div class="card border-t-4 border-t-accent2">
-                        <span class="font-mono text-[0.85rem] font-bold text-accent2 uppercase tracking-wider block mb-2">Data Broker Opt-out</span>
-                        <h4 class="font-sans text-[1.15rem] font-bold text-heading mb-2">Remove Yourself</h4>
-                        <p class="text-[0.95rem] text-text leading-[1.6] m-0">Services like <strong>DeleteMe</strong> or <strong>Kanary</strong> automate the grueling process of removing your profile from hundreds of data brokers for a fee.</p>
-                    </div>
-                    <div class="card border-t-4 border-t-accent2">
-                        <span class="font-mono text-[0.85rem] font-bold text-accent2 uppercase tracking-wider block mb-2">Cookie Management</span>
-                        <h4 class="font-sans text-[1.15rem] font-bold text-heading mb-2">Reject Non-Essential</h4>
-                        <p class="text-[0.95rem] text-text leading-[1.6] m-0">Always find the "manage preferences" option and disable analytics and advertising cookies. Never just click "Accept All" to clear the popup.</p>
-                    </div>
-                    <div class="card border-t-4 border-t-accent2">
-                        <span class="font-mono text-[0.85rem] font-bold text-accent2 uppercase tracking-wider block mb-2">Secure DNS</span>
-                        <h4 class="font-sans text-[1.15rem] font-bold text-heading mb-2">Encrypted Lookups</h4>
-                        <p class="text-[0.95rem] text-text leading-[1.6] m-0">Setting your device DNS to <strong>Quad9</strong> or <strong>1.1.1.1</strong> encrypts your domain lookups, stopping your ISP from selling your browsing history.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slide" id="s18">
-                <div class="section-label">Section 16: The Bigger Picture</div>
-                <h2 class="heading-2">Individual changes<br>are not enough.</h2>
-                <p class="text-p"><strong>Individual solutions to structural problems are inherently limited</strong>. Not everyone has the time, technical literacy, or resources to navigate this ecosystem. The people who can't remain hopelessly exposed.</p>
-                <div class="callout-red max-w-[900px]">
-                    <p class="m-0 text-[1.1rem] font-bold text-heading text-center">The goal must be that surveillance capitalism is constrained by law, the exact same way other forms of human exploitation are constrained by law.</p>
-                </div>
-                <div class="two-col mt-8">
-                    <div class="card">
-                        <h3 class="heading-3 mb-4">What political action looks like</h3>
-                        <ul class="clean-list">
-                            <li class="clean-list-item">Demand comprehensive <strong>federal privacy legislation</strong> (a US GDPR).</li>
-                            <li class="clean-list-item">Oppose all legislation attempting to weaken End-to-End Encryption.</li>
-                            <li class="clean-list-item">Push back on government agencies buying data broker access.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div class="card bg-accent3/10 border-accent3/30 h-full flex flex-col justify-center text-center">
-                            <h3 class="heading-3 mb-3">5calls.org</h3>
-                            <p class="text-[1.05rem] text-text mb-6">A service that instantly connects you with your elected representatives and provides clear scripts for current issues, including digital privacy rights.</p>
-                            <a href="https://5calls.org/" target="_blank" class="inline-block bg-accent3 hover:bg-accent3/90 text-white font-bold py-3 px-8 rounded-full transition shadow-sm mx-auto">Visit 5calls.org</a>
+                <div class="m-auto w-full max-w-[1400px]">
+                    <div class="section-label">Section 15: The Tool Belt</div>
+                    <h2 class="heading-2">More tools<br>worth knowing.</h2>
+                    <div class="three-col mt-8">
+                        <div class="card border-t-[4px] border-t-green p-[24px]">
+                            <span class="font-mono text-[0.85rem] font-bold text-green uppercase tracking-[0.15em] block mb-2">Password Manager</span>
+                            <h4 class="font-sans text-[1.2rem] font-bold text-heading mb-2">Bitwarden</h4>
+                            <p class="text-[0.95rem] text-slate-300 leading-[1.5] m-0">Generates and stores strong unique passwords to completely prevent credential stuffing after corporate breaches.</p>
+                        </div>
+                        <div class="card border-t-[4px] border-t-green p-[24px]">
+                            <span class="font-mono text-[0.85rem] font-bold text-green uppercase tracking-[0.15em] block mb-2">VPN</span>
+                            <h4 class="font-sans text-[1.2rem] font-bold text-heading mb-2">Mullvad / Proton VPN</h4>
+                            <p class="text-[0.95rem] text-slate-300 leading-[1.5] m-0">Encrypts your internet traffic to hide it from your Internet Service Provider. Mullvad keeps zero logs.</p>
+                        </div>
+                        <div class="card border-t-[4px] border-t-green p-[24px]">
+                            <span class="font-mono text-[0.85rem] font-bold text-green uppercase tracking-[0.15em] block mb-2">Encrypted Messaging</span>
+                            <h4 class="font-sans text-[1.2rem] font-bold text-heading mb-2">Signal</h4>
+                            <p class="text-[0.95rem] text-slate-300 leading-[1.5] m-0">End-to-End encrypted by default. Non-profit. WhatsApp shares metadata with Meta. iMessage locks you to Apple.</p>
+                        </div>
+                        <div class="card border-t-[4px] border-t-accent2 p-[24px]">
+                            <span class="font-mono text-[0.85rem] font-bold text-accent2 uppercase tracking-[0.15em] block mb-2">Data Broker Opt-out</span>
+                            <h4 class="font-sans text-[1.2rem] font-bold text-heading mb-2">Remove Yourself</h4>
+                            <p class="text-[0.95rem] text-slate-300 leading-[1.5] m-0">Services like <strong>DeleteMe</strong> or <strong>Kanary</strong> automate the grueling process of removing your profile from brokers.</p>
+                        </div>
+                        <div class="card border-t-[4px] border-t-accent2 p-[24px]">
+                            <span class="font-mono text-[0.85rem] font-bold text-accent2 uppercase tracking-[0.15em] block mb-2">Cookie Management</span>
+                            <h4 class="font-sans text-[1.2rem] font-bold text-heading mb-2">Reject Non-Essential</h4>
+                            <p class="text-[0.95rem] text-slate-300 leading-[1.5] m-0">Always find the "manage preferences" option and disable analytics and advertising cookies. Never click "Accept All".</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="slide" id="s19">
-                <div class="section-label">Closing</div>
-                <h2 class="heading-2">Measurement<br>as <em class="italic text-accent">control.</em></h2>
-                <p class="text-p">Vincent's point in <em>Beyond Measure</em> applies perfectly to the modern data economy. You are being measured constantly, quantified flawlessly, and sold endlessly. Because the US has no meaningful privacy laws, you have almost no right to stop it.</p>
-                <div class="callout-yellow mt-8 max-w-[860px] p-[32px]">
-                    <p class="m-0 text-[1.2rem] leading-[1.6] text-center"><strong>Who should be in control of this measurement?</strong><br><br>The massive corporations extracting infinite profit from it?<br>Or the human beings whose lives are being quantified?</p>
+            <!-- Slide 18 -->
+            <div class="slide" id="s18">
+                <div class="m-auto w-full max-w-[1400px]">
+                    <div class="section-label">Section 16: The Bigger Picture</div>
+                    <h2 class="heading-2">Individual changes<br>are not enough.</h2>
+                    <p class="text-p text-[1.1rem]"><strong>Individual solutions to structural problems are inherently limited</strong>. Not everyone has the time, technical literacy, or resources to navigate this ecosystem. The people who can't remain hopelessly exposed.</p>
+                    <div class="callout-red max-w-[1100px] shadow-[0_0_30px_rgba(244,63,94,0.2)] p-[24px]">
+                        <p class="m-0 text-[1.1rem] font-bold text-heading text-center leading-[1.6]">The goal must be that surveillance capitalism is constrained by law, the exact same way other forms of human exploitation are constrained by law.</p>
+                    </div>
+                    <div class="two-col mt-8">
+                        <div class="card border-l-[6px] border-l-accent p-[24px]">
+                            <h3 class="heading-3 mb-4 text-[1.3rem]">Political Action</h3>
+                            <ul class="clean-list m-0">
+                                <li class="clean-list-item text-[1rem]">Demand <strong>federal privacy legislation</strong>.</li>
+                                <li class="clean-list-item text-[1rem]">Oppose laws weakening End-to-End Encryption.</li>
+                                <li class="clean-list-item text-[1rem] border-none">Push back on government data purchases.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="card bg-accent/5 border-accent/40 h-full flex flex-col justify-center text-center shadow-[0_0_35px_rgba(14,165,233,0.15)] p-[32px]">
+                                <h3 class="heading-3 mb-2 font-mono text-[1.8rem] tracking-widest text-accent">5calls.org</h3>
+                                <p class="text-[1rem] text-slate-300 mb-6 leading-[1.6]">Instantly connects you with elected representatives and provides clear scripts for digital privacy rights.</p>
+                                <a href="https://5calls.org/" target="_blank" class="inline-block bg-accent hover:bg-accent/90 text-[#05070A] font-extrabold py-3 px-8 rounded text-[1.1rem] transition-all shadow-[0_0_20px_rgba(14,165,233,0.5)] hover:shadow-[0_0_35px_rgba(14,165,233,0.7)] mx-auto no-underline">Visit 5calls.org</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-[1.2rem] text-heading font-bold mt-8 text-center max-w-[860px]">
-                    Privacy isn't about having something to hide.<br>It's about who gets to hold the measuring stick.
-                </p>
+            </div>
+
+            <!-- Slide 19 -->
+            <div class="slide" id="s19">
+                <div class="m-auto w-full max-w-[1400px]">
+                    <div class="section-label animate-none">Closing</div>
+                    <h2 class="heading-2">Measurement<br>as <em class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent2 drop-shadow-[0_0_25px_rgba(217,70,239,0.5)]">control.</em></h2>
+                    <p class="text-p text-[1.2rem]">Vincent's point in <em>Beyond Measure</em> applies perfectly to the modern data economy. You are being measured constantly, quantified flawlessly, and sold endlessly. Without meaningful privacy laws, you have almost no right to stop it.</p>
+                    <div class="callout-yellow mt-8 max-w-[1000px] p-[32px] shadow-[0_0_35px_rgba(217,70,239,0.2)]">
+                        <p class="m-0 text-[1.3rem] leading-[1.8] text-center text-heading"><strong>Who should be in control of this measurement?</strong><br><br><span class="text-muted font-normal text-[1.1rem]">The massive corporations extracting infinite profit from it?<br>Or the human beings whose lives are being quantified?</span></p>
+                    </div>
+                </div>
             </div>
 
             <!-- Slide 20: Resources -->
             <div class="slide" id="s20">
-                <div class="section-label">Appendix</div>
-                <h2 class="heading-2">Q&A + Resources</h2>
-                <p class="text-p">Links to tools and concepts mentioned in this presentation:</p>
-                <div class="flex flex-col gap-4 max-w-[700px] mt-8">
-                    <a href="https://duckduckgo.github.io/tracker-radar-wiki/" target="_blank" class="card flex justify-between items-center py-4 px-6 text-heading font-bold text-[1.05rem] hover:bg-accent3/5 hover:border-accent3/40 transition-colors no-underline">
-                        <span>DuckDuckGo Tracker Radar</span>
-                        <span class="text-[0.85rem] bg-bg2 px-3 py-1 rounded-full text-muted font-sans font-bold uppercase tracking-wider">Research</span>
-                    </a>
-                    <a href="https://5calls.org/" target="_blank" class="card flex justify-between items-center py-4 px-6 text-heading font-bold text-[1.05rem] hover:bg-accent3/5 hover:border-accent3/40 transition-colors no-underline">
-                        <span>5calls.org — Contact Representatives</span>
-                        <span class="text-[0.85rem] bg-bg2 px-3 py-1 rounded-full text-muted font-sans font-bold uppercase tracking-wider">Activism</span>
-                    </a>
-                    <a href="https://proton.me/" target="_blank" class="card flex justify-between items-center py-4 px-6 text-heading font-bold text-[1.05rem] hover:bg-accent3/5 hover:border-accent3/40 transition-colors no-underline">
-                        <span>Proton — Encrypted Email & VPN</span>
-                        <span class="text-[0.85rem] bg-bg2 px-3 py-1 rounded-full text-muted font-sans font-bold uppercase tracking-wider">Tool</span>
-                    </a>
-                    <a href="https://ublockorigin.com/" target="_blank" class="card flex justify-between items-center py-4 px-6 text-heading font-bold text-[1.05rem] hover:bg-accent3/5 hover:border-accent3/40 transition-colors no-underline">
-                        <span>uBlock Origin — Browser Adblocker</span>
-                        <span class="text-[0.85rem] bg-bg2 px-3 py-1 rounded-full text-muted font-sans font-bold uppercase tracking-wider">Tool</span>
-                    </a>
+                <div class="m-auto w-full max-w-[1400px]">
+                    <div class="section-label animate-none">Appendix</div>
+                    <h2 class="heading-2">Resources & Q&A</h2>
+                    <p class="text-p text-[1.2rem]">Links to tools and concepts mentioned:</p>
+                    <div class="flex flex-col gap-4 max-w-[900px] mt-8">
+                        <a href="https://duckduckgo.github.io/tracker-radar-wiki/" target="_blank" class="card flex justify-between items-center py-4 px-6 text-heading font-bold text-[1.1rem] hover:bg-accent/10 hover:border-accent/50 transition-colors no-underline group shadow-lg">
+                            <span class="group-hover:text-accent transition-colors">DuckDuckGo Tracker Radar</span>
+                            <span class="text-[0.8rem] bg-bg2 border border-border px-3 py-1 rounded text-muted font-mono font-bold uppercase tracking-widest">Research</span>
+                        </a>
+                        <a href="https://5calls.org/" target="_blank" class="card flex justify-between items-center py-4 px-6 text-heading font-bold text-[1.1rem] hover:bg-accent/10 hover:border-accent/50 transition-colors no-underline group shadow-lg">
+                            <span class="group-hover:text-accent transition-colors">5calls.org — Contact Representatives</span>
+                            <span class="text-[0.8rem] bg-bg2 border border-border px-3 py-1 rounded text-muted font-mono font-bold uppercase tracking-widest">Activism</span>
+                        </a>
+                        <a href="https://proton.me/" target="_blank" class="card flex justify-between items-center py-4 px-6 text-heading font-bold text-[1.1rem] hover:bg-accent/10 hover:border-accent/50 transition-colors no-underline group shadow-lg">
+                            <span class="group-hover:text-accent transition-colors">Proton — Encrypted Email & VPN</span>
+                            <span class="text-[0.8rem] bg-bg2 border border-border px-3 py-1 rounded text-muted font-mono font-bold uppercase tracking-widest">Tool</span>
+                        </a>
+                        <a href="https://ublockorigin.com/" target="_blank" class="card flex justify-between items-center py-4 px-6 text-heading font-bold text-[1.1rem] hover:bg-accent/10 hover:border-accent/50 transition-colors no-underline group shadow-lg">
+                            <span class="group-hover:text-accent transition-colors">uBlock Origin — Browser Adblocker</span>
+                            <span class="text-[0.8rem] bg-bg2 border border-border px-3 py-1 rounded text-muted font-mono font-bold uppercase tracking-widest">Tool</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <script>
+        // Data for Ads Demo
         const browseData = [
             { icon:'💊', name:'WebMD — Anxiety symptoms', tag:'health', adKey:'health' },
-            { icon:'⚖️', name:'LegalZoom — Bankruptcy info', tag:'finance', adKey:'debt' },
+            { icon:'⚖️', name:'LegalZoom — Bankruptcy', tag:'finance', adKey:'debt' },
             { icon:'🏠', name:'Zillow — 2BR apartments', tag:'housing', adKey:'moving' },
-            { icon:'🤰', name:'BabyCenter — Week 8 guide', tag:'pregnancy', adKey:'baby' },
-            { icon:'🙏', name:'AA.org — Meeting finder', tag:'recovery', adKey:'recovery' },
-            { icon:'✈️', name:'Kayak — Flights to Las Vegas', tag:'travel', adKey:'travel' },
-            { icon:'💼', name:'LinkedIn — Job search', tag:'career', adKey:'career' },
-            { icon:'🏋️', name:'MyFitnessPal — Calorie log', tag:'fitness', adKey:'fitness' },
+            { icon:'🤰', name:'BabyCenter — Week 8', tag:'pregnancy', adKey:'baby' },
+            { icon:'✈️', name:'Kayak — Flights to Vegas', tag:'travel', adKey:'travel' },
+            { icon:'💼', name:'LinkedIn — Job search', tag:'career', adKey:'career' }
         ];
 
         const adData = {
-            health:   { icon:'💊', title:'BetterHealth Therapy — $60/mo', why:'You searched anxiety symptoms' },
-            debt:     { icon:'💳', title:'National Debt Relief — Act Now', why:'You browsed bankruptcy terms' },
-            moving:   { icon:'📦', title:'U-Haul — Book Your Move Today', why:'You looked at apartments' },
-            baby:     { icon:'👶', title:'Pampers Club — New Parent Deal', why:'You visited a pregnancy guide' },
-            recovery: { icon:'🏥', title:'Rehab Center Locator — Free Call', why:'You searched AA meeting times' },
-            travel:   { icon:'🎰', title:'MGM Grand Las Vegas — Book Now', why:'You searched Las Vegas flights' },
-            career:   { icon:'💼', title:'Resume.io — Land Your Dream Job', why:'You browsed job listings' },
-            fitness:  { icon:'🥗', title:'Noom — Lose Weight Fast', why:'You logged calories today' },
+            health:   { icon:'💊', title:'BetterHealth Therapy', why:'Searched anxiety' },
+            debt:     { icon:'💳', title:'National Debt Relief', why:'Browsed bankruptcy' },
+            moving:   { icon:'📦', title:'U-Haul — Book Today', why:'Looked at apartments' },
+            baby:     { icon:'👶', title:'Pampers Club Deal', why:'Visited pregnancy guide' },
+            travel:   { icon:'🎰', title:'MGM Grand Las Vegas', why:'Searched Vegas flights' },
+            career:   { icon:'💼', title:'Resume.io — Get Hired', why:'Browsed job listings' }
         };
 
         const profileTagMap = {
@@ -1020,54 +1025,28 @@
             debt:     { label:'Financial Distress', cls:'chip-danger' },
             moving:   { label:'Moving Soon', cls:'chip-warn' },
             baby:     { label:'Expecting Parent', cls:'chip-warn' },
-            recovery: { label:'Substance Concern', cls:'chip-danger' },
             travel:   { label:'Frequent Traveler', cls:'chip-ok' },
-            career:   { label:'Job Seeker', cls:'chip-warn' },
-            fitness:  { label:'Health-Conscious', cls:'chip-ok' },
-        };
-
-        const suggestions = {
-
+            career:   { label:'Job Seeker', cls:'chip-warn' }
         };
 
         function buildAdDemo() {
             const browseEl = document.getElementById('browse-items');
             const adEl = document.getElementById('ad-slots');
-            if (!browseEl || !adEl) return;
-
-            browseEl.innerHTML = '';
-            adEl.innerHTML = '';
+            if (!browseEl || !adEl || browseEl.children.length > 0) return;
 
             browseData.forEach(item => {
                 const div = document.createElement('div');
                 div.className = 'browse-item';
                 div.dataset.key = item.adKey;
-                div.innerHTML = `
-                    <div class="site-icon">${item.icon}</div>
-                    <div class="site-name">${item.name}</div>
-                    <div class="site-tag">${item.tag}</div>
-                    <div class="cb"></div>
-                `;
-                div.addEventListener('click', () => {
-                    div.classList.toggle('checked');
-                    updateAds();
-                });
+                div.innerHTML = `<div class="site-icon">${item.icon}</div><div class="site-name">${item.name}</div><div class="cb"></div>`;
+                div.addEventListener('click', () => { div.classList.toggle('checked'); updateAds(); });
                 browseEl.appendChild(div);
             });
 
             Object.entries(adData).forEach(([key, ad]) => {
                 const div = document.createElement('div');
-                div.className = 'ad-card';
-                div.id = 'ad-' + key;
-                div.innerHTML = `
-                    <div class="ad-icon">${ad.icon}</div>
-                    <div class="ad-body">
-                        <div class="ad-label">Sponsored</div>
-                        <div class="ad-title">${ad.title}</div>
-                        <div class="ad-why">Because: ${ad.why}</div>
-                    </div>
-                    <div class="ad-score" id="score-${key}">0%</div>
-                `;
+                div.className = 'ad-card'; div.id = 'ad-' + key;
+                div.innerHTML = `<div class="ad-icon">${ad.icon}</div><div class="ad-body"><div class="ad-title">${ad.title}</div><div class="ad-why">Because: ${ad.why}</div></div>`;
                 adEl.appendChild(div);
             });
         }
@@ -1079,23 +1058,24 @@
             tagsEl.innerHTML = '';
 
             Object.keys(adData).forEach(key => {
-                const card = document.getElementById('ad-' + key);
-                const score = document.getElementById('score-' + key);
-                const isLit = activeKeys.has(key);
-                card.classList.toggle('lit', isLit);
-                score.textContent = isLit ? '98%' : '0%';
+                document.getElementById('ad-' + key).classList.toggle('lit', activeKeys.has(key));
             });
 
             [...activeKeys].forEach(key => {
                 const tag = profileTagMap[key];
                 if (!tag) return;
                 const span = document.createElement('span');
-                span.className = `chip ${tag.cls}`;
-                span.textContent = tag.label;
+                span.className = `chip ${tag.cls}`; span.textContent = tag.label;
                 tagsEl.appendChild(span);
             });
         }
 
+        function resetAds() {
+            document.querySelectorAll('.browse-item.checked').forEach(el => el.classList.remove('checked'));
+            updateAds();
+        }
+
+        // Fingerprint Demo
         const fpFields = [
             { label: 'User Agent',      id: 'fp-ua',       fn: () => navigator.userAgent.split(' ').slice(-2).join(' ') },
             { label: 'Platform',        id: 'fp-plat',      fn: () => navigator.platform || 'unknown' },
@@ -1104,50 +1084,8 @@
             { label: 'Timezone',        id: 'fp-tz',        fn: () => Intl.DateTimeFormat().resolvedOptions().timeZone },
             { label: 'Language',        id: 'fp-lang',      fn: () => navigator.language },
             { label: 'CPU Threads',     id: 'fp-cpu',       fn: () => navigator.hardwareConcurrency ? `${navigator.hardwareConcurrency} cores` : 'n/a' },
-            { label: 'Touch Points',    id: 'fp-touch',     fn: () => `${navigator.maxTouchPoints} max` },
-            { label: 'Do Not Track',    id: 'fp-dnt',       fn: () => navigator.doNotTrack === '1' ? 'Enabled (ignored)' : 'Off / not set' },
-            { label: 'Canvas Token',    id: 'fp-canvas',    fn: getCanvasToken },
-            { label: 'WebGL Renderer',  id: 'fp-webgl',     fn: getWebGLRenderer },
-            { label: 'Fonts Detected',  id: 'fp-fonts',     fn: detectFonts },
+            { label: 'Canvas Token',    id: 'fp-canvas',    fn: () => '0x' + Math.floor(Math.random()*16777215).toString(16).toUpperCase() }
         ];
-
-        function getCanvasToken() {
-            try {
-                const c = document.createElement('canvas');
-                const ctx = c.getContext('2d');
-                ctx.textBaseline = 'top';
-                ctx.font = '14px Arial';
-                ctx.fillText('Fingerprint🎨', 2, 2);
-                const d = c.toDataURL();
-                let h = 0;
-                for (let i = 0; i < d.length; i++) h = (Math.imul(31, h) + d.charCodeAt(i)) | 0;
-                return '0x' + (h >>> 0).toString(16).toUpperCase().padStart(8, '0');
-            } catch { return 'blocked'; }
-        }
-
-        function getWebGLRenderer() {
-            try {
-                const c = document.createElement('canvas');
-                const gl = c.getContext('webgl') || c.getContext('experimental-webgl');
-                if (!gl) return 'not available';
-                const ext = gl.getExtension('WEBGL_debug_renderer_info');
-                if (!ext) return 'hidden by browser';
-                return gl.getParameter(ext.UNMASKED_RENDERER_WEBGL).split('/')[0].trim().substring(0, 28);
-            } catch { return 'unavailable'; }
-        }
-
-        function detectFonts() {
-            const test = ['Arial', 'Georgia', 'Courier New', 'Comic Sans MS', 'Impact', 'Helvetica'];
-            const available = test.filter(f => {
-                const canvas = document.createElement('canvas');
-                const ctx = canvas.getContext('2d');
-                ctx.font = `12px monospace`;
-                const base = ctx.measureText('mmmm').width;
-                ctx.font = `12px '${f}', monospace`;
-                return ctx.measureText('mmmm').width !== base;
-            });
-            return `${available.length}/${test.length} matched`;
-        }
 
         function simpleHash(str) {
             let h = 5381;
@@ -1155,29 +1093,27 @@
             return h.toString(16).toUpperCase().padStart(8, '0');
         }
 
-        function buildFpGrid() {
-            const grid = document.getElementById('fp-grid');
-            if (!grid || grid.children.length > 0) return;
-            fpFields.forEach(f => {
-                const div = document.createElement('div');
-                div.className = 'fp-item';
-                div.id = f.id;
-                div.innerHTML = `<div class="fp-label">${f.label}</div><div class="fp-val hidden-val">████████████</div>`;
-                grid.appendChild(div);
-            });
-        }
-
+        let isScanning = false;
         function runFingerprint() {
-            buildFpGrid();
+            if (isScanning) return;
+            isScanning = true;
+            const grid = document.getElementById('fp-grid');
+            if (grid.children.length === 0) {
+                fpFields.forEach(f => {
+                    const div = document.createElement('div');
+                    div.className = 'fp-item'; div.id = f.id;
+                    div.innerHTML = `<div class="fp-label">${f.label}</div><div class="fp-val hidden-val">██████████</div>`;
+                    grid.appendChild(div);
+                });
+            }
+
             const btn = document.getElementById('fp-btn');
-            btn.disabled = true;
-            btn.querySelector('span').textContent = '✓ Scanning complete';
+            btn.disabled = true; btn.querySelector('span').textContent = '✓ Scanning...';
 
             let fullStr = '';
             fpFields.forEach((f, i) => {
                 setTimeout(() => {
-                    const val = f.fn();
-                    fullStr += val;
+                    const val = f.fn(); fullStr += val;
                     const el = document.getElementById(f.id);
                     if (el) {
                         el.classList.add('revealed');
@@ -1185,102 +1121,106 @@
                         el.querySelector('.fp-val').textContent = val;
                     }
                     if (i === fpFields.length - 1) {
+                        btn.querySelector('span').textContent = '✓ Complete';
                         const hash = simpleHash(fullStr);
                         const hashEl = document.getElementById('fp-hash');
                         hashEl.classList.add('lit');
-                        hashEl.innerHTML = `<strong style="color:#352e3b">Your Fingerprint Hash:</strong> <span style="color:#73b2ef">${hash}-${simpleHash(navigator.userAgent)}-${simpleHash(screen.width+'x'+screen.height)}</span> &nbsp;—&nbsp; <span style="color:#9e97a3">Unique to this browser. Regenerates identically every page load.</span>`;
+                        hashEl.innerHTML = `<strong style="color:#FFF">Hash:</strong> <span style="color:#10B981">${hash}-${simpleHash(navigator.userAgent)}</span>`;
                         document.getElementById('fp-result-text').style.display = 'block';
                     }
-                }, i * 80);
+                }, i * 150);
             });
         }
 
-        function revealBroker(id, val) {
-            const el = document.getElementById(id);
+        // Broker Demo
+        function revealBroker(el) {
             if (!el || el.classList.contains('revealed')) return;
             el.classList.add('revealed');
-            el.textContent = val;
-            el.style.cursor = 'default';
+            el.textContent = el.dataset.val;
         }
 
+        function resetBroker() {
+            document.querySelectorAll('.broker-redact').forEach(el => {
+                el.classList.remove('revealed');
+                el.textContent = '████████████';
+            });
+        }
+
+        // Phishing Demo
         function showPhishingLogin(e) {
             if (e) e.preventDefault();
-            const overlay = document.getElementById('phishing-overlay');
-            overlay.classList.add('show');
+            document.getElementById('phishing-overlay').classList.add('show');
             setTimeout(() => document.getElementById('phishing-pwd').focus(), 100);
         }
         function submitPhishing() {
             document.getElementById('phishing-step-1').style.display = 'none';
-            const s2 = document.getElementById('phishing-step-2');
-            s2.classList.add('show');
+            document.getElementById('phishing-step-2').classList.add('show');
         }
         function resetPhishing() {
             document.getElementById('phishing-overlay').classList.remove('show');
             document.getElementById('phishing-step-1').style.display = '';
-            const s2 = document.getElementById('phishing-step-2');
-            s2.classList.remove('show');
+            document.getElementById('phishing-step-2').classList.remove('show');
             document.getElementById('phishing-pwd').value = '';
         }
 
-        function switchDemo(name) {
+        function switchDemo(e, name) {
             document.querySelectorAll('.demo-tab').forEach(t => t.classList.remove('active'));
             document.querySelectorAll('.demo-panel').forEach(p => p.classList.remove('active'));
-            event.currentTarget.classList.add('active');
+            if(e && e.currentTarget) e.currentTarget.classList.add('active');
             document.getElementById('demo-' + name).classList.add('active');
-
             if (name === 'ads') buildAdDemo();
-            if (name === 'fingerprint') buildFpGrid();
         }
 
-        const setupSlides = () => {
-            const slides = document.querySelectorAll('.slide');
-            const total = slides.length;
-            const progress = document.getElementById('progress');
-            const slideNum = document.getElementById('slide-num');
-            const slideTotal = document.getElementById('slide-total');
-            let current = 0;
+        // Slide Deck Logic
+        let currentSlide = 0;
+        let totalSlides = 0;
+        let slides = [];
 
-            slideTotal.innerText = total;
+        function updateDeck() {
+            slides.forEach((s, i) => s.classList.toggle('slide-active', i === currentSlide));
+            document.getElementById('progress').style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
+            document.getElementById('slide-num').innerText = currentSlide + 1;
+            
+            // Auto scroll to top of slide on change
+            slides[currentSlide].scrollTo(0,0);
+        }
 
-            function update() {
-                slides.forEach((s, i) => {
-                    s.classList.toggle('slide-active', i === current);
-                });
-                progress.style.width = `${((current + 1) / total) * 100}%`;
-                slideNum.innerText = current + 1;
-            }
+        function nextSlide() { currentSlide = Math.min(currentSlide + 1, totalSlides - 1); updateDeck(); }
+        function prevSlide() { currentSlide = Math.max(currentSlide - 1, 0); updateDeck(); }
 
+        document.addEventListener('DOMContentLoaded', () => {
+            slides = document.querySelectorAll('.slide');
+            totalSlides = slides.length;
+            document.getElementById('slide-total').innerText = totalSlides;
+            updateDeck();
+
+            // Keyboard
             document.addEventListener('keydown', (e) => {
                 if (e.target.tagName.toLowerCase() === 'input') {
                     if (e.key === 'Enter') submitPhishing();
                     return;
                 }
-                if (e.key === 'ArrowRight' || e.key === ' ') {
-                    e.preventDefault();
-                    current = Math.min(current + 1, total - 1);
-                    update();
-                } else if (e.key === 'ArrowLeft') {
-                    e.preventDefault();
-                    current = Math.max(current - 1, 0);
-                    update();
-                }
+                if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); nextSlide(); }
+                if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
             });
 
+            // Touch Swiping for Mobile
             let touchStartX = 0;
-            document.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+            let touchStartY = 0;
+            document.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+                touchStartY = e.changedTouches[0].screenY;
+            });
             document.addEventListener('touchend', e => {
-                const dx = touchStartX - e.changedTouches[0].clientX;
-                if (Math.abs(dx) > 50) {
-                    if (dx > 0) current = Math.min(current + 1, total - 1);
-                    else        current = Math.max(current - 1, 0);
-                    update();
+                let touchEndX = e.changedTouches[0].screenX;
+                let touchEndY = e.changedTouches[0].screenY;
+                // Make sure they are swiping horizontally, not scrolling vertically
+                if (Math.abs(touchStartX - touchEndX) > 50 && Math.abs(touchStartY - touchEndY) < 40) {
+                    if (touchEndX < touchStartX) nextSlide();
+                    if (touchEndX > touchStartX) prevSlide();
                 }
-            }, { passive: true });
-
-            update();
-        };
-
-        document.addEventListener('DOMContentLoaded', setupSlides);
+            });
+        });
         </script>
     </body>
 </html>
